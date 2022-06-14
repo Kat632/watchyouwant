@@ -2,182 +2,520 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container header-container">
+<div class="container header-container">
+    <div class="row">
+        <div class="col-xl-3 col-lg-2">
+            <div class="header_logo">
+                <a href="">
+                    <img src="">
+                    Logo goes here!
+                </a>
+            </div>
+        </div>
+        <div class="col-xl-6 col-lg-7">
+            <nav class="header_menu">
+                <ul>
+                    <li class="active">
+                        <a href="">
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Men
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Women
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Unisex
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Children
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Restored
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Special Offers
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Blog
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="col-lg-3">
+            <div class="header_right_auth">
+                <a href="">Login</a>
+                /
+                <a href="">Register</a>
+            </div>
+            <ul class="header_right_widgets">
+                <li>
+                    <span>
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </span>
+                </li>
+                <li>
+                    <span>
+                        <i class="fa-solid fa-heart"></i>
+                    </span>
+                </li>
+                <li>
+                    <span>
+                        <i class="fa-solid fa-bag-shopping"></i>
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<section class="categories">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-xl-3 col-lg-2">
-                <div class="header_logo">
-                    <a href="">
-                        <img src="">
-                        Logo goes here!
-                    </a>
+            <div class="col-lg-6 p-0">
+                <div class="categories_item">
+                    <div class="categories_text">
+                        <h1>View All</h1>
+                        <p>View our entire range of stylish wrist watches. We supply individual watches for individual
+                            people. Specialists in Casio, Fossil and Skagen.</p>
+                        <button><a href="">View All</a></button>
+                    </div>
                 </div>
             </div>
-            <div class="col-xl-6 col-lg-7">
-                <nav class="header_menu">
-                    <ul>
-                        <li class="active">
-                            <a href="">
-                                Home
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                Men
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                Women
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                Unisex
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                Children
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                Restored
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                Special Offers
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                Blog
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="col-lg-3">
-                <div class="header_right_auth">
-                    <a href="">Login</a>
-                    /
-                    <a href="">Register</a>
+            <div class="col-lg-6">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6 p-0">
+                        <div class="categories_item">
+                            <div class="categories_text">
+                                <h1>Men's Watches</h1>
+                                <p>Watches for the discerning gentleman and the retro lover.</p>
+                                <button><a href="">View All</a></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 p-0">
+                        <div class="categories_item">
+                            <div class="categories_text">
+                                <h1>Women's Watches</h1>
+                                <p>Elegant and beautiful watches for our female customers.</p>
+                                <button><a href="">View All</a></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 p-0">
+                        <div class="categories_item">
+                            <div class="categories_text">
+                                <h1>Unisex Watches</h1>
+                                <p>Watches do not have to be gender-biased. Maybe there is something in this category
+                                    for you. Watch you want?</p>
+                                <button><a href="">View All</a></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 p-0">
+                        <div class="categories_item">
+                            <div class="categories_text">
+                                <h1>Children's Watches</h1>
+                                <p>View our entire range of stylish wrist watches. We supply individual watches for
+                                    individual people. Specialists in Casio, Fossil and Skagen.</p>
+                                <button><a href="">View All</a></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 p-0">
+                        <div class="categories_item">
+                            <div class="categories_text">
+                                <h1>Restored Watches</h1>
+                                <p>View our entire range of stylish wrist watches. We supply individual watches for
+                                    individual people. Specialists in Casio, Fossil and Skagen.</p>
+                                <button><a href="">View All</a></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 p-0">
+                        <div class="categories_item">
+                            <div class="categories_text">
+                                <h1>Special Offers</h1>
+                                <p>View our entire range of stylish wrist watches. We supply individual watches for
+                                    individual people. Specialists in Casio, Fossil and Skagen.</p>
+                                <button><a href="">View All</a></button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <ul class="header_right_widgets">
-                    <li>
-                        <span>
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                        </span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="products_spread">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-8">
+                <div class="section_title">
+                    <h4>Special Offers</h4>
+                </div>
+            </div>
+            <div class="col-lg-8 col-md-8">
+                <ul class="filter_menu">
+                    <li class="active">
+                        All
                     </li>
                     <li>
-                        <span>
-                            <i class="fa-solid fa-heart"></i>
-                        </span>
+                        Men's
                     </li>
                     <li>
-                        <span>
-                            <i class="fa-solid fa-bag-shopping"></i>
-                        </span>
+                        Women's
+                    </li>
+                    <li>
+                        Children's
+                    </li>
+                    <li>
+                        Unisex
+                    </li>
+                    <li>
+                        Restored
                     </li>
                 </ul>
             </div>
         </div>
-    </div>
-{% endblock %}
-
-{% block content %}
-    <section class="categories">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-6 p-0">
-                    <div class="categories_item">
-                        <div class="categories_text">
-                            <h1>View All</h1>
-                            <p>View our entire range of stylish wrist watches.  We supply individual watches for individual people.  Specialists in Casio, Fossil and Skagen.</p>
-                            <button><a href="">View All</a></button>
+        <div class="row product_gallery">
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="product_item">
+                    <div class="image">
+                        Image
+                        <div class="label">
+                            Offers
+                        </div>
+                    </div>
+                    <div class="product_item_text">
+                        <h6>
+                            <a href="#">Random Watch #1</a>
+                        </h6>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <div class="product_price">
+                            £59.99
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6 col-sm-6 p-0">
-                            <div class="categories_item">
-                                <div class="categories_text">
-                                    <h1>Men's Watches</h1>
-                                    <p>Watches for the discerning gentleman and the retro lover.</p>
-                                    <button><a href="">View All</a></button>
-                                </div>
-                            </div> 
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="product_item">
+                    <div class="image">
+                        Image
+                        <div class="label">
+                            Offers
                         </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6 p-0">
-                            <div class="categories_item">
-                                <div class="categories_text">
-                                    <h1>Women's Watches</h1>
-                                    <p>Elegant and beautiful watches for our female customers.</p>
-                                    <button><a href="">View All</a></button>
-                                </div>
-                            </div>
+                    </div>
+                    <div class="product_item_text">
+                        <h6>
+                            <a href="#">Random Watch #1</a>
+                        </h6>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
                         </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6 p-0">
-                            <div class="categories_item">
-                                <div class="categories_text">
-                                    <h1>Unisex Watches</h1>
-                                    <p>Watches do not have to be gender-biased.  Maybe there is something in this category for you.  Watch you want?</p>
-                                    <button><a href="">View All</a></button>
-                                </div>
-                            </div>
+                        <div class="product_price">
+                            £59.99
                         </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6 p-0">
-                            <div class="categories_item">
-                                <div class="categories_text">
-                                    <h1>Children's Watches</h1>
-                                    <p>View our entire range of stylish wrist watches.  We supply individual watches for individual people.  Specialists in Casio, Fossil and Skagen.</p>
-                                    <button><a href="">View All</a></button>
-                                </div>
-                            </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="product_item">
+                    <div class="image">
+                        Image
+                        <div class="label">
+                            Offers
                         </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6 p-0">
-                            <div class="categories_item">
-                                <div class="categories_text">
-                                    <h1>Restored Watches</h1>
-                                    <p>View our entire range of stylish wrist watches.  We supply individual watches for individual people.  Specialists in Casio, Fossil and Skagen.</p>
-                                    <button><a href="">View All</a></button>
-                                </div>
-                            </div>
+                    </div>
+                    <div class="product_item_text">
+                        <h6>
+                            <a href="#">Random Watch #1</a>
+                        </h6>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
                         </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6 p-0">
-                            <div class="categories_item">
-                                <div class="categories_text">
-                                    <h1>Special Offers</h1>
-                                    <p>View our entire range of stylish wrist watches.  We supply individual watches for individual people.  Specialists in Casio, Fossil and Skagen.</p>
-                                    <button><a href="">View All</a></button>
-                                </div>
-                            </div>
+                        <div class="product_price">
+                            £59.99
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="product_item">
+                    <div class="image">
+                        Image
+                        <div class="label">
+                            Offers
+                        </div>
+                    </div>
+                    <div class="product_item_text">
+                        <h6>
+                            <a href="#">Random Watch #1</a>
+                        </h6>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <div class="product_price">
+                            £59.99
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
+        <div class="row product_gallery">
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="product_item">
+                    <div class="image">
+                        Image
+                        <div class="label">
+                            Offers
+                        </div>
+                    </div>
+                    <div class="product_item_text">
+                        <h6>
+                            <a href="#">Random Watch #1</a>
+                        </h6>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <div class="product_price">
+                            £59.99
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="product_item">
+                    <div class="image">
+                        Image
+                        <div class="label">
+                            Offers
+                        </div>
+                    </div>
+                    <div class="product_item_text">
+                        <h6>
+                            <a href="#">Random Watch #1</a>
+                        </h6>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <div class="product_price">
+                            £59.99
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="product_item">
+                    <div class="image">
+                        Image
+                        <div class="label">
+                            Offers
+                        </div>
+                    </div>
+                    <div class="product_item_text">
+                        <h6>
+                            <a href="#">Random Watch #1</a>
+                        </h6>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <div class="product_price">
+                            £59.99
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="product_item">
+                    <div class="image">
+                        Image
+                        <div class="label">
+                            Offers
+                        </div>
+                    </div>
+                    <div class="product_item_text">
+                        <h6>
+                            <a href="#">Random Watch #1</a>
+                        </h6>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <div class="product_price">
+                            £59.99
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section="services_spread">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="services_item">
+                    <i class="fa fa-car"></i>
+                    <h6>Free Shipping</h6>
+                    <p>For orders over £50</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="services_item">
+                    <i class="fa-solid fa-money-bill-1-wave"></i>
+                    <h6>Money Back Guarantee</h6>
+                    <p>See <a href="#">Terms & Conditions</a></p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="services_item">
+                    <i class="fa-solid fa-life-ring"></i>
+                    <h6>Online Support 24/7</h6>
+                    <p>Dedicated experts</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="services_item">
+                    <i class="fa fa-headphones"></i>
+                    <h6>Secure Payments</h6>
+                    <p>For your peace of mind</p>
+                </div>
+            </div>
+        </div>
+    </div>
     </section>
-
-
-
-
-
-    <div class="container h-100">
-        <div class="row h-100">
-            <div class="col-7 col-md-6 my-auto">
-                <h1 class="display-4 logo-font text-black">
-                    The new collections are here
-                </h1>
-                <div class="my-5">
-                    <h4>
-                        <a href="" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">Shop Now</a>
-                    </h4>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-7">
+                    <div class="footer_about">
+                        <div class="footer_logo">
+                            <a href="#">
+                                Logo goes here!
+                            </a>
+                        </div>
+                        <p>Interesing watches for interesting people.</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-5">
+                    <div class="footer_widget">
+                        <h6>Quick Links</h6>
+                        <ul>
+                            <li>
+                                <a href="#">Blog</a>
+                            </li>
+                            <li>
+                                <a href="#">Terms & Conditions</a>
+                            </li>
+                            <li>
+                                <a href="#">FAQs</a>
+                            </li>
+                            <li>
+                                <a href="#">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-5">
+                    <div class="footer_widget">
+                        <h6>Account</h6>
+                        <ul>
+                            <li>
+                                <a href="#">My Account</a>
+                            </li>
+                            <li>
+                                <a href="#">My Bag</a>
+                            </li>
+                            <li>
+                                <a href="#">Wishlist</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-8 col-sm-8">
+                    <div class="footer_newsletter">
+                        <h6>Newsletter</h6>
+                        <form action="#">
+                            <input type="text" placeholder="Email">
+                            <button type="submit">Subscribe</button>
+                        </form>
+                        <div class="footer_social">
+                            <a href="#">
+                                <i class="fa-brands fa-facebook"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fa-brands fa-twitter"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="footer_copyright_text">
+                        <p>This website is copyright of Katherine Biggs 2022</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-{% endblock %}
+    </footer>
+    {% endblock %}
