@@ -15,8 +15,9 @@
     {% endblock %}
 
     {% block corecss %}
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="{% static 'css/base.css' %}">
     {% endblock %}
 
     {% block extra_css %}
@@ -46,17 +47,16 @@
 
 <body>
     <header class="container-fluid fixed-top">
-        <div class="row">
+        <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
             <div class="col-xl-3 col-lg-2 my-auto py-1 py-lg-0 text-center text-lg-left">
-                <div class="header_logo">
+                <div class="header-logo">
                     <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                        <img src="">
-                        Logo goes here!
+                        <img src="{% static 'media/watchyouwant_logo.png' %}" alt="Watch You Want logo" width="150" height="150" class="d-inline-block align-text-top">
                     </a>
                 </div>
             </div>
             <div class="col-xl-6 col-lg-7 my-auto py-1 py-lg-0">
-                <nav class="header_menu">
+                <nav class="header-menu">
                     <ul>
                         <li class="active">
                             <a href="">
