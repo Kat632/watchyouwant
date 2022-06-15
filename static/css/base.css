@@ -218,6 +218,74 @@ cursor: pointer;
     margin-bottom: 0;
 }
 
+/* Footer */
+.footer {
+    padding-top: 55px;
+}
+
+footer-about {
+    margin-bottom: 30px;
+}
+
+.footer-logo {
+    margin-bottom: 20px;
+}
+
+.footer-about p {
+    margin-bottom: 20px;
+}
+
+.footer-widget {
+    margin-bottom: 30px;
+}
+
+.footer-widget h6 {
+    color: #111;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.footer-widget ul {
+    margin: 0;
+    padding: 0;
+}
+
+.footer-newsletter {
+    margin-bottom: 30px;
+}
+
+.footer-newsletter h6 {
+    color: #111;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+.footer-newsletter form {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.footer-newsletter form button {
+    position: absolute;
+    right: 4px;
+    top: 4px;
+}
+
+.footer-newsletter form input {
+    height: 52px;
+    width: 100%;
+    border: 1px solid #e1e1e1;
+    padding-left: 30px;
+    font-size: 14px;
+    color: #666;
+}
+
+.footer-widget ul li {
+    list-style: none;
+}
+
 .shop-btn {
     background: black;
     color: white;
