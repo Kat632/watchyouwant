@@ -286,6 +286,44 @@ footer-about {
     list-style: none;
 }
 
+.footer-social a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background: #e1e1e1;
+    font-size: 15px;
+    color: #111;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    margin-right: 6px;
+    margin-bottom: 5px;
+}
+
+.footer-copyright-text {
+    border-top: 1px solid #e1e1e1;
+    padding: 18px 0 25px;
+    text-align: center;
+    margin-top: 35px;
+}
+
+/* Buttons */
+
+button {
+    cursor: pointer;
+}
+
+.site-btn {
+    font-size: 14px;
+    color: #00ece2;
+    background: #111;
+    font-weight: 600;
+    border: none;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 12px 30px;
+}
+
 .shop-btn {
     background: black;
     color: white;
