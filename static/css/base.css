@@ -444,6 +444,25 @@ input[name='q']::placeholder {
     color: #aab7c4;
 }
 
+/* Products page */
+
+.breadcrumb {
+    padding-top: 70px;
+}
+
+.breadcrumb-links a {
+    font-size: 15px;
+    font-weight: 500;
+    color: #111;
+    margin-right: 18px;
+    display: inline-block;
+    position: relative;
+}
+
+.breadcrumb-links a i {
+    margin-right: 5px;
+}
+
 /* Bootstrap toasts */
 
 .message-container {
