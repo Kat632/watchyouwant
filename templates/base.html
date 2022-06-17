@@ -51,8 +51,8 @@
             <div class="col-xl-3 col-lg-2 my-auto py-1 py-lg-0 text-center text-lg-left">
                 <div class="header-logo">
                     <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                        <img src="{% static 'media/watchyouwant_logo.png' %}" alt="Watch You Want logo" width="150"
-                            height="150" class="d-inline-block align-text-top">
+                        <img src="{% static 'media/watchyouwant_logo.png' %}" alt="Watch You Want logo" width="100"
+                            height="100" class="d-inline-block align-text-top">
                     </a>
                 </div>
             </div>
@@ -78,46 +78,51 @@
             </div>
             <div class="col-lg-3 my-auto py-1 py-lg-0 text-right my-0">
                 <div class="row bg-white right-list">
-                        <ul class="header-right-widgets list-inline list-unstyled">
-                            <li class="list-inline-item dropdown">
-                                <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown"
-                                    aria-haspopup="true" aria-expanded="false">
-                                    <div class="text-center">
-                                        <div><i class="fas fa-user fa-lg"></i></div>
-                                        <p class="my-0">My Account</p>
-                                    </div>
-                                </a>
-                                <div class="dropdown-menu border-0" aria-labelledby="user-options">
-                                    {% if request.user.is_authenticated %}
-                                    {% if request.user.is_superuser %}
-                                    <a href="#" class="dropdown-item">Product Management</a>
-                                    {% endif %}
-                                    <a href="#" class="dropdown-item">My Account</a>
-                                    <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-                                    {% else %}
-                                    <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                                    <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
-                                    {% endif %}
+                    <ul class="header-right-widgets list-inline list-unstyled">
+                        <li class="list-inline-item dropdown">
+                            <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                <div class="text-center">
+                                    <div><i class="fas fa-user fa-lg"></i></div>
+                                    <p class="my-0">My Account</p>
                                 </div>
-                            </li>
-                            <li class="list-inline-item">
-                                <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
-                                    href="#">
-                                    <div class="text-center">
-                                        <div><i class="fas fa-shopping-bag fa-lg"></i></div>
-                                        <p class="my-0">
-                                            {% if grand_total %}
-                                            £{{ grand_total|floatformat:2 }}
-                                            {% else %}
-                                            £0.00
-                                            {% endif %}
-                                        </p>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
+                            </a>
+                            <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                                {% if request.user.is_authenticated %}
+                                {% if request.user.is_superuser %}
+                                <a href="#" class="dropdown-item">Product Management</a>
+                                {% endif %}
+                                <a href="#" class="dropdown-item">My Account</a>
+                                <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                                {% else %}
+                                <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                                <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                                {% endif %}
+                            </div>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
+                                href="#">
+                                <div class="text-center">
+                                    <div><i class="fas fa-shopping-bag fa-lg"></i></div>
+                                    <p class="my-0">
+                                        {% if grand_total %}
+                                        £{{ grand_total|floatformat:2 }}
+                                        {% else %}
+                                        £0.00
+                                        {% endif %}
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
+        </div>
+        <div id="delivery-banner" class="row text-center">
+            <div class="col bg-black text-white">
+                <h4 class="logo-font my-1">Free delivery on orders over £{{ free_delivery_threshold }}!</h4>                
+            </div>            
         </div>
     </header>
 
