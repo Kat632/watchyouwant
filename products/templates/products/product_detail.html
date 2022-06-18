@@ -1,0 +1,110 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="overlay"></div>
+<div class="breadcrumb">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="breadcrumb-links">
+                    <a href="{% url 'home' %}">
+                        <i class="fa-solid fa-house"></i>
+                        Home
+                    </a>
+                    <a href="#">
+                        <span>{{ product.category }}
+                    </a>
+                    </span>
+                    <span>{{ product.name }}</span>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
+                    <div class="image-container my-5">
+                        {% if product.image %}
+                            <a href="{{ product.image.url }}" target="_blank">
+                                <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                            </a>
+                            {% else %}
+                            <a href="">
+                                <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                            </a>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="product-details-container mb-5 mt-md-5">
+                        <div class="product-details-text">
+                            <h3 class="mb-0">{{ product.name }}</h3>
+                        </div>
+                        {% if product.rating %}
+                        <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
+                        {% else %}
+                        <small class="text-muted">No Rating</small>
+                        {% endif %}
+                        <div class="product-details-price">
+                            <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
+                        </div>
+                        <div class="product-details-description">
+                            <p class="mt-3">{{ product.description }}</p>
+                        </div>
+                        <div class="product-details-widget">
+                            <ul>
+                                <li><span>Availability: </span>
+                                    <div class="text-right">{% if product.stock_level > 0 %}
+                                        In stock
+                                        {% else %}
+                                        Sorry this product is unavailable
+                                        {% endif %}
+                                    </div>
+                                </li>
+                                <li><span>Movement Origin: </span>
+                                    <div class="text-right">{% if product.movement_origin is not None %}
+                                        {{ product.movement_origin }}
+                                        {% else %}
+                                        Unknown
+                                        {% endif %}
+                                    </div>
+                                </li>
+                                <li><span>Movement Type: </span>
+                                    <div class="text-right">{% if product.movement_type is not None %}
+                                        {{ product.movement_type }}
+                                        {% else %}
+                                        Unknown
+                                        {% endif %}
+                                    </div>
+                                </li>
+                                <li><span>Water Resistance: </span>
+                                    <div class="text-right">{% if product.water_resistance is not None %}
+                                        {{ product.water_resistance }}
+                                        {% else %}
+                                        Unknown
+                                        {% endif %}
+                                    </div>
+                                </li>
+                                <li><span>Movement Origin: </span> 
+                                    <div class="text-right">{% if product.weight is not None %}
+                                        {{ product.weight }}
+                                        {% else %}
+                                        Unknown
+                                        {% endif %}
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+{% endblock %}

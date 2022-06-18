@@ -17,7 +17,7 @@ class ProductAdmin(admin.ModelAdmin):
         'movement_origin',
         'movement_type',
         'water_resistance',
-        'weight'
+        'weight',
     )
 
     ordering = ('sku',)
