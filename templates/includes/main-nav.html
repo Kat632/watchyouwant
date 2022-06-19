@@ -6,14 +6,14 @@
             </a>           
         </li>
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'products' %}" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 All Products
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="" class="dropdown-item">By Price</a>
-                <a href="" class="dropdown-item">By Rating</a>
-                <a href="" class="dropdown-item">By Category</a>
-                <a href="" class="dropdown-item">All Products</a>
+                <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
+                <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item ">By Rating</a>
+                <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item ">By Category</a>
+                <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
             </div>
         </li>
 
@@ -22,12 +22,12 @@
                 By Category
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="category-link">
-                <a href="" class="dropdown-item">Men</a>
-                <a href="" class="dropdown-item">Women</a>
-                <a href="" class="dropdown-item">Children</a>
-                <a href="" class="dropdown-item">Unisex</a>
-                <a href="" class="dropdown-item">Restored</a>
-                <a href="" class="dropdown-item">All Watches</a>
+                <a href="{% url 'products' %}?category=men" class="dropdown-item">Men</a>
+                <a href="{% url 'products' %}?category=women" class="dropdown-item">Women</a>
+                <a href="{% url 'products' %}?category=unisex" class="dropdown-item">Unisex</a>
+                <a href="{% url 'products' %}?category=children" class="dropdown-item">Children</a>
+                <a href="{% url 'products' %}?category=restored" class="dropdown-item">Restored</a>
+                <a href="{% url 'products' %}?category=men,women,unisex,children,restored" class="dropdown-item">All CWatches</a>
             </div>
         </li>
 
@@ -36,11 +36,16 @@
                 Special Offers
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="specials-link">
-                <a href="" class="dropdown-item">New Arrivals</a>
-                <a href="" class="dropdown-item">Deals</a>
-                <a href="" class="dropdown-item">Clearance</a>
-                <a href="" class="dropdown-item">All Specials</a>
+                <a href="{% url 'products' %}?category=new_arrivals" class="dropdown-item">New Arrivals</a>
+                <a href="{% url 'products' %}?category=deals" class="dropdown-item">Deals</a>
+                <a href="{% url 'products' %}?category=clearance" class="dropdown-item">Clearance</a>
+                <a href="{% url 'products' %}?category=new_arrivals,deals,clearance" class="dropdown-item">All Specials</a>
             </div>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="logo-font font-weight-bold nav-link text-black" href="#" id="specials-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Blog
+            </a>         
         </li>
     </ul>
 </div>
