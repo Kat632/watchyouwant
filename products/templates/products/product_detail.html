@@ -20,12 +20,14 @@
                         <i class="fa-solid fa-house"></i>
                         Home
                     </a>
-                    <a href="#">
-                        <span>{{ product.category }}
+                    {% if product.category %}
+                    <a href="{% url 'products' %}?category={{ product.category.name }}">
+                        <span>{{ product.category.friendly_name }}
                     </a>
                     </span>
                     <span>{{ product.name }}</span>
                 </div>
+                {% endif %}
             </div>
         </div>
         <div class="container-fluid">
