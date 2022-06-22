@@ -439,7 +439,7 @@ input[name='q']::placeholder {
 /* Products page */
 
 .breadcrumb {
-    padding-top: 70px;
+    padding-top: 25px;
 }
 
 .breadcrumb-links {
@@ -526,6 +526,20 @@ a:not([href]) {
     color: #111111;
     width: 150px;
     float: left;
+}
+
+/* Bag page */
+
+.text-purple {
+    color: #5247d4;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 600;
+    padding-bottom: 20px;
+}
+
+.bag-form > .form-control {
+    width: 60%;
 }
 
 /* Bootstrap toasts */
@@ -698,14 +712,14 @@ a:not([href]) {
     }
 
     .header-container {
-        padding-top: 164px;
+        padding-top: 210px;
     }
 }
 
 /* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 991px) {
     .header-container {
-        padding-top: 116px;
+        padding-top: 100px;
     }
 
     body {
