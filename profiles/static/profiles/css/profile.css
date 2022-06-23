@@ -19,3 +19,11 @@
 #id_default_country option:first-child {
     color: #aab7c4;
 }
+
+.text-purple-profile {
+    color: #5247d4;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 600;
+    padding-bottom: 20px;
+}
