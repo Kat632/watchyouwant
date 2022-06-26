@@ -12,3 +12,4 @@ class BlogList(generic.ListView):
     queryset = BlogPost.objects.filter(status=1).order_by('-publish_date')
     template_name = 'blog/blog.html'
     paginate_by = 6
+
