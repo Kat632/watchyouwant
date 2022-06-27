@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'blog/css/blog.css' %}">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+{% endblock %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="overlay"></div>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <hr>
+            <h2 class="logo-font mb-4">Blog</h2>
+            <hr>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <p class="text-center mb-5 fw-bold black-text">Chris first started restoring watches and walkmans for his
+                friends in the 1980s. His love of digital watches recently became a hobby again as he rediscovered some
+                forgotten gems in his collection, as well as buying some new ones to hone his restoration skills.
+            </p>
+        </div>
+    </div>
+
+    <div class="container text-center text-md-left mb-3">
+        <div class="row text-center text-md-left g-3 card-row">
+
+            {% for blog in blogpost_list %}
+            <div class="col-md-6 col-lg-3 col-xl-3 mx-auto mt-3">
+                <div class="card box-shadow h-100">
+                    {% if "placeholder" in blog.featured_image.url %}
+                    {% load static %}
+                    <img class="card-img-top" src=""
+                        alt="1980s Casio Digital Watch">
+                    {% else %}
+                    <img class="card-img-top recipe-image" src="{{ blog.featured_image.url }}"
+                        alt="{{ blog.title }}">
+                    {% endif %}
+                    <div class="card-body">
+                        <h3 class="card-title dancing-text">{{ blog.title }}</h3>
+                        <p class="card-text">{{ blog.excerpt }}</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item align-items-center"><i class="fa-solid fa-heart"></i>
+                            {{ blog.amount_of_likes }}
+                        </li>
+                    </ul>
+
+                    <div class="card-footer">
+                        <a href="{% url 'blog_detail' blog.slug %}" class="btn btn-recipe align-items-center">View
+                            Post</a>
+                    </div>
+                </div>
+            </div>
+
+            {% if forloop.counter|divisibleby:3 %}
+        </div>
+        <div class="row">
+            {% endif %}
+            {% endfor %}
+        </div>
+        <div class="row mt-3">
+            {% if is_paginated %}
+            <nav aria-label="Page Navigation">
+                <ul class="pagination justify-content-center">
+                    {% if page_obj.has_previous %}
+                    <li>
+                        <a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo;
+                            Previous</a>
+                    </li>
+                    {% endif %}
+                    {% if page_obj.has_next %}
+                    <li>
+                        <a href="?page={{ page_obj.next_page_number }}" class="page-link">Next &raquo;</a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </nav>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}
+    

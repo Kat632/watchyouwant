@@ -8,7 +8,6 @@ class BlogAdmin(SummernoteModelAdmin):
     """
     Use Summernote for blog admin
     """
-    prepopulated_fields = {'slug': ('title',)}
     list_display = ('title', 'slug', 'status', 'publish_date')
     search_fields = ['title', 'content']
     list_filter = ('status', 'publish_date')

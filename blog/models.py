@@ -1,15 +1,16 @@
 from django.db import models
-
+from django_extensions.db.fields import AutoSlugField
 from profiles.models import UserProfile
 
 STATUS = ((0, "Draft"), (1, "Published"))
+
 
 class BlogPost(models.Model):
     """
     Model for the blog posts
     """
     title = models.CharField(max_length=50)
-    slug = models.SlugField(unique=True)
+    slug = AutoSlugField(populate_from='title', unique=True,)
     category = models.CharField(max_length=150)
     content = models.TextField(blank=True, null=True)
     featured_image = models.ImageField(default='placeholder')
@@ -43,7 +44,7 @@ class Comment(models.Model):
     """
     Add a comment.
     """
-    recipe = models.ForeignKey(
+    blog = models.ForeignKey(
         BlogPost, on_delete=models.CASCADE, related_name='comments')
     name = models.CharField(max_length=80)
     email = models.EmailField()
