@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
+{% load crispy_forms_tags %}
 {% load static %}
+
 
 {% block page_header %}
 <div class="container header-container">
@@ -58,6 +60,26 @@
             <div class="fs-5 mb-4">
                 {{ blog.content | safe }}
             </div>
+
+            <div class="row">
+
+                <div class="col-1">
+                        {% if user.is_authenticated %}
+                        <form id="like_form" action="{% url 'post_like' blog.slug %}"
+                        class="d-inline" method="POST">
+                        {% csrf_token %}
+                        {% if liked %}
+                        <button type="submit" name="blog_id" value="{{ blog.slug }}"
+                            class="btn btn-md"><i class="fas fa-heart"></i>
+                            {{ blog.amount_of_likes }} </button>
+                        {% else %}
+                        <button type="submit" name="blog_id" value="{{ blog.slug }}"
+                            class="btn btn-md"><i class="far fa-heart"></i>
+                            {{ blog.amount_of_likes }}</button>
+                        {% endif %}
+                        {% endif %}
+                    </form>
+                </div>
         </section>
 
                 <!-- Comments section-->
@@ -76,5 +98,24 @@
                             </div>
                             {% endfor %}
                         </div>
+
+                        <!-- Comment form-->
+
+                {% if commented %}
+                <div class="alert alert-success" role="alert">
+                    Thank you! Your comment will appear once approved.
+                </div>
+                {% else %}
+
+                {% if user.is_authenticated %}
+                <p>Posting as {{ user.username }}</p>
+
+                <form method="post" class="mb-4">
+                    {{ comment_form | crispy }}
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-signup btn-lg">Submit</button>
+                </form>
+                {% endif %}
+                {% endif %}
 
 {% endblock %}

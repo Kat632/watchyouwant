@@ -44,7 +44,7 @@ class Comment(models.Model):
     """
     Add a comment.
     """
-    recipe = models.ForeignKey(
+    blog = models.ForeignKey(
         BlogPost, on_delete=models.CASCADE, related_name='comments')
     name = models.CharField(max_length=80)
     email = models.EmailField()
