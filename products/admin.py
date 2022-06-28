@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Product, Category
+from .models import Product, Category, Review
 
 # Register your models here.
 
@@ -27,6 +27,20 @@ class CategoryAdmin(admin.ModelAdmin):
     list_display = (
         'friendly_name',
         'name',
+    )
+
+
+@admin.register(Review)
+class ReviewAdmin(admin.ModelAdmin):
+    """
+    Admin class for Review model
+    With list_display to show fields
+    to user
+    """
+    list_display = (
+        'product',
+        'user',
+        'review_time',
     )
 
 

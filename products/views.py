@@ -4,6 +4,7 @@ from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 
+from profiles.models import UserProfile
 from .models import Product, Category, Review
 from .forms import ProductForm, ReviewForm
 
