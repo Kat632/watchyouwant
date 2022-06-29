@@ -22,6 +22,23 @@
             <strong>{{ review.star_rating }}
             </strong>
             </p>
+            {% if request.user.is_authenticated %} 
+            {% if request.user|lower == review.user|lower %}
+            <!-- Edit / Delete review if user's review -->
+            <small class="ml-3">
+              <a href="{% url 'edit_review' review.id %}" class="btn">Edit my review
+                <i class="far fa-edit">
+                </i>
+              </a>
+              <a href="{% url 'delete_review' review.id %}" class="btn text-danger">Delete my review
+                <i class="far fa-trash-alt">
+                </i>
+              </a>
+            </small>
+            {% endif %}
+            {% endif %}
+          </p>
+          <hr>
         </div>
         <div class="card-footer is-justify-content-right py-3">
             <p class="subtitle-att">{{ review.user }}, {{ review.review_time|date:"M d, Y" }}</p>
@@ -47,13 +64,8 @@
                 </div>
             </div>
             <div class="columns has-text-centered reverse-mobile">
-                <div class="column is-6 ">
-                    <button type="reset" class="button is-danger is-light is-outlined">
-                        Reset Form <i class="fas fa-undo ml-2"></i>
-                    </button>
-                </div>
                 <div class="column is-6">
-                    <button class="button is-danger" type="submit">Add Review <i class="fas fa-plus ml-2"></i></button>
+                    <button class="btn btn-custom rounded-0" type="submit">Add Review <i class="fas fa-plus ml-2"></i></button>
                 </div>
             </div>
         </form>
