@@ -18,6 +18,8 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 
+from .views import handler404, handler403, handler500
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls')),
@@ -29,3 +31,7 @@ urlpatterns = [
     path('summernote/', include('django_summernote.urls')),
     path('blog/', include('blog.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+handler404 = 'watchyouwant.views.handler404'
+handler403 = 'watchyouwant.views.handler403'
+handler500 = 'watchyouwant.views.handler500'
