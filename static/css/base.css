@@ -436,6 +436,28 @@ input[name='q']::placeholder {
     color: #aab7c4;
 }
 
+.btn-custom {
+    font-weight: 400;
+    line-height: 1.5;
+    color: #FFFFFF;
+    background-color: #000000;
+  }
+
+  .btn-custom:disabled {
+    pointer-events: none;
+  }
+  
+  .btn-custom:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+    color: #FFFFFF;
+  }
+  
+  .btn-custom:active {
+    box-shadow: none;
+    transform: translateY(0);
+  }
+
 /* Products page */
 
 .breadcrumb {

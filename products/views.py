@@ -62,14 +62,23 @@ def all_products(request):
 
 def product_detail(request, product_id):
     """ A view to show individual product details """
-
     product = get_object_or_404(Product, pk=product_id)
+    reviews = product.reviews.filter(product=product)
 
-    context = {
-        'product': product,
-    }
+    review_form = ReviewForm(data=request.POST)
 
-    return render(request, 'products/product_detail.html', context)
+    if review_form.is_valid():
+        review = review_form.save(commit=False)
+        review.product = product
+        review.save()
+    else:
+        review_form = ReviewForm()
+
+    return render(request, 'products/product_detail.html',
+                  {'product': product,
+                   'reviews': reviews,
+                   'review_form': ReviewForm(),
+                   })
 
 
 @login_required
@@ -175,3 +184,43 @@ def add_review(request, product_id):
     }
 
     return render(request, template, context)
+
+
+@login_required
+def edit_review(request, review_id):
+    """
+    Edit a product review
+    """
+    review = get_object_or_404(Review, pk=review_id)
+    if request.method == 'POST':
+        form = ReviewForm(request.POST, instance=review)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'You review has been \
+            successfully edited.')
+            return redirect(
+                reverse('product_detail', args=(review.product.id,)))
+        else:
+            messages.error(request, 'Please try again.')
+    else:
+        form = ReviewForm(instance=review)
+
+    template = "reviews/edit_review.html"
+    context = {
+        "form": form,
+        "review": review,
+        "product": review.product,
+    }
+
+    return render(request, template, context)
+
+
+@login_required
+def delete_review(request, review_id):
+    """
+    Delete a product review
+    """
+    review = get_object_or_404(Review, pk=review_id)
+    review.delete()
+    messages.success(request, 'Review deleted!')
+    return redirect(reverse('product_detail', args=(review.product.id,)))
