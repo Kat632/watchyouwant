@@ -22,14 +22,16 @@ def add_to_bag(request, item_id):
     redirect_url = request.POST.get('redirect_url')
     bag = request.session.get('bag', {})
 
-    if item_id in list(bag.keys()):
+    if quantity > 0 and product.stock_level > 0:
         bag[item_id] += quantity
         messages.success(request,
                          (f'Updated {product.name} '
                           f'quantity to {bag[item_id]}'))
-    else:
+    elif quantity > 0 and product.stock_level > 0:
         bag[item_id] = quantity
         messages.success(request, f'Added {product.name} to your bag')
+    else:
+        messages.error(request, f'Sorry,{product.name} is out of stock.  Please check back soon.')
 
     request.session['bag'] = bag
     return redirect(redirect_url)

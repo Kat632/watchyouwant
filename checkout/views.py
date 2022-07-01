@@ -4,6 +4,7 @@ from django.shortcuts import (
 from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
+from django.http import JsonResponse
 
 from .forms import OrderForm
 from .models import Order, OrderLineItem
@@ -14,6 +15,46 @@ from bag.contexts import bag_contents
 
 import stripe
 import json
+
+
+@require_POST
+def is_in_stock(request):
+    """
+    At the point of checkout, determines is there is enough stock
+    for each item in the bag, by checking with the database stock
+    levels.  Purchase will be stopped if the chosen quantity of one
+    or more of the items is more than the current stock.
+    """
+    bag = request.session.get('bag', {})
+    confirmed_okay = 0
+    for item_id, item_data in bag.items():
+        product = Product.objects.get(id=item_id)
+        if item_data <= product.stock_level:
+            confirmed_okay += 1
+        else:
+            continue
+
+    if confirmed_okay == len(bag):
+        result = True  # this means that sale can complete
+    else:
+        result = False  # this means that sale cannot complete
+
+    return JsonResponse({'result': result})
+
+
+def no_sale(request):
+    """
+    If there is not enough stock of one or more of the bag items at
+    the point of checkout, this function is called to redirect customer
+    to the bag and display an appropriate message.
+    """
+    messages.error(request, (
+        "You have selected too many items for one or more of your purchases. \
+            Please amend your order. \
+                Please contact us to discuss if you experience further \
+                    issues.")
+    )
+    return redirect(reverse('view_bag'))
 
 
 @require_POST
