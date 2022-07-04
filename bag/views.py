@@ -18,30 +18,32 @@ def add_to_bag(request, item_id):
     """ Add a quantity of the specified product to the shopping bag """
 
     product = get_object_or_404(Product, pk=item_id)
-    quantity = int(request.POST.get('quantity'))
+    quantity = int(request.POST.get('quantity') or 1)
     redirect_url = request.POST.get('redirect_url')
     bag = request.session.get('bag', {})
 
-    if quantity > 0 and product.stock_level > 0:
+    # Determines if item exists and updates quantity or adds item.
+    if item_id in list(bag.keys()):
         bag[item_id] += quantity
         messages.success(request,
                          (f'Updated {product.name} '
                           f'quantity to {bag[item_id]}'))
-    elif quantity > 0 and product.stock_level > 0:
-        bag[item_id] = quantity
-        messages.success(request, f'Added {product.name} to your bag')
     else:
-        messages.error(request, f'Sorry,{product.name} is out of stock.  Please check back soon.')
+        bag[item_id] = quantity
+        messages.success(request,
+                         (f'Updated {product.name} '
+                          f'quantity to {bag[item_id]}'))
+        # Overwrites the bag variable in the session with updated version.
+        request.session['bag'] = bag
 
-    request.session['bag'] = bag
-    return redirect(redirect_url)
+        return redirect(redirect_url)
 
 
 def adjust_bag(request, item_id):
     """Adjust the quantity of the specified product to the specified amount"""
 
     product = get_object_or_404(Product, pk=item_id)
-    quantity = int(request.POST.get('quantity'))
+    quantity = int(request.POST.get('quantity') or 1)
     bag = request.session.get('bag', {})
 
     if quantity > 0:
@@ -61,22 +63,13 @@ def adjust_bag(request, item_id):
 
 def remove_from_bag(request, item_id):
     """Remove the item from the shopping bag"""
-
-    product = get_object_or_404(Product, pk=item_id)
-
     try:
-        if item_id == '0':
-            request.session['bag'] = {}
-            request.session['order_info'] = {}
-            messages.success(request, 'Your bag is now empty')
-            return redirect(reverse('view_bag'))
-        else:
-            product = get_object_or_404(Product, pk=item_id)
-            bag = request.session.get('bag', {})
-            bag.pop(item_id)
-            request.session['bag'] = bag
-            messages.success(request, f'{product.name} removed from bag')
-            return HttpResponse(status=200)
+        product = get_object_or_404(Product, pk=item_id)
+        bag = request.session.get('bag', {})
+        bag.pop(item_id)
+        messages.success(request, f'{product.name.title()} removed from bag')
+        request.session['bag'] = bag
+        return HttpResponse(status=200)
 
     except Exception as e:
         messages.error(request, f'Error removing {product.name} from bag')

@@ -68,7 +68,7 @@ form.addEventListener('submit', function(ev) {
     $.post(in_stock_url, postData).done(function(response) {
         // If sale quantity is equal to or less that stock amount:
         if (response.result === true) {
-            var cache_data_url = 'checkout/cache_checkout_data/';
+            var cache_data_url = 'cache_checkout_data/';
             $.post(cache_data_url, postData).done(function () {
                 stripe.confirmCardPayment(clientSecret, {
                     payment_method: {
@@ -100,16 +100,11 @@ form.addEventListener('submit', function(ev) {
                     },
                 }).then(function(result) {
                     if (result.error) {
-                        var errorDiv = document.getElementById('card-errors');
-                        var html = `
-                            <span class="icon" role="alert">
-                            <i class="fas fa-times"></i>
-                            </span>
-                            <span>${result.error.message}</span>`;
-                        $(errorDiv).html(html);
+                        let displayError = document.getElementById('card-errors');
+                        displayError.textContent = result.error.message;
                         $('#payment-form').fadeToggle(100);
                         $('#loading-overlay').fadeToggle(100);
-                        card.update({ 'disabled': false});
+                        card.update({'disabled': false});
                         $('#submit-button').attr('disabled', false);
                     } else {
                         if (result.paymentIntent.status === 'succeeded') {
@@ -117,16 +112,16 @@ form.addEventListener('submit', function(ev) {
                         }
                     }
                 });
-            }).fail(function () {
-                // just reload the page, the error will be in django messages
+            }).fail(function() {
+                // reloads page with error shown in django messages; customer not charged.
                 location.reload();
             });
-            } else {
+        } else {
             // If sale quantity is more than stock amount:
             var loc = window.location.href;
             var path = window.location.pathname;
             var newurl = loc.replace(path, '/checkout/no_sale/');
             location.replace(newurl);
         }
-        });
     });
+});
