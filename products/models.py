@@ -44,6 +44,10 @@ class Product(models.Model):
     def is_featured(self):
         return self.featured
 
+    def get_rating(self):
+        total = (sum(int(review['star_rating']) for review
+                 in self.reviews.values()))
+
 
 class Review(models.Model):
     """

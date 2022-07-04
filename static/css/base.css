@@ -110,6 +110,12 @@ h1,h2,h3,h4,h5,h6 {
     background: #00ece2;
 }
 
+.categories-item img {
+    height: 205px;
+    text-align: left;
+    bottom: 5px;
+}
+
 .categories-text a {
     font-size: 14px;
     color: #111111;
@@ -183,33 +189,59 @@ h1,h2,h3,h4,h5,h6 {
     color: #212529;
     text-align: left;
     margin-bottom: 45px;
-}
-
-.filter-menu {
     position: relative;
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    text-align: right;
-    margin-bottom: 50px;
 }
 
-.filter-menu li {
-font-size: 14px;
-list-style: none;
-display: inline-block;
-color: #111;
-margin-right: 35px;
-position: relative;
-cursor: pointer;
+.section-title::after {
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    height: 2px;
+    width: 70px;
+    background: #ff0051;
+    content: "";
 }
 
-.product-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px;
+.section-title h4 {
+    color: #111111;
+    font-weight: 600;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
 }
+
+.blurb {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    background-color: #effc00;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.blurb h4 {
+    color: #111111;
+    font-weight: 600;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+}
+
+.blurb h4::after {
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    height: 2px;
+    width: 70px;
+    background: #ff0051;
+    content: "";
+}
+
+.blurb p {
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
+/* Products */
 
 .product-item {
     margin-bottom: 15px;
@@ -231,14 +263,14 @@ cursor: pointer;
     color: #111;
 }
 
-.product-item-text .rating {
+.rating {
     background: #111;
     line-height: 18px;
     padding: 5px;
     margin-bottom: 5px;
 }
 
-.product-item-text .rating i {
+.rating i {
     font-size: 10px;
     color: #effc00;
     margin-right: -4px;
@@ -253,6 +285,8 @@ cursor: pointer;
     display: block;
     padding-top: 80px;
     padding-bottom: 50px;
+    background-color: #00ece2;
+    margin-bottom: 10px;
 }
 
 .services-item {
@@ -281,6 +315,7 @@ cursor: pointer;
 /* Footer */
 .footer {
     padding-top: 55px;
+    background-color: #ff43ab;
 }
 
 footer-about {
@@ -293,6 +328,7 @@ footer-about {
 
 .footer-about p {
     margin-bottom: 20px;
+    color: #111;
 }
 
 .footer-widget {
@@ -309,6 +345,15 @@ footer-about {
 .footer-widget ul {
     margin: 0;
     padding: 0;
+}
+
+.footer-widget ul li {
+    list-style: none;
+}
+
+.footer-widget ul li a {
+    color: #111;
+    text-decoration: none;
 }
 
 .footer-newsletter {
@@ -340,10 +385,6 @@ footer-about {
     padding-left: 30px;
     font-size: 14px;
     color: #666;
-}
-
-.footer-widget ul li {
-    list-style: none;
 }
 
 .footer-social a {
