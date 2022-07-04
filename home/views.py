@@ -7,4 +7,6 @@ from products.models import Product, Category
 def index(request):
     """ A view to return the index page """
 
-    return render(request, 'home/index.html')
+    featured_products_list = Product.objects.filter(featured=True)
+    context = {'featured_products_list': featured_products_list}
+    return render(request, 'home/index.html', context)
