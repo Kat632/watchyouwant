@@ -264,10 +264,13 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .rating {
-    background: #111;
     line-height: 18px;
-    padding: 5px;
     margin-bottom: 5px;
+}
+
+.rating .stars{
+    background: #111;
+    margin-right: 4px;
 }
 
 .rating i {
@@ -434,6 +437,12 @@ button {
 .btn-black {
     background: black;
     color: white;
+    max-width: 150px;
+}
+
+.btn-purple {
+    background: #5247d4;
+    color: white;
 }
 
 .btn-outline-black {
@@ -457,6 +466,14 @@ button {
 .btn-black:focus {
     background: #222;
     color: white;
+}
+
+.btn-purple:hover,
+.btn-purple:active,
+.btn-purple:focus {
+    background: white;
+    color: #5247d4;
+    border: 1px solid #5247d4;
 }
 
 .text-black {
@@ -525,6 +542,7 @@ input[name='q']::placeholder {
 
 .breadcrumb {
     padding-top: 25px;
+    background: #ffffff;
 }
 
 .breadcrumb-links {
@@ -572,6 +590,10 @@ a:not([href]) {
     text-decoration: none;
 }
 
+.card-img-top:hover {
+    transform: scale(1.1);
+}
+
 /* Product detail page */
 
 .product-details-text h3 {
@@ -589,14 +611,36 @@ a:not([href]) {
     margin-bottom: 30px;
 }
 
-.product-details-description {
-    color: #444444;
+.product-details-description h4 {
     margin-bottom: 28px;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.product-details-description h4::after {
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    height: 2px;
+    width: 70px;
+    background: #ff0051;
+    content: "";
+}
+
+.product-details-description {
+    padding-bottom: 30px;
 }
 
 .product-details-widget {
-    border-top: 1px solid #ebebeb;
+    border-top: 1px solid #d358e0;
+    border-bottom: 1px solid #d358e0;
     padding-top: 35px;
+    margin-bottom: 30px;
 }
 
 .product-details-widget ul li {
@@ -612,6 +656,36 @@ a:not([href]) {
     width: 150px;
     float: left;
 }
+
+.product-details-widget .widget-right {
+    margin-bottom: 0;
+    color: #666666;
+    font-size: 14px;
+}
+
+/* Reviews */
+
+.product-details-description h4 {
+    margin-bottom: 28px;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.title-heading h3::after {
+position: absolute;
+left: 0;
+bottom: -4px;
+height: 2px;
+width: 70px;
+background: #ff0051;
+content: "";
+}
+
 
 /* Bag page */
 
