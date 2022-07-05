@@ -519,7 +519,7 @@ input[name='q']::placeholder {
 .btn-custom {
     font-weight: 400;
     line-height: 1.5;
-    color: #FFFFFF;
+    color: #00ece2;
     background-color: #000000;
   }
 
@@ -665,9 +665,9 @@ a:not([href]) {
 
 /* Reviews */
 
-.product-details-description h4 {
+.review-heading {
     margin-bottom: 28px;
-    font-size: 1rem;
+    font-size: 2rem;
     font-weight: 600;
     line-height: 1.5;
     color: #212529;
@@ -676,16 +676,44 @@ a:not([href]) {
     position: relative;
 }
 
-.title-heading h3::after {
-position: absolute;
-left: 0;
-bottom: -4px;
-height: 2px;
-width: 70px;
-background: #ff0051;
-content: "";
+.review-heading::after {
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    height: 2px;
+    width: 70px;
+    background: #ff0051;
+    content: "";
 }
 
+.blockquote-custom {
+    position: relative;
+    font-size: 1.1rem;
+    border: 1px solid #000000;
+    }
+    
+.blockquote-custom-icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -40px;
+    left: 19px;
+}
+
+.quote-square {
+    background-color: #5247d4;
+}
+
+.edit-buttons a {
+    font-size: 80%;
+}
+
+.quote-box {
+    background-color: #f5f7fa;
+}
 
 /* Bag page */
 

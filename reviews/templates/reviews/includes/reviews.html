@@ -1,82 +1,77 @@
 {% block content %}
 {% load static %}
+
 <!-- Reviews Section -->
-<div class="columns is-justify-content-center has-text-centered">
-    <div class="column">
-        <h3 class="title-heading has-text-centered">Reviews</h3>
-    </div>
-</div>
-<div class="columns is-justify-content-center is-multiline my-3">
-    {% if reviews %}
-    {% for review in product.reviews.all %}
-    <div class="column is-7 is-10-mobile is-offset-1-mobile card review-card my-3">
-        <div class="card-header-title">
-            <h4 class="title-heading-small">Customer Review
-            </h4>
-        </div>
-        <div class="card-content">
-            <p class="mb-3">{{ review.description }}</p>
-            <p>
-            <i class="fas fa-star mr-1">
-            </i> -
-            <strong>{{ review.star_rating }}
-            </strong>
-            </p>
-            {% if request.user.is_authenticated %} 
-            {% if request.user|lower == review.user|lower %}
-            <!-- Edit / Delete review if user's review -->
-            <small class="ml-3">
-              <a href="{% url 'edit_review' review.id %}" class="btn">Edit my review
-                <i class="far fa-edit">
-                </i>
-              </a>
-              <a href="{% url 'delete_review' review.id %}" class="btn text-danger">Delete my review
-                <i class="far fa-trash-alt">
-                </i>
-              </a>
-            </small>
-            {% endif %}
-            {% endif %}
-          </p>
-          <hr>
-        </div>
-        <div class="card-footer is-justify-content-right py-3">
-            <p class="subtitle-att">{{ review.user }}, {{ review.review_time|date:"M d, Y" }}</p>
-        </div>
-    </div>
-    {% endfor %}
-    {% else %}
-    <div class="column">
-        <h4 class="title-heading-small">There are no reviews for {{ product.name }} yet.</h4>
-        <h5 class="title-heading-small">Why don't you add one?</h5>
-    </div>
-    {% endif %}
-</div>
-{% if user.is_authenticated %}
-<div class="columns is-justify-content-center my-4">
-    <div class="column is-7 is-10-mobile is-offset-1-mobile card add-review-card my-4">
-        <h5 class="title-heading-small">Add your review here</h5>
-        <form action="{% url 'add_review' product.id %}#reviews" method="POST">
-            {% csrf_token %}
+<section class="mb-5">
+    <div class="card bg-light">
+        <div class="card-body">
+            <h3 class="review-heading">Reviews</h3>
+            {% if user.is_authenticated %}
+                    <h5 class="title-heading-small">Add your review here</h5>
+                    <a href="{% url 'add_review' product.id %}" class="btn btn-custom rounded-0" aria-label="add review">Add Review <i
+                        class="fas fa-plus ml-2"></i></a>
+            {% else %}
             <div class="columns">
                 <div class="column">
-                    {{ form|crispy }}
+                    <h6 class="title-heading-small">
+                        Please <a href="{% url 'account_login' %}">log in</a> to add a review of a product.</h6>
                 </div>
             </div>
-            <div class="columns has-text-centered reverse-mobile">
-                <div class="column is-6">
-                    <button class="btn btn-custom rounded-0" type="submit">Add Review <i class="fas fa-plus ml-2"></i></button>
+            {% endif %}
+            <hr>
+            {% if reviews %}
+            {% for review in product.reviews.all %}
+            <div class="quote-box">
+                <div class="container py-5 h-100">
+                    <div class="row d-flex align-items-center">
+                        <div class="col col-md-9 col-lg-7 col-xl-5">
+                            <blockquote class="blockquote blockquote-custom bg-white px-3 pt-4">
+                                <div class="blockquote-custom-icon quote-square shadow-1-strong">
+                                    <i class="fa fa-quote-left text-white"></i>
+                                </div>
+                                <p class="mb-0 mt-2 font-italic">
+                                    {{ review.description | linebreaks }}
+                                </p>
+                                <div class="blockquote-footer pt-4 mt-4 border-top">
+                                    <div class="fw-bold">{{ review.user }}, created a review on
+                                        {{ review.review_time|date:"M d, Y" }} and gave this product a
+                                        <strong>{{ review.star_rating }} - <i
+                                                class="fas fa-star mr-1"></i></strong>rating.
+                                    </div>
+                                    {% if request.user.is_authenticated %}
+                                    {% if request.user|lower == review.user|lower %}
+                                    <!-- Edit / Delete review if user's review -->
+                                    <p class="edit-buttons text-right">
+                                        <a href="{% url 'edit_review' review.id %}" class="btn">Edit my review
+                                            <i class="far fa-edit">
+                                            </i>
+                                        </a>
+                                        <a href="{% url 'delete_review' review.id %}" class="btn text-danger">Delete my
+                                            review
+                                            <i class="far fa-trash-alt">
+                                            </i>
+                                        </a>
+                                    </p>
+                                    {% endif %}
+                                    {% endif %}
+                                </div>
+                            </blockquote>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </form>
+        </div>
+        {% if forloop.counter|divisibleby:3 %}
     </div>
-</div>
-{% else %}
-<div class="columns">
+        <div class="row">
+            {% endif %}
+            {% endfor %}
+        </div>
+    {% else %}
     <div class="column">
-        <h6 class="title-heading-small">
-            Please <a href="{% url 'account_login' %}">log in</a> to add a review of a product.</h6>
+        <h5 class="title-heading-small">There are no reviews for {{ product.name }} yet.</h5>
+        <h6 class="title-heading-small">Why don't you add one?</h6>
     </div>
-</div>
-{% endif %}
-{% endblock %}
+    {% endif %}
+    {% endblock %}
+</section>

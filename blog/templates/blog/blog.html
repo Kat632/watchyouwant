@@ -22,10 +22,15 @@
 {% block content %}
 <div class="overlay"></div>
 <div class="container">
+    <div class="row bg-light py-5">
+        <div class="container-fluid">
+                <img class="img-fluid header-image" src="{{ MEDIA_URL }}heather-zabriskie-yBzrPGLjMQw-unsplash.jpg" alt="Pile of old broken watches">
+        </div>
+    </div>
     <div class="row">
         <div class="col">
             <hr>
-            <h2 class="logo-font mb-4">Blog</h2>
+            <h2 class="blog-title mb-4">Blog</h2>
             <hr>
         </div>
     </div>
@@ -43,7 +48,7 @@
 
             {% for blog in blogpost_list %}
             <div class="col-md-6 col-lg-3 col-xl-3 mx-auto mt-3">
-                <div class="card box-shadow h-100">
+                <div class="card blog-box h-100">
                     {% if "placeholder" in blog.featured_image.url %}
                     {% load static %}
                     <img class="card-img-top" src=""
@@ -53,8 +58,8 @@
                         alt="{{ blog.title }}">
                     {% endif %}
                     <div class="card-body">
-                        <h3 class="card-title dancing-text">{{ blog.title }}</h3>
-                        <p class="card-text">{{ blog.excerpt }}</p>
+                        <h3 class="card-title blog-name">{{ blog.title }}</h3>
+                        <p class="card-text blog-blurb">{{ blog.excerpt }}</p>
                     </div>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item align-items-center"><i class="fa-solid fa-heart"></i>
@@ -63,7 +68,7 @@
                     </ul>
 
                     <div class="card-footer">
-                        <a href="{% url 'blog_detail' blog.slug %}" class="btn btn-recipe align-items-center">View
+                        <a href="{% url 'blog_detail' blog.slug %}" class="btn btn-blog justify-content-center">View
                             Post</a>
                     </div>
                 </div>
