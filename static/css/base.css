@@ -590,7 +590,7 @@ a:not([href]) {
     text-decoration: none;
 }
 
-.card-img-top:hover {
+.card-img-top:not(.disabled):hover {
     transform: scale(1.1);
 }
 

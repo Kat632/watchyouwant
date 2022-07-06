@@ -1,25 +1,3 @@
-.header-image {
-    width: 100%;
-    height: 50%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-  }
-
-  .blog-box {
-    border: 4px;
-    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
-  }
-
-.card-img-top {
-    width: 100%;
-    height: 15vw;
-    object-fit: cover;
-    min-height: 200px;
-    border-radius: 0;
-}
-
 .blog-title {
   color: #111111;
   font-weight: 600;
@@ -38,49 +16,164 @@
   content: "";
 }
 
-.blog-name {
-  color: #000000;
-  font-weight: 600;
-  font-size: 1.5em;
-  line-height: 1.3em;
-  margin-top: 0;
-  margin-bottom: 5px;
-  padding: 0; 
+.card {
+  border: none;
+  background-color: transparent;
 }
 
-.blog-blurb {
-  color: #747373;
-  font-size: 14px;
+.card-title {
+  color: #111111;
   font-weight: 400;
-  font-size: 1em;
-  line-height: 1.5;
-  margin: 0px;
-  margin-bottom: 20px;
-  padding: 0;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
 }
 
-.btn-blog {
-    background-color: #5247d4;
-	  color: #fff;
-	  box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
-    padding: .84rem 2.14rem;
-    font-size: .81rem;
-    -webkit-transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
-    -o-transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
-    margin: 0;
-    border: 0;
-    -webkit-border-radius: .125rem;
-    border-radius: .125rem;
-    cursor: pointer;
-    text-transform: uppercase;
-    white-space: normal;
-    word-wrap: break-word;
-    color: #fff;
+.card-title::after {
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  height: 2px;
+  width: 70px;
+  background: #ff0051;
+  content: "";
 }
 
-.btn-blog:hover {
-  background: #d358e0;
+.image-container {
+  position: relative;
+}
+/* Modifying style for top of article titles */
+.image-flash-top {
+  position: absolute;
+  top: 0%;
+  min-width: 18%;
+  background-color: #5247d4;
+}
+/* Modifying style for bottom of article titles */
+.image-flash-bottom {
+  position: absolute;
+  bottom: 0%;
+  min-width: 18%;
+  background-color: #5247d4;
+}
+
+.author {
+  color: white;
+  font-weight: 600;
+  margin: 4px;
+  text-transform: uppercase;
+}
+
+.masthead {
+  margin-top: 10px;
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  /* Update height to max-height to avoid dead space on larger screens */
+  max-height: 30vh;
+  width: 100%;
+}
+
+.masthead-text {
+  background-color: #5247d4;
+  color: white;
+  position: relative;
+}
+
+.masthead-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.masthead-image:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 90%;
+  height: 100%;
+  width: 150%;
+  background: #5247d4;
+  -webkit-transform: skew(15deg);
+  -moz-transform: skew(15deg);
+  transform: skew(15deg);
+  z-index: 100;
+}
+
+.post-subtitle i {
+  margin-bottom: 2px;
+}
+
+.border-blog {
+  border: 2px solid #111111;
+}
+
+.border-blog a {
+  text-decoration: none;
+}
+
+/* Update color to green in line with website color palette for Surface UX consistency */
+.page-link {
+  color: #5247d4;
+}
+/* Pull titles up towards top of container for better responsivity */
+.post-title {
+  margin-top: 15%;
+  margin-left: 5%;
+}
+/* Add uppercase text transform to emphasise author on article detail page */
+.post-subtitle {
+  text-transform: uppercase;
+  margin-left: 5%;
+  color: lightgray;
+}
+/* Used on signup & login html tempaltes - white to contrast with green background */
+.link {
+  color: #fff;
+  text-decoration: underline;
+}
+/* Keep white on hover to esnure default blue does not clash w/green background */
+.link:hover,
+.link:active {
+  color: #fff;
+  text-decoration:underline;
+}
+
+.btn-like {
+  color: #5247d4;
+  border: none;
+  background: transparent;
+}
+
+.btn-like:hover,
+.btn-like:active {
+  color: #5247d4;
+  background: transparent;
+  border: none;
+}
+
+.card-body-background {
+  background-color: #f9fafce5;
+}
+
+.blue {
+  background-color: #5247d4;
+}
+
+.blueicon {
+  color: #5247d4;
+}
+
+.blueicon-small {
+  padding-right: 5px;
+}
+
+/* Lines */
+.fat {
+  background-color:#5247d4;
+  height:3px!important;
+}
+
+.thin {
+  background-color: #5247d4;
+  font-weight: 300;
 }
