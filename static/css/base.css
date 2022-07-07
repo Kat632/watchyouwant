@@ -37,7 +37,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .search-form form input {
-    height: 52px;
+    height: 55px;
     width: 100%;
     border: 1px solid #e1e1e1;
     padding-left: 30px;
@@ -435,7 +435,6 @@ button {
 .btn-black {
     background: black;
     color: white;
-    max-width: 150px;
 }
 
 .btn-purple {
@@ -544,7 +543,7 @@ input[name='q']::placeholder {
 /* Products page */
 
 .breadcrumb {
-    padding-top: 25px;
+    padding-top: 30px;
     background: #ffffff;
 }
 
@@ -669,6 +668,7 @@ a:not([href]) {
 /* Reviews */
 
 .review-heading {
+    margin-top: 20px;
     margin-bottom: 28px;
     font-size: 2rem;
     font-weight: 600;
@@ -726,10 +726,6 @@ a:not([href]) {
     font-size: 18px;
     font-weight: 600;
     padding-bottom: 20px;
-}
-
-.bag-form > .form-control {
-    width: 60%;
 }
 
 /* Bootstrap toasts */
