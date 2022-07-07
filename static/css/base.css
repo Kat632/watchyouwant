@@ -75,15 +75,13 @@ h1,h2,h3,h4,h5,h6 {
     cursor: pointer;
 }
 
-.header-right-widgets a {
-    font-size: 14px;
-    color: #666;
-    position: relative;
-    margin-right: 8px;
-}
-
 .header-logo {
     padding: 26px 0;
+}
+
+a.bag-info:focus,
+a.bag-info:hover {
+    color: #d358e0;
 }
 
 /* from Bulma */
@@ -527,16 +525,21 @@ input[name='q']::placeholder {
     pointer-events: none;
   }
   
-  .btn-custom:hover {
-    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
-    transform: translateY(-2px);
-    color: #FFFFFF;
-  }
-  
   .btn-custom:active {
     box-shadow: none;
     transform: translateY(0);
   }
+
+  .btn-custom {
+    color: #FFFFFF;
+    background-color: #000000;
+}
+
+.btn-custom:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+    color: #FFFFFF;
+}
 
 /* Products page */
 
@@ -795,6 +798,26 @@ a:not([href]) {
     height: 100px;
     overflow-x: hidden;
     overflow-y: auto;
+}
+
+/* contact page css */
+
+table.col {
+    margin: auto;
+}
+
+.mb-2 {
+    text-align: center;
+}
+
+.contact-form form input {
+    height: 52px;
+    width: 100%;
+    border: 1px solid #e1e1e1;
+    padding-left: 30px;
+    font-size: 14px;
+    color: #666;
+
 }
 
 /* -------------------------------- Media Queries */

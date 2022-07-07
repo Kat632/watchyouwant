@@ -88,7 +88,7 @@
                             </div>
                         </li>
                         <li class="list-inline-item">
-                            <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
+                            <a class="{% if grand_total %}bag-info font-weight-bold{% else %}text-black{% endif %} nav-link"
                                 href="{% url 'view_bag' %}">
                                 <div class="text-center">
                                     <div><i class="fas fa-shopping-bag fa-lg"></i></div>
@@ -164,16 +164,16 @@
                         <h6>Quick Links</h6>
                         <ul>
                             <li>
-                                <a href="#">Blog</a>
+                                <a href="{% url 'blog' %}">Blog</a>
                             </li>
                             <li>
-                                <a href="#">Terms & Conditions</a>
+                                <a href="{% url 'terms' %}">Terms & Conditions</a>
                             </li>
                             <li>
-                                <a href="#">FAQs</a>
+                                <a href="{% url 'privacy' %}">Privacy Policy</a>
                             </li>
                             <li>
-                                <a href="#">Contact Us</a>
+                                <a href="{% url 'contact' %}">Contact Us</a>
                             </li>
                         </ul>
                     </div>
@@ -183,10 +183,10 @@
                         <h6>Account</h6>
                         <ul>
                             <li>
-                                <a href="#">My Account</a>
+                                <a href="{% url 'profile' %}">My Account</a>
                             </li>
                             <li>
-                                <a href="#">My Bag</a>
+                                <a href="{% url 'view_bag' %}">My Bag</a>
                             </li>
                             <li>
                                 <a href="#">Wishlist</a>
