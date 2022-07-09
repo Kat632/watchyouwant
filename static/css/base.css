@@ -102,7 +102,9 @@ a.bag-info:hover {
     margin-bottom: 10px;
     margin-right: 10px;
 }
+
 .big-box {
+    position:relative;
     height: 638px;
     padding-left: 70px;
     background: #00ece2;
@@ -112,6 +114,14 @@ a.bag-info:hover {
     height: 205px;
     text-align: left;
     bottom: 5px;
+}
+
+.big-box img {
+    position: relative;
+    height: 600px;
+    text-align: left;
+    bottom: 0;
+    z-index: 0;
 }
 
 .categories-text a {
@@ -124,6 +134,7 @@ a.bag-info:hover {
     display: inline-block;
     text-decoration: none;
     background-color: transparent;
+    z-index: 1;
 }
 
 .categories-text a::after {

@@ -18,7 +18,8 @@
         <div class="row">
             <div class="col-lg-6 p-0">
                 <div class="categories-item big-box">
-                    <div class="categories_text my-5">
+                    <img src="{{ MEDIA_URL }}woodwatch-5fiibEXMHRI-unsplash.png" alt="A lady showing her wrist watch to the camera">
+                    <div class="categories-text my-5">
                         <h1>View All</h1>
                         <p>View our entire range of stylish wrist watches. We supply individual watches for individual
                             people. Specialists in Casio, Fossil and Skagen.</p>
@@ -39,6 +40,7 @@
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6 p-0">
                         <div class="categories-item little-box little-box-2">
+                            
                             <div class="categories-text">
                                 <h2>Women</h2>
                                 <a href="{% url 'products' %}?category=women">Shop Now</a>
@@ -47,6 +49,7 @@
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6 p-0">
                         <div class="categories-item little-box little-box-3">
+                            <img src="{{ MEDIA_URL }}analia-baggiano-7_Gkf5JZRv4-unsplash(1).png" alt="Female arm with different coloured fingernails, wearing wrist watch">
                             <div class="categories-text">
                                 <h2>Unisex</h2>
                                 <a href="{% url 'products' %}?category=unisex">Shop Now</a>
@@ -63,6 +66,7 @@
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6 p-0">
                         <div class="categories-item little-box little-box-5">
+                            <img src="{{ MEDIA_URL }}casio_31QR12.png" alt="A vintage casio wrist watch with a silver metal case and strap">
                             <div class="categories-text">
                                 <h2>Restored</h2>
                                 <a href="{% url 'products' %}?category=restored">Shop Now</a>
@@ -71,6 +75,7 @@
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6 p-0">
                         <div class="categories-item little-box little-box-6">
+                            <img src="{{ MEDIA_URL }}woodwatch--Hr_uHRfImo-unsplash.png" alt="A woman wearing a hat and a wrist watch">
                             <div class="categories-text">
                                 <h2>Offers</h2>
                                 <a href="{% url 'products' %}?category=new_arrivals,deals,clearance">Shop Now</a>
@@ -134,13 +139,16 @@
                                         <p class="lead mb-0 text-left font-weight-bold">£{{ product.price }}</p>
                                         {% if product.rating %}
                                         <div class="rating">
-                                        <small class="text-muted">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i> {{ product.rating }} /
-                                            5</small>
+                                            <span class="stars">
+                                                <small class="text-muted">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i> 
+                                                </small>
+                                            </span>
+                                            <small>{{ product.rating }} / 5</small>
                                         </div>
                                         {% else %}
                                         <small class="text-muted">No Rating</small>
