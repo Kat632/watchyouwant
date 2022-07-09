@@ -23,10 +23,11 @@
 
 .card-title {
   color: #111111;
-  font-weight: 400;
+  font-weight: bold;
   text-transform: uppercase;
   position: relative;
   display: inline-block;
+  font-size: 20px;
 }
 
 .card-title::after {
@@ -37,6 +38,14 @@
   width: 70px;
   background: #ff0051;
   content: "";
+}
+
+.card-body {
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.card-img-top {
+  max-height: 500px;
 }
 
 .image-container {
@@ -59,7 +68,7 @@
 
 .author {
   color: white;
-  font-weight: 600;
+  font-weight: 400;
   margin: 4px;
   text-transform: uppercase;
 }
