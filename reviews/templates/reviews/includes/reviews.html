@@ -4,7 +4,7 @@
 <!-- Reviews Section -->
 <section class="mb-5">
     <div class="card bg-light">
-        <div class="card-body">
+        <div class="review-body">
             <h3 class="review-heading">Reviews</h3>
             {% if user.is_authenticated %}
                     <h5 class="title-heading-small">Add your review here</h5>
@@ -18,55 +18,74 @@
                 </div>
             </div>
             {% endif %}
-            <hr>
+
+    <div class="container text-center text-md-left mb-3">
+        <div class="row text-center text-md-left g-3 card-row">
+
             {% if reviews %}
             {% for review in product.reviews.all %}
-            <div class="quote-box">
-                <div class="container py-5 h-100">
-                    <div class="row d-flex align-items-center">
-                        <div class="col col-md-9 col-lg-7 col-xl-5">
-                            <blockquote class="blockquote blockquote-custom bg-white px-3 pt-4">
-                                <div class="blockquote-custom-icon quote-square shadow-1-strong">
-                                    <i class="fa fa-quote-left text-white"></i>
-                                </div>
-                                <p class="mb-0 mt-2 font-italic">
-                                    {{ review.description | linebreaks }}
-                                </p>
-                                <div class="blockquote-footer pt-4 mt-4 border-top">
-                                    <div class="fw-bold">{{ review.user }}, created a review on
-                                        {{ review.review_time|date:"M d, Y" }} and gave this product a
-                                        <strong>{{ review.star_rating }} - <i
-                                                class="fas fa-star mr-1"></i></strong>rating.
-                                    </div>
-                                    {% if request.user.is_authenticated %}
-                                    {% if request.user|lower == review.user|lower %}
-                                    <!-- Edit / Delete review if user's review -->
-                                    <p class="edit-buttons text-right">
-                                        <a href="{% url 'edit_review' review.id %}" class="btn">Edit my review
-                                            <i class="far fa-edit">
-                                            </i>
-                                        </a>
-                                        <a href="{% url 'delete_review' review.id %}" class="btn text-danger">Delete my
-                                            review
-                                            <i class="far fa-trash-alt">
-                                            </i>
-                                        </a>
-                                    </p>
-                                    {% endif %}
-                                    {% endif %}
-                                </div>
-                            </blockquote>
+            <div class="col-md-6 col-lg-3 col-xl-3 mx-auto mt-3">
+                <div class="card box-shadow h-100">
+                    <div class="card-body">
+                        <div class="blockquote-custom-icon quote-square shadow-1-strong">
+                            <i class="fa fa-quote-left text-white"></i>
                         </div>
+                        <p class="card-text">{{ review.description | linebreaks }}</p>
+                    </div>
+                    <div class="card-footer">
+                        <div class="text-black"><small>Review by {{ review.user }}, on
+                            {{ review.review_time|date:"M d, Y" }}.</small>
+                        </div>
+                        <div class="text-black"><small>{{ review.user }} gave this product a
+                            <span class="review-star-rating">{{ review.star_rating }} - <i
+                                    class="fas fa-star mr-1"></i></span>rating.</small>
+                        </div>
+                        
+                        {% if request.user.is_authenticated %}
+                        {% if request.user|lower == review.user|lower %}
+                        <!-- Edit / Delete review if user's review -->
+                        <p class="edit-buttons text-right">
+                            <a href="{% url 'edit_review' review.id %}" class="btn">Edit my review
+                                <i class="far fa-edit">
+                                </i>
+                            </a>
+                            <a href="{% url 'delete_review' review.id %}" class="btn text-danger">Delete my
+                                review
+                                <i class="far fa-trash-alt">
+                                </i>
+                            </a>
+                        </p>
+                        {% endif %}
+                        {% endif %}
                     </div>
                 </div>
             </div>
+            {% if forloop.counter|divisibleby:3 %}
         </div>
-        {% if forloop.counter|divisibleby:3 %}
-    </div>
         <div class="row">
             {% endif %}
             {% endfor %}
         </div>
+        <div class="row mt-3">
+            {% if is_paginated %}
+            <nav aria-label="Page Navigation">
+                <ul class="pagination justify-content-center">
+                    {% if page_obj.has_previous %}
+                    <li>
+                        <a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo;
+                            Previous</a>
+                    </li>
+                    {% endif %}
+                    {% if page_obj.has_next %}
+                    <li>
+                        <a href="?page={{ page_obj.next_page_number }}" class="page-link">Next &raquo;</a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </nav>
+            {% endif %}
+        </div>
+    </div>
     {% else %}
     <div class="column">
         <h5 class="title-heading-small">There are no reviews for {{ product.name }} yet.</h5>

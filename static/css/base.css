@@ -711,13 +711,19 @@ a:not([href]) {
     content: "";
 }
 
-.blockquote-custom {
+.card-row {
+    margin-top: 40px;
+}
+
+.card-body,
+.card-footer {
     position: relative;
     font-size: 1.1rem;
     border: 1px solid #000000;
-    }
+}
     
 .blockquote-custom-icon {
+    margin-top: 25px;
     width: 50px;
     height: 50px;
     display: flex;
@@ -732,12 +738,21 @@ a:not([href]) {
     background-color: #5247d4;
 }
 
+.card-text {
+    padding-top: 10px;
+}
+
 .edit-buttons a {
     font-size: 80%;
 }
 
 .quote-box {
     background-color: #f5f7fa;
+}
+
+.review-star-rating {
+    background: #000000;
+    color: #effc00;
 }
 
 /* Bag page */
