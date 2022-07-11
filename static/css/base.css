@@ -392,7 +392,8 @@ footer-about {
 .footer-newsletter form button {
     position: absolute;
     right: 4px;
-    top: 4px;
+    top: 2px;
+    bottom: 2px;
 }
 
 .footer-newsletter form input {
@@ -402,6 +403,10 @@ footer-about {
     padding-left: 30px;
     font-size: 14px;
     color: #666;
+}
+
+.footer-newsletter form input:focus {
+    outline: none !important;
 }
 
 .footer-social a {
@@ -416,6 +421,12 @@ footer-about {
     border-radius: 50%;
     margin-right: 6px;
     margin-bottom: 5px;
+}
+
+.footer-social a:hover {
+    background:#00ece2;
+    transform: scale(1.1);
+
 }
 
 .footer-copyright-text {
@@ -819,7 +830,7 @@ a:not([href]) {
     overflow-y: auto;
 }
 
-/* contact page css */
+/* Contact page css */
 
 table.col {
     margin: auto;
