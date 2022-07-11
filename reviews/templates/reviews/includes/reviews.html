@@ -20,19 +20,19 @@
             {% endif %}
 
     <div class="container text-center text-md-left mb-3">
-        <div class="row text-center text-md-left g-3 card-row">
+        <div class="row text-center text-md-left g-3 card-row-review">
 
             {% if reviews %}
             {% for review in product.reviews.all %}
             <div class="col-md-6 col-lg-3 col-xl-3 mx-auto mt-3">
                 <div class="card box-shadow h-100">
-                    <div class="card-body">
+                    <div class="card-body card-body-review">
                         <div class="blockquote-custom-icon quote-square shadow-1-strong">
                             <i class="fa fa-quote-left text-white"></i>
                         </div>
                         <p class="card-text">{{ review.description | linebreaks }}</p>
                     </div>
-                    <div class="card-footer">
+                    <div class="card-footer card-footer-review">
                         <div class="text-black"><small>Review by {{ review.user }}, on
                             {{ review.review_time|date:"M d, Y" }}.</small>
                         </div>
