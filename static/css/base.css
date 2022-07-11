@@ -329,12 +329,6 @@ a.bag-info:hover {
     margin-bottom: 0;
 }
 
-/* Contact */
-
-.contact-details {
-    border-left: 2px solid #ff43ab;
-}
-
 /* Footer */
 .footer {
     padding-top: 55px;
@@ -542,18 +536,13 @@ input[name='q']::placeholder {
     background-color: #000000;
   }
 
-  .btn-custom:disabled {
+.btn-custom:disabled {
     pointer-events: none;
-  }
+}
   
-  .btn-custom:active {
+.btn-custom:active {
     box-shadow: none;
     transform: translateY(0);
-  }
-
-  .btn-custom {
-    color: #FFFFFF;
-    background-color: #000000;
 }
 
 .btn-custom:hover {
@@ -746,13 +735,10 @@ a:not([href]) {
     font-size: 80%;
 }
 
-.quote-box {
-    background-color: #f5f7fa;
-}
-
 .review-star-rating {
     background: #000000;
     color: #effc00;
+    font-weight: bold;
 }
 
 /* Bag page */
@@ -839,8 +825,22 @@ table.col {
     margin: auto;
 }
 
+.contact-details {
+    border-left: 2px solid #ff43ab;
+}
+
 .mb-2 {
     text-align: center;
+}
+
+.contact-form {
+    padding-right: 30px;
+    padding-bottom: 30px;
+}
+
+.contact-details {
+    padding-left: 30px;
+    padding-bottom: 30px;
 }
 
 .contact-form form input {
@@ -849,8 +849,8 @@ table.col {
     border: 1px solid #e1e1e1;
     padding-left: 30px;
     font-size: 14px;
-    color: #666;
-
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 /* -------------------------------- Media Queries */
