@@ -100,7 +100,8 @@ a.bag-info:hover {
 
 /* Page Content */
 
-.categories-item {
+.categories-item,
+.big-box-item {
     padding: 0;
     display: flex;
     align-items: center;
@@ -125,7 +126,7 @@ a.bag-info:hover {
     position: relative;
     height: 600px;
     text-align: left;
-    bottom: 0;
+    bottom: -19px;
     z-index: 0;
 }
 
