@@ -1087,3 +1087,12 @@ table.col {
         z-index: 1;
     }
 }
+
+@media (min-width: 571px) and (max-width: 760px) {
+    .categories-text h2,
+    .categories-text-right h2 {
+        font-size: 18px;
+        margin-left: -5px;
+        z-index: 1;
+    }
+}
