@@ -157,7 +157,8 @@ a.bag-info:hover {
     content: "";
 }
 
-.categories-text a {
+.categories-text a,
+.categories-text-right a {
     font-size: 14px;
     color: #111111;
     text-transform: uppercase;
@@ -168,6 +169,16 @@ a.bag-info:hover {
     text-decoration: none;
     background-color: transparent;
     z-index: 1;
+}
+
+.categories-text-right a::after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background: #ff43ab;
+    content: "";
 }
 
 .categories-text a::after {
@@ -1001,7 +1012,7 @@ table.col {
     }
 
     .header-container {
-        padding-top: 210px;
+        padding-top: 230px;
     }
 }
 
