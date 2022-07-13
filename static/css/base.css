@@ -1017,3 +1017,12 @@ table.col {
         padding: .25rem .5rem !important;
     }
 }
+
+/* Fix text in home page coloured boxes on smaller screen sizes */
+
+@media (max-width: 644px) {
+    .big-box > .categories-text {
+        margin-left: -300px;
+        z-index: 1;
+    }
+}
