@@ -202,7 +202,7 @@ With the user stories in mind, I created the below strategy table to determine t
 | EPIC #5 | Allow Site Admin to manage the site |
 | id  |  content | how was it satisfied
 | ------ | ------ | ------ |
-|  [#110](https://github.com/Kat632/watchyouwant/issues/32) | As a Site Admin, I want to be able to add a product so that I can add new items to my store. | admin panel, products app |
+|  [#110](https://github.com/Kat632/watchyouwant/issues/33) | As a Site Admin, I want to be able to add a product so that I can add new items to my store. | admin panel, products app |
 |  [#118](https://github.com/Kat632/watchyouwant/issues/34) | As a Site Admin, I want to be able to edit and update products so that I can change product prices, descriptions, images and other product criteria. | admin panel, products app
 |  [#110](https://github.com/Kat632/watchyouwant/issues/35) | As a Site Admin, I want to be able to delete a product so that I can remove items that are no longer for sale. | admin panel, products app |
 |  [#110](https://github.com/Kat632/watchyouwant/issues/36) | As a Site Admin, I want to be able to write a blog post so that I can add new posts to my blog. | admin panel, blog app |

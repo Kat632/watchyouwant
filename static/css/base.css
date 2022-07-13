@@ -130,6 +130,29 @@ a.bag-info:hover {
     z-index: 0;
 }
 
+.view-all-text a{
+    font-size: 14px;
+    color: #00ece2;
+    text-transform: uppercase;
+    font-weight: 600;
+    position: relative;
+    padding: 0 0 3px;
+    display: inline-block;
+    text-decoration: none;
+    background-color: transparent;
+    z-index: 1;
+}
+
+.view-all-text a::after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background: #00ece2;
+    content: "";
+}
+
 .categories-text a {
     font-size: 14px;
     color: #111111;
