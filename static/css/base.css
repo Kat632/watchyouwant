@@ -1066,8 +1066,24 @@ table.col {
 /* Fix text in home page coloured boxes on smaller screen sizes */
 
 @media (max-width: 644px) {
-    .big-box > .categories-text {
+    .view-all-text {
         margin-left: -300px;
+        z-index: 1;
+    }
+}
+
+@media (max-width: 352px) {
+    .big-box img {
+        margin-left: -52px;
+    }
+    
+    .little-box img {
+        margin-left: -20px;
+    }
+    .categories-text h2,
+    .categories-text-right h2 {
+        font-size: 18px;
+        margin-left: -5px;
         z-index: 1;
     }
 }
