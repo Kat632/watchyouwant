@@ -56,7 +56,7 @@
             <div class="col-xl-3 col-lg-2 my-auto py-1 py-lg-0 text-center text-lg-left">
                 <div class="header-logo">
                     <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                        <img src="" alt="Watch You Want logo" style="width:100px; height:100px;">
+                        <img src="{% static 'media/watchyouwant_logo_new.png' %}" alt="Watch You Want logo" style="height:175px;">
                     </a>
                 </div>
             </div>
@@ -100,7 +100,8 @@
                             <a class="{% if grand_total %}bag-info font-weight-bold{% else %}text-black{% endif %} nav-link"
                                 href="{% url 'view_bag' %}">
                                 <div class="text-center">
-                                    <div><i class="fas fa-shopping-bag fa-lg"></i></div>
+                                    <div
+                                    ><i class="fas fa-shopping-bag fa-lg"></i></div>
                                     <p class="my-0">
                                         {% if grand_total %}
                                         £{{ grand_total|floatformat:2 }}
@@ -162,8 +163,8 @@
                     <div class="footer-about">
                         <div class="footer-logo">
                             <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                                <img src="{% static 'media/watchyouwant_logo.png' %}" alt="Watch You Want logo"
-                                    width="150" height="150" class="d-inline-block align-text-top">
+                                <img src="{% static 'media/watchyouwant_logo_new.png' %}" alt="Watch You Want logo"
+                                    height="150" class="d-inline-block align-text-top">
                             </a>
                         </div>
                     </div>

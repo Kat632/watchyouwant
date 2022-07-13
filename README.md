@@ -7,7 +7,7 @@
 
 [![showpiece home page](README_docs/showpieces/01-home.PNG)](https://watchyouwant-pp5.herokuapp.com/)
 
-Click [here](https://watchyouwant-pp5.herokuapp.com/) to live site.
+Click [here](https://watchyouwant-pp5.herokuapp.com/) to visit the live site.
 ------
 
 ## Introduction
