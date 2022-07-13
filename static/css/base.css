@@ -84,9 +84,13 @@ a {
     padding: 26px 0;
 }
 
+a.bag-info {
+    color: #111;
+}
+
 a.bag-info:focus,
 a.bag-info:hover {
-    color: #d358e0;
+    color: #5247d4;
 }
 
 /* from Bulma */
@@ -277,6 +281,13 @@ a.bag-info:hover {
 .blurb p {
     padding-top: 5px;
     padding-bottom: 10px;
+}
+
+.blog-link a {
+    background: #111111;
+    color: #00ece2;
+    font-weight: bold;
+    font-size: 18px;
 }
 
 /* Products */
