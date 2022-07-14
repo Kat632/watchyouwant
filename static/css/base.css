@@ -118,6 +118,7 @@ a.bag-info:hover {
     height: 638px;
     padding-left: 70px;
     background: #00ece2;
+    margin-left: 10px;
 }
 
 .categories-item img {
@@ -1020,7 +1021,7 @@ table.col {
     }
 
     .header-container {
-        padding-top: 305px;
+        padding-top: 285px;
     }
 }
 
