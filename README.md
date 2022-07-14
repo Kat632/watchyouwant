@@ -12,9 +12,11 @@ Click [here](https://watchyouwant-pp5.herokuapp.com/) to visit the live site.
 
 ## Introduction
 
-**Watch You Want?** is a full stack e-commerce website for the 5th and final projct of the Code Institute diploma in Software Development (e-commerce applications).
+**Watch You Want?** is a full stack e-commerce website for the 5th and final project of the Code Institute diploma in Software Development (e-commerce applications).
 
-The site is based on business logic used to create a centrally-owned dataset.  It provides an authentication mechanism to access certain parts of the site, which in turn provides the ability to purchase a product from the site.
+The site is a full B2C e-commerce website for a fictional watch shop selling brand new and restored watches.
+
+The site provides role based permissions for users to interact with a central dataset. It includes user authentication, email validation, full CRUD functionality for approved users for Products, Categories, Blog Posts and Reviews.
 
 The payment system uses Stripe.  Please note that this website is for EDUCATIONAL PURPOSES only and the credit card payment functionality is not set up to accept real payments.  Please do not enter any personal credit/debit card details when using the site.
 
@@ -28,20 +30,18 @@ When testing interactively, use a card number, such as 4242 4242 4242 4242. Ente
 
 This information has been taken directly from the [Stripe testing documentation](https://stripe.com/docs/testing).
 
-The app administrator is able to use CRUD functionality to manage products and blog posts, as well as having access to the admin panel of the site and full control of the database.
-
 ## UX
 
 ### Ideal User Demographic
-#### The ideal user of this website is:
-- Gift Givers
-- Trendy Individuals
-- Fashion-conscious Individuals
+#### The ideal users of this website are:
+- Gift givers
+- Trendy individuals
+- Fashion-conscious individuals
 - People looking for a treat for themselves
 - People who are interested in restoring and reusing old technology
 
 ### Development Planes
-Watch You Want? takes inspiration from the United Colours of Benetton and Swatch.  I wanted a 1980s vibe with neon colours.  I felt that this would help to differentiate the site from the ones mentioned below.
+The overall design of the **Watch You Want?** website takes inspiration from [United Colours of Benetton](https://gb.benetton.com/) and [Swatch](https://www.swatch.com/).  I wanted a simple, clean site with a 1980s vibe and neon colours.  I felt that this would help to differentiate the site from the ones mentioned below.
 
 #### Inspirations
 Having extensively researched e-commerce websites, and then latterly specific watch websites, I knew that I wanted the website to have a white background and to not be overly busy.  My research led me to [Watch Shop](https://www.watchshop.com/) and to [House of Watches](https://www.houseofwatches.co.uk/), both of which served as inspiration for **Watch You Want?**.
@@ -86,9 +86,8 @@ The website needs to enable the **Site Owner** to:
 - Add, edit and delete products on the site.
 - View orders on the admin screen.
 - Add, edit and delete blog posts.
-- Approve blog comments.
-
-
+- Approve or delete blog comments.
+- Delete reviews.
 
 The homepage gives the user plenty of choices to browse watches by specific category, or to view all products, either by way of the navbar dropdowns or by clicking on one of the choices in the coloured boxes.  If the user scrolls down further, they can immediately see anything in the "featured" category of products.
 
@@ -425,7 +424,7 @@ When a product image is clicked, it takes the user to a page with more details a
 
 ![product detail page](README_docs/readme_images/watchyouwant_product_detail_top.png)
 
-The top of the product detail page is divided into two halves.  The left-hand half contains a large product image and the right-hand half contains all the other details about the product, such as a longer description and features of the product.  At the bottom of this section is where the user will be able to change the quantity of the item, if they wish to purchase more than one and then add the product to their bag.  It is also possible to see if an item is out of stock here.  If an item is out of stock, the increment quantity buttons will not work and a user won't be able to add an item to their bag.
+The top of the product detail page is divided into two halves.  The left-hand half contains a large product image and the right-hand half contains all the other details about the product, such as a longer description and features of the product.  At the bottom of this section is where the user can to change the quantity of the item, if they wish to purchase more than one and then add the product to their bag.  It is also possible to see if an item is out of stock here.  If an item is out of stock, the increment quantity buttons will not work and a user won't be able to add an item to their bag.
 
 On mobile devices, this entire section will be in one column.
 
@@ -434,6 +433,7 @@ On mobile devices, this entire section will be in one column.
 The bottom of the product detail page is the review section.  A user can see reviews for the product they are viewing and logged-in users are also able to leave a review for the product.
 
 ### Shopping bag
+
 
 
 
