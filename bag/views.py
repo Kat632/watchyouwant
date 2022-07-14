@@ -23,20 +23,25 @@ def add_to_bag(request, item_id):
     bag = request.session.get('bag', {})
 
     # Determines if item exists and updates quantity or adds item.
-    if item_id in list(bag.keys()):
+    if item_id in list(bag.keys()) and product.stock_level != 0:
         bag[item_id] += quantity
         messages.success(request,
                          (f'Updated {product.name} '
                           f'quantity to {bag[item_id]}'))
+    elif product.stock_level == 0:
+        messages.error(request,
+        (f'{product.name} '
+         f'is out of stock'))
     else:
-        bag[item_id] = quantity
+        bag[item_id] = quantity and product.stock_level != 0
         messages.success(request,
-                         (f'Updated {product.name} '
-                          f'quantity to {bag[item_id]}'))
+                        (f'Updated {product.name} '
+                         f'quantity to {bag[item_id]}'))
         # Overwrites the bag variable in the session with updated version.
         request.session['bag'] = bag
 
-        return redirect(redirect_url)
+
+    return redirect(redirect_url)
 
 
 def adjust_bag(request, item_id):
