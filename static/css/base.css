@@ -335,8 +335,16 @@ a.bag-info:hover {
 
 .rating i {
     font-size: 10px;
-    color: #effc00;
     margin-right: -4px;
+    margin-left: 4px;
+}
+
+.star-filled {
+    color: #effc00;
+}
+
+.star-empty {
+    color: #F8F9FA;
 }
 
 .product-item-text .product-price {

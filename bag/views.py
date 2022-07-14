@@ -30,16 +30,15 @@ def add_to_bag(request, item_id):
                           f'quantity to {bag[item_id]}'))
     elif product.stock_level == 0:
         messages.error(request,
-        (f'{product.name} '
-         f'is out of stock'))
+                       (f'{product.name} '
+                        f'is out of stock'))
     else:
         bag[item_id] = quantity and product.stock_level != 0
         messages.success(request,
-                        (f'Updated {product.name} '
-                         f'quantity to {bag[item_id]}'))
+                         (f'Updated {product.name} '
+                          f'quantity to {bag[item_id]}'))
         # Overwrites the bag variable in the session with updated version.
         request.session['bag'] = bag
-
 
     return redirect(redirect_url)
 
