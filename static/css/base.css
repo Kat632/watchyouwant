@@ -158,6 +158,12 @@ a.bag-info:hover {
     content: "";
 }
 
+.categories-text h2,
+.categories-text-right h2 {
+    font-size: 22px;
+    margin-left: -5px;
+}
+
 .categories-text a,
 .categories-text-right a {
     font-size: 14px;
