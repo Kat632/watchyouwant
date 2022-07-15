@@ -433,9 +433,23 @@ On mobile devices, this entire section will be in one column.
 The bottom of the product detail page is the review section.  A user can see reviews for the product they are viewing and logged-in users are also able to leave a review for the product.
 
 ### Shopping bag
+![shopping bag page](README_docs/readme_images/watchyouwant_shopping_bag.png)
 
+On the shopping bag page the user is able to see everything in their bag, including a product image, the quantity of the item they are ordering and the sub total of that item.  The user is also able to add more of an item to their bag, reduce the quantity or completely remove an item from their bag.  The subtotal and the bag total will respond accordingly.
 
+There are two buttons at the bottom.  If the user clicks on Keep Shopping it will take them back to the All Products page and if they click Secure Checkout, it will take them to the checkout page.
 
+### Checkout page
+![checkout page](README_docs/readme_images/watchyouwant_checkout_page.png)
+
+The checkout page is divided into two halves.  One half has a form for the user to input their details, and the other one has a summary of the order about to be purchased.  If the user is logged in, this form will appear pre-filled with their details if they have saved them to their account previously.  A user will always have to fill in their credit card details because the website does not store these details.
+
+There are two buttons at the bottom.  One will take the user back to their bag if they wish to adjust it and the second one confirms the payment.
+
+### Order confirmation
+![order confirmation page](README_docs/readme_images/watchyouwant_confirmation.png)
+
+The order confirmation page allows the user to see a summary of what they have just paid for, the address it is being sent to and successful completion of an order sends an email to the user.
 
 ### Blog
 

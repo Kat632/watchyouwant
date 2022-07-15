@@ -50,6 +50,7 @@
 
 .image-container {
   position: relative;
+
 }
 /* Modifying style for top of article titles */
 .image-flash-top {
@@ -74,12 +75,9 @@
 }
 
 .masthead {
-  margin-top: 10px;
   overflow: hidden;
   position: relative;
   display: inline-block;
-  /* Update height to max-height to avoid dead space on larger screens */
-  max-height: 30vh;
   width: 100%;
 }
 
@@ -87,25 +85,12 @@
   background-color: #5247d4;
   color: white;
   position: relative;
+  text-align: center;
+  vertical-align: middle;
 }
 
-.masthead-image {
-  position: relative;
-  overflow: hidden;
-}
-
-.masthead-image:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 90%;
-  height: 100%;
-  width: 150%;
-  background: #5247d4;
-  -webkit-transform: skew(15deg);
-  -moz-transform: skew(15deg);
-  transform: skew(15deg);
-  z-index: 100;
+.post-title {
+  margin-top: 15px;
 }
 
 .post-subtitle i {
@@ -120,27 +105,35 @@
   text-decoration: none;
 }
 
-/* Update color to green in line with website color palette for Surface UX consistency */
 .page-link {
   color: #5247d4;
 }
-/* Pull titles up towards top of container for better responsivity */
+
 .post-title {
-  margin-top: 15%;
-  margin-left: 5%;
+  padding-top: 15px;
 }
-/* Add uppercase text transform to emphasise author on article detail page */
+
 .post-subtitle {
   text-transform: uppercase;
   margin-left: 5%;
   color: lightgray;
 }
-/* Used on signup & login html tempaltes - white to contrast with green background */
+
 .link {
   color: #fff;
   text-decoration: underline;
 }
-/* Keep white on hover to esnure default blue does not clash w/green background */
+
+.blog-image-container {
+  max-width: 300px;
+  max-height: 350px;
+  margin-bottom: 25px;
+  margin: auto;
+}
+
+.card-text {
+  margin-top: 25px;
+}
 .link:hover,
 .link:active {
   color: #fff;

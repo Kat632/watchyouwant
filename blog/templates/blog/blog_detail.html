@@ -27,34 +27,24 @@
 <div class="container">
     <div class="row">
         <div class="col">
-            <hr>
         </div>
     </div>
 </div>
 
 <div class="masthead">
     <div class="container">
-        <div class="row g-0">
-            <div class="col-md-6 masthead-text">
-                <!-- The title of the Article is located in h1 tags here -->
+        <div class="row">
+            <div class="col-md-12 masthead-text">
                 <h1 class="post-title">{{ blog.title }}</h1>
-                <!-- The Article author goes before the | the article's creation date goes after -->
                 <p class="post-subtitle">Written By: {{ blog.author }} | {{ blog.publish_date }}</p>
-                <!-- Further customization to improve UX - pull in likes & comments as part of masthead -->
                 <p class="post-subtitle">
                     <i class="fas fa-thumbs-up pe-1"></i>
-                    {{ blog.amount_of_likes }}
+                    {{ blog.number_of_likes }}
+                    {% with comments.count as total_comments %}
+                    <i class="far fa-comments"></i>
+                        {{ total_comments }}
+                    {% endwith %}
                 </p>
-            </div>
-            <div class="d-none d-md-block col-md-6 masthead-image">
-                <!-- An updated & appropriate default image placeholder used here to differentiate & individualise the site/code -->
-                <!-- The featured image Cloudinary Storage URL goes in the src attribute -->
-                {% if "placeholder" in blog.featured_image.url %}
-                <img src="{{ MEDIA_URL }}heather-zabriskie-yBzrPGLjMQw-unsplash.jpg" alt="Pile of old broken watches"
-                    width="100%">
-                {% else %}
-                <img alt="Django Image" src=" {{ blog.featured_image.url }}" width="100%">
-                {% endif %}
             </div>
         </div>
     </div>
@@ -64,9 +54,14 @@
     <div class="row">
         <div class="col card mb-4 mt-3 left top">
             <div class="card-body">
-                <!-- The Article content is housed inside the card-text. -->
-                <!-- The | safe filter  is used inside the Jinja templating tags -->
-                <p class="card-text ">
+                <div class="blog-image-container">
+                    {% if blog.featured_image %}
+                        <img class="img-fluid" src="{{ blog.featured_image.url }}" alt="{{ blog.title }}">
+                    {% else %}
+                        <img class="img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ blog.title }}">
+                    {% endif %}
+                </div>
+                <p class="card-text">
                     {{ blog.content | safe }}
                 </p>
                 <div class="row">
@@ -90,7 +85,7 @@
                             <!-- Use thumbs-up icon to represent likes for positive UX -->
                             <span class="test-secondary"><i class="far fa-thumbs-up"></i></span>
                             {% endif %}
-                            <span class="text-secondary">{{ blog.amount_of_likes }} </span>
+                            <span class="text-secondary">{{ blog.number_of_likes }} </span>
                         </strong>
                     </div>
                     <!-- Update responsive bootstrap grid to ensure comments & likes display properly on smaller screen sizes -->
