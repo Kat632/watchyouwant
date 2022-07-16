@@ -748,6 +748,19 @@ a:not([href]) {
     font-size: 14px;
 }
 
+.delete-product {
+    cursor: pointer;
+}
+
+.delete-product:hover {
+    border-bottom:1px solid red;
+}
+
+.modal-header {
+    font-size: 14px;
+    color: red;
+}
+
 /* Reviews */
 
 .review-heading {

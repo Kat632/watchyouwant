@@ -97,8 +97,9 @@
                         {% endif %}
                         {% if request.user.is_superuser %}
                             <small class="ml-3">
-                                <a href="{% url 'edit_product' product.id %}">Edit</a> | 
-                                <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                                    <a href="{% url 'edit_product' product.id %}"><small>Edit</small></a>
+                                    <a class="text-danger delete-product" data-toggle="modal" data-target="#deleteProduct2"><small>Delete</small></a>
+                                </div>
                             </small>                                            
                         {% endif %}
                         <div class="product-details-price">
@@ -228,11 +229,31 @@
         </div>
     </div>
 </div>
+        <!-- delete modal -->
+        <div class="modal fade" id="deleteProduct2" tabindex="-1" role="dialog" aria-labelledby="deleteProduct2Label" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header text-center">
+                        <p>You are about to delete this product.</p>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <p>Are you sure you want to delete it?</p>
+                        <button type="button" class="btn-custom" data-dismiss="modal">Close</button>
+                        <a href="{% url 'delete_product' product.id %}" class="btn">Yes, delete it!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}   
 <!-- Includes -->
 {% include 'reviews/includes/reviews.html' %}
-{% endblock %}
+{% include 'products/includes/quantity_input_script.html' %}
 
 {% block postloadjs %}
 {{ block.super }}
-{% include 'products/includes/quantity_input_script.html' %}
+
 {% endblock %}
