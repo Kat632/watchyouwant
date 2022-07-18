@@ -89,15 +89,6 @@ The website needs to enable the **Site Owner** to:
 - Approve or delete blog comments.
 - Delete reviews.
 
-The homepage gives the user plenty of choices to browse watches by specific category, or to view all products, either by way of the navbar dropdowns or by clicking on one of the choices in the coloured boxes.  If the user scrolls down further, they can immediately see anything in the "featured" category of products.
-
-The checkout page features the ability to pay by Stripe in order for the user to make a purchase.
-
-A logged in user can also leave reviews for products and leave a comment on blog posts.
-
-A user can also sign up to the newsletter.
-
-
 ## Purpose
 
 The app is designed as a e-commerce application that encourages the users to purchase one of the products on the website and the watch restoration blog gives users the opportunity to engage with the website.
@@ -399,28 +390,28 @@ With the user stories in mind, I created the below strategy table to determine t
 
 
 
-## Existing Features
+## **Existing Features**
 
-### Navbar and Footer
+### **Navbar and Footer**
 
 ![home page](README_docs/readme_images/watchyouwant_home.png)
 
 A wide, deep navbar, incoporating a large logo and large icons has been designed for desktop users and narrow, simple navbar for mobile phone users. Each navbar appears and disapears according to bootstrap classes. 
 
-### Footer
+### **Footer**
 The footer is also wide and deep and is divided into three sections.  The first section is a logo that if clicked will take the user back to the home page.  The second section is a list of links pertaining to the user's account, in addition to links to the Privacy Policy, the Terms & Conditions and a link to the Contact Us page.  The third section has a link to sign up for the newsletter and links to social media presences.
 
-### Shop
+### **Shop**
 
 ![products page](README_docs/readme_images/watchyouwant_all_products.png)
 
 Each individual watch is set on its own bootstrap card. Cards are organised in grid utilising bootstrap classes. The mobile phone user will see one card in a row, medium screens will show 2 cards in a row and large screens will have 4 cards in a row.
 
-Each card has the name of the product, an image of the product, the price and the rating.  If the user is logged in as a superuser, they will also be able to edit and delete a product from here.
+Each card has the name of the product, an image of the product, the price and the rating.  If the user is logged in as a superuser, they will also be able to edit and delete a product from here.  If a superuser chooses to delete a product, a modal will appear asking them to confirm that this is what they want to do.
 
 When a product image is clicked, it takes the user to a page with more details about the given product.
 
-### Product Detail page
+### **Product Detail page**
 
 ![product detail page](README_docs/readme_images/watchyouwant_product_detail_top.png)
 
@@ -428,30 +419,32 @@ The top of the product detail page is divided into two halves.  The left-hand ha
 
 On mobile devices, this entire section will be in one column.
 
+A superuser is able to edit or delete a product from this page of the website.  If a user chooses to delete a product, a modal will appear asking them to confirm that this is what they want to do.
+
 ![product detail page](README_docs/readme_images/watchyouwant_product_detail_reviews.png)
 
-The bottom of the product detail page is the review section.  A user can see reviews for the product they are viewing and logged-in users are also able to leave a review for the product.
+The bottom of the product detail page is the review section.  A user can see reviews for the product they are viewing and logged-in users are also able to leave a review and a star-rating for the product.
 
-### Shopping bag
+### **Shopping bag**
 ![shopping bag page](README_docs/readme_images/watchyouwant_shopping_bag.png)
 
 On the shopping bag page the user is able to see everything in their bag, including a product image, the quantity of the item they are ordering and the sub total of that item.  The user is also able to add more of an item to their bag, reduce the quantity or completely remove an item from their bag.  The subtotal and the bag total will respond accordingly.
 
 There are two buttons at the bottom.  If the user clicks on Keep Shopping it will take them back to the All Products page and if they click Secure Checkout, it will take them to the checkout page.
 
-### Checkout page
+### **Checkout page**
 ![checkout page](README_docs/readme_images/watchyouwant_checkout_page.png)
 
 The checkout page is divided into two halves.  One half has a form for the user to input their details, and the other one has a summary of the order about to be purchased.  If the user is logged in, this form will appear pre-filled with their details if they have saved them to their account previously.  A user will always have to fill in their credit card details because the website does not store these details.
 
 There are two buttons at the bottom.  One will take the user back to their bag if they wish to adjust it and the second one confirms the payment.
 
-### Order confirmation
+### **Order confirmation**
 ![order confirmation page](README_docs/readme_images/watchyouwant_confirmation.png)
 
 The order confirmation page allows the user to see a summary of what they have just paid for, the address it is being sent to and successful completion of an order sends an email to the user.
 
-### Blog
+### **Blog**
 
 ![blog page](README_docs/readme_images/watchyouwant_blog.png)
 
@@ -459,5 +452,52 @@ Each individual blog post is set on its own bootstrap card. Cards are organised 
 
 Each card has the title of the blog post, an image pertaining to the blog post, the author at the top and the number of post likes and comments at the bottom.
 
-![blog detail page]()
+![blog detail page](README_docs/readme_images/watchyouwant_blog_detail.png)
+
+The blog detail page has the title of the post, the author, the date, the number of likes and the number of comments displayed in a panel at the top of the page.  The main body of the blog displays in a bootstrap card with the featured image at the top and then the text and any other images that have been added to the blog post below.
+
+Any comments that have been made on a blog post are displayed at the bottom of the page and there is a form for a logged in user to leave a comment if they wish, otherwise there is a prompt to login or register in order to leave a comment.
+
+### **Profile**
+
+![profile page](README_docs/readme_images/watchyouwant_profile.png)
+
+On the profile page, a user can update their personal delivery information which will ensure that the checkout form is pre-filled and they can also see their past order history.  Clicking on a past order will take a user to the order confirmation page for that particular order and it pops a toast in the top right of the screen to inform them that they are viewing a past order.
+
+### **Product Management**
+
+![product management page](README_docs/readme_images/watchyouwant_product_management.png)
+
+A superuser is able to add or edit a product from the front end of the website.
+
+## Web Marketing
+
+### SEO
+
+The meta tags and descriptions have been updated for SEO purposes.  The main site does not contain very much copy, other than in the product descriptions and in the yellow block on the home page.  However, keywords will be able to be used with more frequency in the blog.
+
+In order to create the list of keywords for the site, I researched both long and short tail keywords.  
+
+One of the first ways I looked for keywords was by using Google autocomplete, but it does have it's limitations as of course, this method only covers Google.  In addition, I used [Soolve](https://soovle.com/) which covers keyword suggestions across all the major search engines.
+
+Related Searches at the bottom of the first page of Google proved quite useful for long tail keywords and I also have access to Google Keyword Planner through a Google Adwords account I have for my real-life business.
+
+Finally, I had some interesting results using [Answer The Public](https://answerthepublic.com/reports/208f59e1-6934-4804-bae1-27c3fe8add44) to find more question-based long tail keywords.  This method of keyword research could be useful for planning blog post content too, as you can see the questions the potential audience is asking.
+
+### Newsletter
+
+A customer does not have to be registered in order to sign up for the newsletter.  Anyone who registers to receive the newsletter is automatically added to the list of Watch You Want newsletter subscribers list in Mailchimp.
+
+### Facebook
+
+Social media marketing in the form of Facebook or Instagram is a way to become identifiable to the community you are trying to reach.  For this project I had to set up a Facebook page as part of one of the assessment criteria for the project.
+
+Here is a [link to the Facebook page I created](https://www.facebook.com/Watch-You-Want-103162945806977).  Please note that this page my be removed by Facebook at some point because it is not for a real business.  Therefore I have included two screenshots of the page at time of writing.
+
+![Facebook main banner](README_docs/readme_images/watchyouwant_facebook_banner.png)
+| Watch You Want Facebook banner and logo |
+![Facebook example post](README_docs/readme_images/watchyouwant_sample_post.png)
+| Watch You Want Facebook sample post |
+
+
 
