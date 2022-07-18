@@ -66,7 +66,6 @@
                 </p>
                 <div class="row">
                     <div class="col-3 col-sm-2 col-lg-1">
-                        <strong>
                             {% if user.is_authenticated %}
                             <form class="d-inline" action="{% url 'post_like' blog.slug %}" method="POST">
                                 {% csrf_token %}
@@ -82,7 +81,6 @@
                             <span class="test-secondary"><i class="far fa-thumbs-up"></i></span>
                             {% endif %}
                             <span class="text-secondary">{{ blog.number_of_likes }} </span>
-                        </strong>
                     </div>
                     <div class="col-3 col-sm-2 col-lg-1">
                         {% with comments.count as total_comments %}

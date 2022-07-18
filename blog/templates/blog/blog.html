@@ -42,29 +42,22 @@
 
 <div class="container-fluid">
     <div class="row">
-        <!-- Article Entries Column -->
         <div class="col-12 mt-3 left">
             <div class="row">
-                <!-- Iterate over article list -->
                 {% for blog in blogpost_list %}
                 <div class="col-sm-12 col-md-6 col-lg-4 card mb-4 ">
                     <div class="card-body card-body-background border-blog">
-                        <!-- Thicker HR's to aid user in visually parsing the title & content -->
                         <hr class="fat">
                         <a href="{% url 'blog_detail' blog.slug %}" class="post-link">
-                            <!-- Responsive text alignment - centering titles on smaller screens vs. left aligned on large screens for UX optimisation -->
                             <h2 class="card-title">{{ blog.title }}
                             </h2>
                             <hr class="fat">
                             <div class="image-container">
                                 {% if "placeholder" in blog.featured_image.url %}
-                                <!-- Different default image placeholder used here to differentiate & individualise the site/code -->
-                                <img alt="default" class="card-img-top disabled"
-                                    src="{{ MEDIA_URL }}heather-zabriskie-yBzrPGLjMQw-unsplash.jpg"
-                                    alt="Pile of old broken watches">
+                                <img alt="Pile of old broken watches" class="card-img-top disabled"
+                                    src="{{ MEDIA_URL }}heather-zabriskie-yBzrPGLjMQw-unsplash.jpg">
                                 {% else %}
-                                <!-- Pull in featured image from Article model to display -->
-                                <img alt="Django Image" class="card-img-top disabled"
+                                <img alt="{{ blog.title }}" class="card-img-top disabled"
                                     src="{{ blog.featured_image.url }}">
                                 {% endif %}
                                 <div class="image-flash-top">
@@ -72,18 +65,14 @@
                                 </div>
                                 <div class="image-flash-bottom">
                                     <p class="author">
-                                        <!-- Use Django date filters to aid with UX, particularly on smaller screens -->
                                         {{ blog.publish_date | date:"d N, Y" }}
-                                        <!-- Add like totals to article banners -->
                                         <i class="far fa-thumbs-up ps-3"></i>
                                         {{ blog.number_of_likes }}
-                                        <!-- Add comment totals to article banners -->
                                         <i class="far fa-comments ps-1"></i>                                                
                                         {{ blog.comment_count }}  
                                     </p>
                                 </div>
                             </div>
-                            <!-- Thinner HR's to de-emphasize article excerpts whilst keeping them visible to the user - UX-->
                             <hr class="thin">
                             <p class="card-text text-black">{{ blog.excerpt }}</p>
                             <hr class="thin">
