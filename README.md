@@ -499,5 +499,48 @@ Here is a [link to the Facebook page I created](https://www.facebook.com/Watch-Y
 ![Facebook example post](README_docs/readme_images/watchyouwant_sample_post.png)
 | Watch You Want Facebook sample post |
 
+## Technologies Used
 
+### Languages Used
 
+   + HTML5
+   + CSS3
+   + JavaScript
+   + jQuery
+   + Python
+   + Django
+
+### Technologies and Programs Used:
++ GitHub
+    The Git was used for version control.
+    Git issues were used for user stories.
+    GitPod was used as IDE to write the code and push to GitHub.
++ Heroku 
+    The page was deployed to Heroku.
++ PostgreSQL
+    PostgreSQL was used as database for this project
++ VSCode
+    VSCode was used for testing out code snippets and for drafing the .md files.
++ Stripe
+    In order for the user to make payments.
++ AWS S3 bucket storage
+    For storing static files and media files.
+
+ ### Frameworks Libraries and Programs Used
+
++ Balsamiq:
+    Balsamiq was used to create the wireframes during the design process.
++ Bootstrap 4:
+    Bootstrap was used to add style to the website.
++ Visio:
+    Visio was used to create the models schema and the site map schema included in this README document.
++ Fontawesome
++ Django
+
+## Website Architecture
+
+### Database Schema
+
+A relational database has been used to deliver the expected functionality.  SQLite was used in the development of the site and Postgres provided by the Heroku platform is being used in production.  The diagram below shows the database models and the relationships between them.
+
+![ERD for Watch You Want]()

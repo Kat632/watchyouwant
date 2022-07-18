@@ -11,8 +11,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Meta tags for improved SEO using search keywords and descriptions -->
-    <meta name="description" content="Visit Watch You Want today - individual watches for individual people.  Specialists in Casio, Skagen, Fossil and restored retro timepieces.">
-    <meta name="keywords" content="watches for her, watches for him, watches for kids, unisex watches, watches for men, watches for women, ladies watches, mens watches, watch gifts for men, watch gifts for women, first watch for child, watch lover gifts, restored watches, restored vintage watches, restored retro watches, restored casio watches, vintage watch restoration, watch restoration">
+    <meta name="description"
+        content="Visit Watch You Want today - individual watches for individual people.  Specialists in Casio, Skagen, Fossil and restored retro timepieces.">
+    <meta name="keywords"
+        content="watches for her, watches for him, watches for kids, unisex watches, watches for men, watches for women, ladies watches, mens watches, watch gifts for men, watch gifts for women, first watch for child, watch lover gifts, restored watches, restored vintage watches, restored retro watches, restored casio watches, vintage watch restoration, watch restoration">
     <meta name="author" content="Katherine Biggs">
     <meta name="page-topic" content="Wrist watches">
     <meta name="page-type" content="Watch store">
@@ -23,7 +25,8 @@
     {% endblock %}
 
     {% block corecss %}
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="apple-touch-icon" sizes="180x180" href="{{ MEDIA_URL }}apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ MEDIA_URL }}favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="{{ MEDIA_URL }}favicon-16x16.png">
@@ -35,14 +38,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7_dtp.css" rel="stylesheet" type="text/css">
+    <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7_dtp.css" rel="stylesheet" type="text/css">
     {% endblock %}
 
     {% block corejs %}
     <script src="https://kit.fontawesome.com/e9c73d7092.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
     <!-- Stripe -->
     <script src="https://js.stripe.com/v3/"></script>
     {% endblock %}
@@ -59,7 +67,8 @@
             <div class="col-xl-3 col-lg-2 my-auto py-1 py-lg-0 text-center text-lg-left">
                 <div class="header-logo">
                     <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                        <img src="{% static 'media/watchyouwant_logo_new.png' %}" alt="Watch You Want logo" style="height:115px;">
+                        <img src="{% static 'media/watchyouwant_logo_new.png' %}" alt="Watch You Want logo"
+                            style="height:115px;">
                     </a>
                 </div>
             </div>
@@ -103,8 +112,7 @@
                             <a class="{% if grand_total %}bag-info font-weight-bold{% else %}text-black{% endif %} nav-link"
                                 href="{% url 'view_bag' %}">
                                 <div class="text-center">
-                                    <div
-                                    ><i class="fas fa-shopping-bag fa-lg"></i></div>
+                                    <div><i class="fas fa-shopping-bag fa-lg"></i></div>
                                     <p class="my-0">
                                         {% if grand_total %}
                                         £{{ grand_total|floatformat:2 }}
@@ -121,7 +129,8 @@
         </div>
         <div class="row bg-white">
             <nav class="navbar navbar-expand-lg navbar-light w-100">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav"
+                    aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 {% include 'includes/mobile-top-header.html' %}
@@ -130,8 +139,8 @@
         </div>
         <div id="delivery-banner" class="row text-center">
             <div class="col bg-black text-white">
-                <h4 class="logo-font my-1">Free delivery on orders over £{{ free_delivery_threshold }}!</h4>                
-            </div>            
+                <h4 class="logo-font my-1">Free delivery on orders over £{{ free_delivery_threshold }}!</h4>
+            </div>
         </div>
     </header>
 
@@ -139,17 +148,17 @@
     <div class="message-container">
         {% for message in messages %}
         {% with message.level as level %}
-            {% if level == 40 %}
-                {% include 'includes/toasts/toast_error.html' %}
-            {% elif level == 30 %}
-                {% include 'includes/toasts/toast_warning.html' %}
-            {% elif level == 25 %}
-                {% include 'includes/toasts/toast_success.html' %}
-            {% else %}
-                {% include 'includes/toasts/toast_info.html' %}
-            {% endif %}
+        {% if level == 40 %}
+        {% include 'includes/toasts/toast_error.html' %}
+        {% elif level == 30 %}
+        {% include 'includes/toasts/toast_warning.html' %}
+        {% elif level == 25 %}
+        {% include 'includes/toasts/toast_success.html' %}
+        {% else %}
+        {% include 'includes/toasts/toast_info.html' %}
+        {% endif %}
         {% endwith %}
-    {% endfor %}
+        {% endfor %}
     </div>
     {% endif %}
 
@@ -207,45 +216,54 @@
                 <div class="col-lg-4 col-md-8 col-sm-8">
                     <div id="mc_embed_signup" class="footer-newsletter">
                         <h6>Newsletter</h6>
-                        <form action="https://herokuapp.us11.list-manage.com/subscribe/post?u=62bd93b1e49d86b1989c2e9da&amp;id=785dbc5b60" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                            <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email" aria-labelledby="newsletter signup">
-                            <button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="site-btn">Subscribe</button>
+                        <form
+                            action="https://herokuapp.us11.list-manage.com/subscribe/post?u=62bd93b1e49d86b1989c2e9da&amp;id=785dbc5b60"
+                            method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
+                            class="validate" target="_blank" novalidate>
+                            <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL"
+                                placeholder="Email" aria-labelledby="newsletter signup">
+                            <button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
+                                class="site-btn">Subscribe</button>
                             <div id="mce-responses" class="clear foot">
-                                <div class="response" id="mce-error-response" style="display:none"></div> 
+                                <div class="response" id="mce-error-response" style="display:none"></div>
                                 <div class="response" id="mce-success-response" style="display:none"></div>
-                            </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_62bd93b1e49d86b1989c2e9da_785dbc5b60" tabindex="-1" value=""></div>
                             </div>
-                        </form>
-                        <div class="footer-social">
-                            <a href="https://www.facebook.com/Watch-You-Want-103162945806977" aria-label="Go to our Facebook page (opens in new tab)" rel="noopener" target="_blank">
-                                <i class="fa-brands fa-facebook"></i>
-                            </a>
-                            <a href="#">
-                                <i class="fa-brands fa-instagram"></i>
-                            </a>
-                            <a href="#">
-                                <i class="fa-brands fa-twitter"></i>
-                            </a>
-                            <a href="#">
-                                <i class="fa-brands fa-linkedin"></i>
-                            </a>
-                        </div>
+                            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
+                                    name="b_62bd93b1e49d86b1989c2e9da_785dbc5b60" tabindex="-1" value=""></div>
+                    </div>
+                    </form>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/Watch-You-Want-103162945806977"
+                            aria-label="Go to our Facebook page (opens in new tab)" rel="noopener" target="_blank">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                        <a href="https://www.instagram.com/"
+                            aria-label="Go to Intagram (opens in new tab)" rel="noopener" target="_blank">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://twitter.com/" aria-label="Go to Twitter (opens in new tab)" rel="noopener" target="_blank"></a>
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/" aria-label="Go to LinkedIn (opens in new tab)" rel="noopener" target="_blank"></a>
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="footer-copyright-text">
-                        <p>Copyright<span>&copy</span>
-                            <script>
-                                document.write(new Date().getFullYear());
-                            </script>
-                            All rights reserved. | This website was made by Katherine Biggs.
-                        </p>
-                    </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="footer-copyright-text">
+                    <p>Copyright<span>&copy</span>
+                        <script>
+                            document.write(new Date().getFullYear());
+                        </script>
+                        All rights reserved. | This website was made by Katherine Biggs.
+                    </p>
                 </div>
             </div>
+        </div>
         </div>
     </footer>
 
@@ -253,7 +271,26 @@
     <script type="text/javascript">
         $('.toast').toast('show');
     </script>
-    <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+    <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+    <script type='text/javascript'>
+        (function ($) {
+            window.fnames = new Array();
+            window.ftypes = new Array();
+            fnames[0] = 'EMAIL';
+            ftypes[0] = 'email';
+            fnames[1] = 'FNAME';
+            ftypes[1] = 'text';
+            fnames[2] = 'LNAME';
+            ftypes[2] = 'text';
+            fnames[3] = 'ADDRESS';
+            ftypes[3] = 'address';
+            fnames[4] = 'PHONE';
+            ftypes[4] = 'phone';
+            fnames[5] = 'BIRTHDAY';
+            ftypes[5] = 'birthday';
+        }(jQuery));
+        var $mcj = jQuery.noConflict(true);
+    </script>
     {% endblock %}
 </body>
 
