@@ -135,27 +135,17 @@ a.bag-info:hover {
     z-index: 0;
 }
 
-.view-all-text a{
+.view-all-text a {
     font-size: 14px;
     color: #00ece2;
     text-transform: uppercase;
     font-weight: 600;
     position: relative;
-    padding: 0 0 3px;
+    padding: 20px 30px;
     display: inline-block;
-    text-decoration: none;
-    background-color: transparent;
+    text-decoration: underline;
+    background-color: #111;
     z-index: 1;
-}
-
-.view-all-text a::after {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 2px;
-    width: 100%;
-    background: #00ece2;
-    content: "";
 }
 
 .categories-text h2,
@@ -512,6 +502,16 @@ button {
     font-size: 14px;
     color: #00ece2;
     background: #111;
+    font-weight: 600;
+    border: none;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 12px 30px;
+}
+
+.shop-button {
+    background-color: #111;
+    color: #00ece2;
     font-weight: 600;
     border: none;
     text-transform: uppercase;
