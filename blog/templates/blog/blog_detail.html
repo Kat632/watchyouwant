@@ -65,34 +65,28 @@
                     {{ blog.content | safe }}
                 </p>
                 <div class="row">
-                    <!-- Update responsive bootstrap grid to ensure comments & likes display properly on smaller screen sizes -->
                     <div class="col-3 col-sm-2 col-lg-1">
                         <strong>
                             {% if user.is_authenticated %}
                             <form class="d-inline" action="{% url 'post_like' blog.slug %}" method="POST">
                                 {% csrf_token %}
                                 {% if liked %}
-                                <!-- Use thumbs-up icon to represent likes for positive UX -->
                                 <button type="submit" name="blog_id" value="{{ blog.slug }}" class="btn-like"
                                     aria-label="like button"><i class="fas fa-thumbs-up"></i></button>
                                 {% else %}
-                                <!-- Use thumbs-up icon to represent likes for positive UX -->
                                 <button type="submit" name="blog_id" value="{{ blog.slug }}" class="btn-like"
                                     aria-label="like button"><i class="far fa-thumbs-up"></i></button>
                                 {% endif %}
                             </form>
                             {% else %}
-                            <!-- Use thumbs-up icon to represent likes for positive UX -->
                             <span class="test-secondary"><i class="far fa-thumbs-up"></i></span>
                             {% endif %}
                             <span class="text-secondary">{{ blog.number_of_likes }} </span>
                         </strong>
                     </div>
-                    <!-- Update responsive bootstrap grid to ensure comments & likes display properly on smaller screen sizes -->
                     <div class="col-3 col-sm-2 col-lg-1">
                         {% with comments.count as total_comments %}
                         <strong class="text-secondary"><i class="far fa-comments"></i>
-                            <!-- Add the count of total_comments variable here -->
                             {{ total_comments }}</strong>
                         {% endwith %}
                     </div>
@@ -105,38 +99,28 @@
         <div class="col-md-8 card mb-4 mt-3 ">
             <h3>Comments: <i class="fas fa-comments ps-1 blueicon"></i></h3>
             <div class="card-body">
-                <!-- Use Horizontal Lining for demarcation and readability of comments to differentiate and improve UX -->
                 <hr class="thin">
-                <!-- Setup a for loop via jinja tags to iterate through each comment in comments -->
                 {% for comment in comments %}
                 <div class="comments p-2">
                     <p class="font-weight-bold">
-                        <!-- User leaving the comment's name below: -->
                         <i class="far fa-comment pe-2 blueicon blueicon-small"></i>{{ comment.name }}
                         <span class=" text-muted font-weight-normal">
-                            <!-- Creation date and time attached to comment -->
                             {{ comment.created_on }}
                         </span> wrote:
                     </p>
-                    <!-- Space to insert the actual body of the comment, with linebreaks filter for formatting | -->
                     {{ comment.body | linebreaks }}
-                    <!-- Use Horizontal Lining in each iteration for consistency and improved, differentiated UX -->
                     <hr class="thin">
                 </div>
                 {% endfor %}
-                <!-- End the For-Loop here -->
             </div>
         </div>
         <div class="col-md-4 card mb-4 mt-3">
             <div class="card-body">
-                <!-- This section to display notification messages for commenting -->
                 {% if commented %}
-                <!-- Check if a comment has been submitted & Display an alert to comment poster that the comment is pending approval -->
                 <div class="alert alert-success" role="alert">
                     Your comment is awaiting approval.
                 </div>
                 {% else %}
-                <!-- Otherwise, display the empty comments form in readiness for a comment to be posted by the user -->
                 {% if user.is_authenticated %}
                 <h3>Add a Comment: <i class="fas fa-comment ps-1 blueicon"></i></h3>
                 <p>Commenting as: {{ user.username }}</p>
@@ -145,6 +129,8 @@
                     {% csrf_token %}
                     <button type="submit" class="btn btn-custom mb-2 mt-2">Submit For Approval</button>
                 </form>
+                {% else %}
+                <h3>Please <a href="{% url 'account_login' %}">login</a> or <a href="{% url 'account_signup' %}">register</a> to leave a comment.</h3>
                 {% endif %}
                 {% endif %}
             </div>

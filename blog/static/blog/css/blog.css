@@ -157,6 +157,10 @@
   background-color: #f9fafce5;
 }
 
+.card-body a:hover {
+  color: #ff0051;
+}
+
 .blue {
   background-color: #5247d4;
 }
