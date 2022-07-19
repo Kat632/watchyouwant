@@ -545,4 +545,10 @@ Here is a [link to the Facebook page I created](https://www.facebook.com/Watch-Y
 
 A relational database has been used to deliver the expected functionality.  SQLite was used in the development of the site and Postgres provided by the Heroku platform is being used in production.  The diagram below shows the database models and the relationships between them.
 
-![ERD for Watch You Want]()
+![ERD for Watch You Want](README_docs/readme_images/erd_p5.png)
+
+### Site Structure
+
+I prepared a site map diagram in order to keep track of the templates I needed to create and to see how the site would flow.
+
+![Site map for Watch You Want](README_docs/readme_images/site_map.png)
