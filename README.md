@@ -10,8 +10,6 @@
 Click [here](https://watchyouwant-pp5.herokuapp.com/) to visit the live site.
 ------
 
-
-
 ## Introduction
 
 **Watch You Want?** is a full stack e-commerce website for the 5th and final project of the Code Institute diploma in Software Development (e-commerce applications).
@@ -86,9 +84,7 @@ The website needs to enable the **Site Owner** to:
 - Delete reviews.
 
 ## Purpose
-
 The app is designed as a e-commerce application that encourages the users to purchase one of the products on the website and the watch restoration blog gives users the opportunity to engage with the website.
-
 
 ## User Stories
 
@@ -144,7 +140,6 @@ I began with some broad epics that allowed further refinement, resulting in the 
 With the user stories in mind, I created the below strategy table to determine the trade-off of importance and viability with the following results: INSERT STRATEGY TABLE
 
 ### User Stories that have been satisfied by creation of particular apps in ths project:
-
 
 **EPIC #1: Allow Site User to view what is on the site**
 | id  |  content | how was it satisfied
@@ -210,34 +205,88 @@ With the user stories in mind, I created the below strategy table to determine t
 | ------ | ------ |
 
 
-##
+## AGILE
 
 
 ## Website Architecture
 
 ### Database Schema
-
 A relational database has been used to deliver the expected functionality.  SQLite was used in the development of the site and Postgres provided by the Heroku platform is being used in production.  The diagram below shows the database models and the relationships between them.
 
 ![ERD for Watch You Want](README_docs/readme_images/erd_p5.png)
 
-### Site Structure
-
-I prepared a site map diagram in order to keep track of the templates I needed to create and to see how the site would flow.
+### **Site Structure**
+I prepared a site map diagram in order to keep track of the templates I needed to create and to see how the site would flow.  Users need to be able to navigate through the site with ease and efficiency.
 
 ![Site map for Watch You Want](README_docs/readme_images/site_map.png)
 
-## Skeleton
+## **Skeleton**
 
-### Wireframes
+### **Wireframes**
 
-WIREFRAMES!!!!!
+Please note, I have intentionally not made wireframes for every page because some pages are just a simple form, for example the product management page.
 
+#### **Home Page**
+![Wireframe for Watch You Want - Home Page](README_docs/readme_images//wireframes/wyw_home_page.png)
+
+The layout of this page is heavily inspired by a Colorlib bootstrap template.  Please see Tutorials and Inspirations for details of the template.  I liked the box-style layout of the home page which matched the colour-block style of what I wanted the home page of **Watch You Want?** to be.
+
+The home page is divided into sections, with links to the main product categories at the top.  Beneath, there is a box with a few lines of text to introduce the shop, but also for SEO purposes.  Then there is a Special Offers section where all the watches in that category can be seen.  Below, there is a service box that talks about the customer service you can expect from Watch You Want.
+
+#### **All Products Page**
+![Wireframe for Watch You Want - All Products Page](README_docs/readme_images//wireframes/wyw_products_page.png)
+
+The page which shows all of the products has a small breadcrumb at the top.  If a user clicks the house they will be taken back to the homepage.  Next to that there is a sort box, which allows the user to manipulate the order in which they view the products.  For example, they can sort in alphabetical order or reverse alphabetical order.
+
+The way the products are displayed, is a simple bootstrap grid with cards for the individual products.  This was to ensure that the products remained responsive at all screen sizes.
+
+#### **Product Detail Page**
+![Wireframe for Watch You Want - Product Detail Page](README_docs/readme_images//wireframes/wyw_product_detail.png)
+
+The product detail page has a small breadcrumb at the top.  From here, a user can either click the house to go back to the home page, or they can click the next breadcrumb which will take the user to the main category of the watch they are currently viewing.
+
+The product image is displayed on the left.  Ideally there would be a carousel with thumbnails.  Unfortunately, I only had one image of each product so I didn't think it was worth the coding time to put this in.  However, if I was to build a similar website for a client, I would definitely include a thumbnail carousel.
+
+The right side has all the details about the product.  Name, price, star rating and a description.  Then there are further details a user might want to know about the watch that I coded into the product model, for example availability and the water resistance of the product.
+
+At the bottom of this section is where a user can adjust the quantity of a item, add it to their bag, or go back to the products page.
+
+Each product has its own review section which appears at the bottom of the page.  A logged in user will be able to leave a review and anyone can read the reviews that have already been written about the product.  The reviews are a bootstrap grid to ensure they remain responsive at all screen sizes.
+
+#### **Shopping Bag Page**
+![Wireframe for Watch You Want - Shopping Bag Page](README_docs/readme_images//wireframes/wyw_shopping_bag.png)
+
+The shopping bag is a table with each product displayed as a row.  A small product image, followed by the name of the product, the price, the ability to change the quantity and a subtotal which updates if the user makes changes to the quantity.
+
+At the bottom of the page is a bag summary, which displays the bag total (before delivery costs), the delivery cost if below the threshold, and finally a grand total.
+
+There are two buttons, one to continue shopping and another one to direct the user to the checkout page.
+
+#### **Register for an Account page**
+![Wireframe for Watch You Want - Register for an Account page](README_docs/readme_images//wireframes/wyw_profile_app_allauth.png)
+
+The allauth templates, sign up, sign in and logout have been styled to match the general feel and design of the rest of the site.
+
+#### **User Profile Page**
+![Wireframe for Watch You Want - User Profile Page](README_docs/readme_images//wireframes/wyw_profile_app_user_profile.png)
+
+The profile app allows the user to change their details on the right and to view their previous orders on the left.
+
+#### **Blog App**
+![Wireframe for Watch You Want - Blog Page](README_docs/readme_images//wireframes/wyw_blog_app.png)
+
+The blog app uses bootstrap cards to display the title, main image and excerpt from each blog post.  A user can click anywhere on the card to be taken to the page for the individual blog post.
+
+#### **Blog Detail Page**
+![Wireframe for Watch You Want - Blog Detail Page](README_docs/readme_images//wireframes/wyw_blog_detail.png)
+
+Each blog detail page has the title of the blog at the top in a header bar, plus the author, the date of the post, the number of likes and the number of comments that post has received.
+
+Underneath the blog, there is a comments section where a logged in user can leave a comment and anyone can read the comments that have been previously left for that blog post.
 
 ## Surface
 
 ### Main colours
-
 The overall design of the **Watch You Want?** website takes inspiration from [United Colours of Benetton](https://gb.benetton.com/) and [Swatch](https://www.swatch.com/).  I wanted a simple, clean site with a 1980s vibe and neon colours.  I felt that this would help to differentiate the site from the ones mentioned below. in [Inspirations]  - NEED LINK!
 
 This conrast grid shows how all the colours fit together.  Further information about my design inspiration can be found in [this section](#tutorials-and-inspiration). - LINK DOESN'T GO ANYWHERE
@@ -248,13 +297,11 @@ This conrast grid shows how all the colours fit together.  Further information a
 Having extensively researched e-commerce websites, and then latterly specific watch websites, I knew that I wanted the website to have a white background and to not be overly busy.  My research led me to [Watch Shop](https://www.watchshop.com/) and to [House of Watches](https://www.houseofwatches.co.uk/), both of which served as inspiration for **Watch You Want?**.
 
 ### Text
-
-I deliberately decided to only use one font throughout the site.  My chosen font is Courier New, which is a TrueType font.  It is scaleable, in that it doesn't get jagged edges when enlarged and the font is versatile enough using different font weights and uppercase to be sufficient for both headlines and other text.
+I deliberately decided to only use one font throughout the site.  My chosen font is Courier New, which is a TrueType font.  It is scaleable, in that it doesn't become jagged around the edges when enlarged.  The font is versatile enough using different font weights and uppercase to be sufficient for both headlines and other text.
 
 Courier has a typewriter feel, indeed according to [this](https://en.wikipedia.org/wiki/Courier_(typeface)) Wikipedia article, it was developed for IBM's first typewriters.  I felt that this added to the retro style of the website.
 
 ## Technologies Used
-
 ### Languages Used
 
    + HTML5
@@ -312,7 +359,7 @@ Each individual watch is set on its own bootstrap card. Cards are organised in g
 
 Each card has the name of the product, an image of the product, the price and the rating.  If the user is logged in as a superuser, they will also be able to edit and delete a product from here.  If a superuser chooses to delete a product, a modal will appear asking them to confirm that this is what they want to do.
 
-When a product image is clicked, it takes the user to a page with more details about the given product.
+When a product image is clicked, it takes the user to a page with more details about the given product.  Hovering over a product makes the image grow slightly larger.
 
 ### **Product Detail page**
 
@@ -540,7 +587,7 @@ $ git clone https://github.com/Kat632/watchyouwant
 2. Create env.py file. It needs to contain those 5 variables.
 
 * Database URL can be obtained from [heroku](https://dashboard.heroku.com/), add PostgreSQL as an add on when creating an app. 
-* Secret_key - is the djnago secret key can be generated [here](https://miniwebtool.com/django-secret-key-generator/). 
+* Secret_key - is the django secret key can be generated [here](https://miniwebtool.com/django-secret-key-generator/). 
 * Cloudinary URL can be obtained from [cloudinary](https://cloudinary.com/) follow the steps on the website to register. 
 * Google API key can be obtained [here](https://cloud.google.com/gcp?authuser=1) you will have to register with google and create new app to get the API key. Follow the instructions on the website.
 
@@ -752,22 +799,18 @@ class MediaStorage(S3Boto3Storage):
 * [Markdown Table of content generator](http://ecotrust-canada.github.io/markdown-toc/)
 * [Favicon](https://favicon.io/)
 * [TINYPNG](https://tinypng.com/)
-+ Balsamiq:
-    Balsamiq was used to create the wireframes during the design process.
 
 ### Offline resources
 * All of the images for the blog and for the restored section of the website were provided by my husband, Chris Morley.
 * All of the copy for the blog and for the restored section of the website was also provided by my husband and checked by myself for SEO purposes.
 
-* [GIMP](https://www.gimp.org/)
-+ Visio:
-    Visio was used to create the models schema and the site map schema included in this README document.
-https://balsamiq.cloud/
+* [GIMP](https://www.gimp.org/): Gimp was used for image manipulation and background removal.
+* [Visio](https://www.microsoft.com/en-gb/microsoft-365/visio/flowchart-software): Visio was used to create the models schema and the site map schema included in this README document.
+* [Balsamiq](https://balsamiq.cloud/): Balsamiq was used to create the wireframes in this README document.
 
 ### Tutorials and inspiration
-
 * The project walkthrough Boutique Ado from Code Institute [original repo](https://github.com/Code-Institute-Solutions/boutique_ado_v1/tree/f5880efee43b3b9ea1276a09ca972f4588001c59), deployed [here](https://ado-clothes-shop.herokuapp.com/). 
-* This [Boostrap template from Colorlib](https://preview.colorlib.com/theme/ashion/index.html) that I used as inspiration for the home page of my website.  I liked the clean, white aesthetic which is very similar to the watch websites I encountered during my initial research.  Please note that I did not buy this template, but I did use its aesthetic as inspiration.
+* This [Bootstrap template from Colorlib](https://preview.colorlib.com/theme/ashion/index.html) that I used as inspiration for the home page of my website.  I liked the clean, white aesthetic which is very similar to the watch websites I encountered during my initial research.  Please note that I did not buy this template, but I did use its aesthetic and homepage layout as inspiration.
 * This website that I found and fell in love with during my research into websites with a retro aesthetic: [Cockta](https://cockta.eu/en/).
 * This [Pinterest board](https://www.pinterest.co.uk/bjoel0663/esprit-and-benetton-ads-of-the-80s/) featuring adverts from 1980s United Colour of Benetton.
 * Google image search ["Swatch Watch Aesthetic"](https://www.google.com/search?q=swatch+watch+aesthetic&sxsrf=ALiCzsZXApDm8-x3jfmKtcJ6VDZzzcu7yw:1657650512400&source=lnms&tbm=isch&sa=X&ved=2ahUKEwj39M-v_fP4AhUREcAKHTYXBSUQ_AUoAXoECAEQAw&biw=1294&bih=627&dpr=1)
