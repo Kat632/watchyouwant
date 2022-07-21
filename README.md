@@ -1,16 +1,11 @@
-
-
-
-
-
-# Watch You Want?
+# **Watch You Want?**
 
 [![Watch You Want - Home Page](README_docs/readme_images/watchyouwant_home.png)]
 
 Click [here](https://watchyouwant-pp5.herokuapp.com/) to visit the live site.
 ------
 
-## Introduction
+## **Introduction**
 
 **Watch You Want?** is a full stack e-commerce website for the 5th and final project of the Code Institute diploma in Software Development (e-commerce applications).
 
@@ -30,17 +25,17 @@ When testing interactively, use a card number, such as 4242 4242 4242 4242. Ente
 
 This information has been taken directly from the [Stripe testing documentation](https://stripe.com/docs/testing).
 
-## UX
+## **UX**
 
-### Ideal User Demographic
-#### The ideal users of this website are:
+### **Ideal User Demographic**
+#### **The ideal users of this website are:**
 - Gift givers
 - Trendy individuals
 - Fashion-conscious individuals
 - People looking for a treat for themselves
 - People who are interested in restoring and reusing old technology
 
-#### Strategy
+#### **Strategy**
 Broken into three categories, the website will attempt to focus on the following target audiences:
 - **Roles:**
      - Site User
@@ -83,12 +78,12 @@ The website needs to enable the **Site Owner** to:
 - Approve or delete blog comments.
 - Delete reviews.
 
-## Purpose
+## **Purpose**
 The app is designed as a e-commerce application that encourages the users to purchase one of the products on the website and the watch restoration blog gives users the opportunity to engage with the website.
 
-## User Stories
+## **User Stories**
 
-#### EPICS
+#### **EPICS**
 I began with some broad epics that allowed further refinement, resulting in the user stories outlined below:
 - EPIC #1: Allow Site User to view what is on the site
 - EPIC #2: Allow Site User to manage their own account
@@ -96,7 +91,7 @@ I began with some broad epics that allowed further refinement, resulting in the 
 - EPIC #4: Allow a Shopper to make a purchase
 - EPIC #5: Allow Site Admin to manage the site
 
-#### Site User:
+#### **Site User:**
 - As a Shopper, I want to be able to view a list of products so that I can select some to purchase.
 - As a Shopper, I want to be able to view a specific category of products so that I can quickly find products I’m interested in without having to search through all the products.
 - As a Shopper, I want to be able to view individual product details so that I can identify the price, description, product rating, product image and available colours.
@@ -124,7 +119,7 @@ I began with some broad epics that allowed further refinement, resulting in the 
 - As a Shopper, I want to be able to view an order confirmation after checkout so that I can verify that I haven't made any mistakes.
 - As a Shopper, I want to be able to receive an email confirmation after checkout so that I can keep the confirmation of what I’ve purchased for my records.
 
-#### Site Admin:
+#### **Site Admin:**
 - As a Site Admin, I want to be able to add a product so that I can add new items to my store.
 - As a Site Admin, I want to be able to edit and update products so that I can change product prices, descriptions, images and other product criteria.
 - As a Site Admin, I want to be able to delete a product so that I can remove items that are no longer for sale.
@@ -137,9 +132,63 @@ I began with some broad epics that allowed further refinement, resulting in the 
 - As a Site Admin, I want to be able to delete product reviews so that I can remove product reviews that are irrelevant or unhelpful.
 
 
-With the user stories in mind, I created the below strategy table to determine the trade-off of importance and viability with the following results: INSERT STRATEGY TABLE
+With the user stories in mind, I created the below strategy table using MOSCOW principles.
 
-### User Stories that have been satisfied by creation of particular apps in ths project:
+Each story was assigned a classification of Must-Have, Should-Have, Could-Have or Won't Have. Each story was also assigned user story points, based on my best estimation for the time/difficulty of completing each story.  All of the user stories in the table are what I believed I needed to do in order to deliver above the expected MVP (Minimum Viable Product).  This is why there are no Won't Have items in the table below because I expected to be able to deliver all of the user stories.  I completed every user story within the timeframe.
+
+#### **Strategy Table**
+
+|User Story ID                                                     |AS A/AN   |I WANT TO BE ABLE TO…                                                 |SO THAT I CAN…                                                                                                      |Story Points|MOSCOW     |
+|------------------------------------------------------------------|----------|----------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------|------------|-----------|
+|Viewing and Navigation                                            |          |                                                                      |                                                                                                                    |            |           |
+|EPIC: Allow Site User to view what is on the site                 |          |                                                                      |                                                                                                                    |            |           |
+|1                                                                 |Shopper   |View a list of products                                               |Select some to purchase                                                                                             |5           |Must Have  |
+|2                                                                 |Shopper   |View a specific category of products                                  |Quickly find products I’m interested in without having to search through all the products                           |3           |Could Have |
+|3                                                                 |Shopper   |View individual product details                                       |Identify the price, description, product rating, product image and available colours                                |5           |Must Have  |
+|4                                                                 |Shopper   |View reviews of individual products by other shoppers                 |See what other people have said about the items I am thinking of purchasing                                         |4           |Could Have |
+|5                                                                 |Shopper   |View the site blog and read about real-life watch restoration projects|Engage with the site’s content without necessarily having to make a purchase                                        |2           |Could Have |
+|6                                                                 |Shopper   |Quickly identify deals, clearance items and special offers            |Take advantage of special savings on products I’d like to purchase                                                  |2           |Could Have |
+|7                                                                 |Shopper   |Easily view the total of my purchases at any one time                 |Avoid spending too much!                                                                                            |5           |Must Have  |
+|Registration and User Accounts                                    |          |                                                                      |                                                                                                                    |            |           |
+|EPIC: Allow Site User to manage their own account                 |          |                                                                      |                                                                                                                    |            |           |
+|8                                                                 |Site User |Easily register for an account                                        |Have a personal account and be able to view my profile                                                              |4           |Must Have  |
+|9                                                                 |Site User |Easily log in or out                                                  |Access my personal account information                                                                              |4           |Must Have  |
+|10                                                                |Site User |Easily recover my password in case I forget it                        |Recover access to my account                                                                                        |4           |Must Have  |
+|11                                                                |Site User |Receive an email confirmation after registering                       |Verify that my account registration was successful                                                                  |4           |Must Have  |
+|12                                                                |Site User |Leave a comment on a blog post                                        |Engage with the site’s content without necessarily having to make a purchase                                        |2           |Should Have|
+|13                                                                |Site User |Leave a review for an individual product I have purchased             |Let other site user’s know what I think of something I have previously purchased                                    |2           |Should Have|
+|14                                                                |Site User |Have a personalised user profile                                      |View my personal order history and order confirmations and save my payment information                              |4           |Must Have  |
+|Sorting and searching                                             |          |                                                                      |                                                                                                                    |            |           |
+|EPIC: Allow a Shopper to refine what they are seeing on the screen|          |                                                                      |                                                                                                                    |            |           |
+|15                                                                |Shopper   |Sort the list of available products                                   |Easily identify the best rated, best priced and categorically sorted products                                       |3           |Should Have|
+|16                                                                |Shopper   |Sort a specific category of products                                  |Find the best priced or best rated product in a particular category, or sort the products in that category by name  |3           |Should Have|
+|17                                                                |Shopper   |Sort multiple categories of products simultaneously                   |Find the best priced or best rated products across multiple categories, such as “Men’s Watches” and “Unisex Watches”|3           |Should Have|
+|18                                                                |Shopper   |Search for a product by name or description                           |Find a specific product I’d like to purchase                                                                        |3           |Should Have|
+|19                                                                |Shopper   |Easily see what I’ve searched for and the number of results           |Quickly decide if the product I want is available                                                                   |3           |Should Have|
+|Purchasing and Checkout                                           |          |                                                                      |                                                                                                                    |            |           |
+|EPIC: Allow a Shopper to make a purchase                          |          |                                                                      |                                                                                                                    |            |           |
+|20                                                                |Shopper   |Easily select the quantity of a product when purchasing it            |Ensure I don’t accidentally select the wrong product or quantity                                                    |5           |Must Have  |
+|21                                                                |Shopper   |View items in my bag to be purchased                                  |Identify the total cost of my purchase and all the items I will receive                                             |5           |Must Have  |
+|22                                                                |Shopper   |Adjust the quantity of individual items in my bag                     |Easily make changes to my purchase before checkout                                                                  |4           |Must Have  |
+|23                                                                |Shopper   |Easily enter my payment information                                   |Check out quickly and with no hassles                                                                               |5           |Must Have  |
+|24                                                                |Shopper   |Feel my personal and payment information is safe and secure           |Confidently provide the required information to make a purchase                                                     |5           |Must Have  |
+|25                                                                |Shopper   |View an order confirmation after checkout                             |Verify that I haven’t made any mistakes                                                                             |3           |Must Have  |
+|26                                                                |Shopper   |Receive an email confirmation after checkout                          |Keep the confirmation of what I’ve purchased for my records                                                         |4           |Must Have  |
+|Admin and Store Management                                        |          |                                                                      |                                                                                                                    |            |           |
+|EPIC: Allow Site Admin to manage the site                         |          |                                                                      |                                                                                                                    |            |           |
+|27                                                                |Site Admin|Add a product                                                         |Add new items to my store                                                                                           |4           |Must Have  |
+|28                                                                |Site Admin|Edit/update a product                                                 |Change product prices, descriptions, images and other product criteria                                              |4           |Must Have  |
+|29                                                                |Site Admin|Delete a product                                                      |Remove items that are no longer for sale                                                                            |4           |Must Have  |
+|30                                                                |Site Admin|Add a blog post                                                       |Add new posts to my blog                                                                                            |2           |Could Have |
+|31                                                                |Site Admin|Edit/update a blog post                                               |Change aspects of my blog, images and other                                                                         |2           |Could Have |
+|32                                                                |Site Admin|Delete a blog post                                                    |Remove blog posts that are no longer relevant                                                                       |2           |Could Have |
+|33                                                                |Site Admin|Approve comments                                                      |Filter out any spam or irrelevant comments                                                                          |2           |Should Have|
+|34                                                                |Site Admin|Delete comments                                                       |Remove comments that are spam or offensive                                                                          |2           |Should Have|
+|35                                                                |Site Admin|Approve product reviews                                               |Filter out any spam or irrelevant reviews                                                                           |2           |Should Have|
+|36                                                                |Site Admin|Delete product reviews                                                |Remove product reviews that are irrelevant or unhelpful                                                             |2           |Should Have|
+|                                                                  |          |                                                                      |Total Story Points                                                                                                  |122         |           |
+
+### **User Stories that have been satisfied by the creation of particular apps in ths project:**
 
 **EPIC #1: Allow Site User to view what is on the site**
 | id  |  content | how was it satisfied
@@ -197,15 +246,9 @@ With the user stories in mind, I created the below strategy table to determine t
 |  [#34](https://github.com/Kat632/watchyouwant/issues/41) | As a Site Admin, I want to be able to approve product reviews so that I can remove comments that are spam or offensive. | admin panel, reviews app |
 |  [#35](https://github.com/Kat632/watchyouwant/issues/42) | As a Site Admin, I want to be able to delete product reviews so that I can remove product reviews that are irrelevant or unhelpful. | admin panel, reviews app |
 
+## Agile
 
 
-### User stories that are planned for next sprint
-
-| id  |  content | 
-| ------ | ------ |
-
-
-## AGILE
 
 
 ## Website Architecture
