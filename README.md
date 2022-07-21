@@ -1,5 +1,94 @@
 # **Watch You Want?**
 
+## **Table of Contents**
+
+- [**Watch You Want?**](#--watch-you-want---)
+  * [**Introduction**](#--introduction--)
+  * [**UX**](#--ux--)
+    + [**Ideal User Demographic**](#--ideal-user-demographic--)
+      - [**The ideal users of this website are:**](#--the-ideal-users-of-this-website-are---)
+      - [**Strategy**](#--strategy--)
+  * [**Purpose**](#--purpose--)
+  * [**User Stories**](#--user-stories--)
+      - [**EPICS**](#--epics--)
+      - [**Site User:**](#--site-user---)
+      - [**Site Admin:**](#--site-admin---)
+      - [**Strategy Table**](#--strategy-table--)
+    + [**User Stories that have been satisfied by the creation of particular apps in ths project:**](#--user-stories-that-have-been-satisfied-by-the-creation-of-particular-apps-in-ths-project---)
+  * [**Agile**](#--agile--)
+    + [**Kanban Board and Issues**](#--kanban-board-and-issues--)
+      - [**SPRINT 1 - PLANNING**](#--sprint-1---planning--)
+      - [**SPRINT 2 - INSTALLING DJANGO AND CREATING A HOME PAGE**](#--sprint-2---installing-django-and-creating-a-home-page--)
+      - [**SPRINT 3 - MAJOR MODELS PART 1**](#--sprint-3---major-models-part-1--)
+      - [**SPRINT 4 - MAJOR MODELS PART 2**](#--sprint-4---major-models-part-2--)
+      - [**SPRINT 5 - MAJOR MODELS PART 3**](#--sprint-5---major-models-part-3--)
+      - [**SPRINT 6 - EXTRA MODELS**](#--sprint-6---extra-models--)
+      - [**SPRINT 7 - AWS AND HEROKU**](#--sprint-7---aws-and-heroku--)
+      - [**SPRINT 7 - SNAGGING LIST AND EXTRA STYLING](#--sprint-7---snagging-list-and-extra-styling--)
+      - [**SPRINT 8 - DOCUMENTATION AND TESTING**](#--sprint-8---documentation-and-testing--)
+  * [Website Architecture](#--website-architecture--)
+    + [Database Schema](#--database-schema--)
+    + [**Site Structure**](#--site-structure--)
+  * [**Skeleton**](#--skeleton--)
+    + [**Wireframes**](#--wireframes--)
+      - [**Home Page**](#--home-page--)
+      - [**All Products Page**](#--all-products-page--)
+      - [**Product Detail Page**](#--product-detail-page--)
+      - [**Shopping Bag Page**](#--shopping-bag-page--)
+      - [**Register for an Account page**](#--register-for-an-account-page--)
+      - [**User Profile Page**](#--user-profile-page--)
+      - [**Blog App**](#--blog-app--)
+      - [**Blog Detail Page**](#--blog-detail-page--)
+  * [Surface](#--surface--)
+    + [Main colours](#--main-colours--)
+    + [Inspirations](#--inspirations--)
+    + [Text](#--text--)
+  * [Technologies Used](#--technologies-used--)
+    + [Languages Used](#--languages-used--)
+    + [Technologies and Programs Used:](#--technologies-and-programs-used--)
+    + [Frameworks Libraries and Programs Used](#--frameworks-libraries-and-programs-used--)
+    + [Product database](#--product-database--)
+  * [**Existing Features**](#--existing-features--)
+    + [**Navbar and Footer**](#--navbar-and-footer--)
+    + [**Footer**](#--footer--)
+    + [**Shop**](#--shop--)
+    + [**Product Detail page**](#--product-detail-page--)
+    + [**Shopping bag**](#--shopping-bag--)
+    + [**Checkout page**](#--checkout-page--)
+    + [**Order confirmation**](#--order-confirmation--)
+    + [**Blog**](#--blog--)
+    + [**Profile**](#--profile--)
+    + [**Product Management**](#--product-management--)
+  * [**Future Features**](#--future-features--)
+    + [**Stock Management**](#--stock-management--)
+    + [**Star Rating System**](#--star-rating-system--)
+    + [**Reviews**](#--reviews--)
+  * [**Web Marketing**](#--web-marketing--)
+    + [**SEO**](#--seo--)
+  * [**Keywords**](#--keywords--)
+    + [**Newsletter**](#--newsletter--)
+    + [**Facebook**](#--facebook--)
+  * [**Code Validation**](#--code-validation--)
+  * [**Testing**](#--testing--)
+  * [**Project Bugs and Solutions**](#--project-bugs-and-solutions--)
+  * [**Deployment and making a clone**](#--deployment-and-making-a-clone--)
+    + [**Deployment to Heroku**](#--deployment-to-heroku--)
+    + [Forking the GitHub Repository](#--forking-the-github-repository--)
+    + [Making a Local Clone](#making-a-local-clone)
+    + [Setting up your local enviroment](#--setting-up-your-local-enviroment--)
+    + [Getting Stripe keys](#--getting-stripe-keys--)
+    + [Getting email variables from gmail](#--getting-email-variables-from-gmail--)
+    + [Setting AWS bucket](#--setting-aws-bucket--)
+  * [Credits](#--credits--)
+    + [Online resources](#--online-resources--)
+    + [Offline resources](#--offline-resources--)
+    + [Tutorials and inspiration](#--tutorials-and-inspiration--)
+    + [Code Snippets](#--code-snippets--)
+    + [People](#--people--)
+    + [Conclusion](#--conclusion--)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 [![Watch You Want - Home Page](README_docs/readme_images/watchyouwant_home.png)]
 
 Click [here](https://watchyouwant-pp5.herokuapp.com/) to visit the live site.
@@ -246,10 +335,76 @@ Each story was assigned a classification of Must-Have, Should-Have, Could-Have o
 |  [#34](https://github.com/Kat632/watchyouwant/issues/41) | As a Site Admin, I want to be able to approve product reviews so that I can remove comments that are spam or offensive. | admin panel, reviews app |
 |  [#35](https://github.com/Kat632/watchyouwant/issues/42) | As a Site Admin, I want to be able to delete product reviews so that I can remove product reviews that are irrelevant or unhelpful. | admin panel, reviews app |
 
-## Agile
+## **Agile**
+### **Kanban Board and Issues**
 
+![Kanban Board - Part of the way through the project](README_docs/readme_images/kanban1.png)
 
+Github Issues were used to create the EPICS.  Each of the EPICS has a milestone attached to it.  The user stories were also entered as issues, but assigned to each EPIC via the milestones.  A link to the project with live issues can be found [here](https://github.com/Kat632/watchyouwant/projects/1).
 
+I kept the EPICS in their own column on the Kanban board and the user stories were distributed amongst three columns, depending on whether they were To Do, In Progress or Done.  The image above illustrates how this was working at a random point during my project.
+
+For the major app builds of the project, I created separate branches so that I could be assured that the basic structure of the main branch could not be affected by what I was doing on the development branches.  I realise that I could have created branches for issues and linked them in that way too.  I imagine this would be useful for a project on a bigger scale, but I chose not to do that for this project.
+
+I also used Issues to detail some of the over-arching project tasks.  I found this really useful to help keep me on track, specifically during the initial stages of the project.  One of the major issues I had with Project 4 was lack of planning for the first incarnation of my project, so much so that I completely lost track of what I was doing and had to restart with something much simpler three weeks before the project deadline.  I was determined to avoid that this time and so I planned meticulously.  I gave myself a week at the beginning of the project just for planning and I refused to let myself write a line of code until all of the plans were in place.
+
+#### **SPRINT 1 - PLANNING**
+* Find a database and refine it into what I need.
+* Make the site map diagram.
+* Make the database schema.
+* Write the EPICS and User Stories.
+* Add the EPICS and User Stories to Github issues.
+* Research what I wanted the website to look like.
+* Make wireframes.
+
+#### **SPRINT 2 - INSTALLING DJANGO AND CREATING A HOME PAGE**
+* Install Django and associated items.
+* Initial configuration and deployment to Heroku.
+* Install and configure allauth.
+* Make templates for base.html and index.html.
+* Start adding basic css.
+
+#### **SPRINT 3 - MAJOR MODELS PART 1**
+* Make the Product app.
+* Load the categories and products database fixtures.
+* Load the product images.
+* Make templates for products.html and product_detail.html.
+* Styling for these pages.
+* Get the sorting function working.
+* Get admin functionality for adding or deleting a product working.
+
+#### **SPRINT 4 - MAJOR MODELS PART 2**
+* Make the Shopping Bag App and models, views and templates.
+* Make the Checkout App and templates.
+* Styling of the above.
+
+#### **SPRINT 5 - MAJOR MODELS PART 3**
+* Wire up Stripe.
+* Webhooks.
+* Email set up for order confirmations.
+* Second deployment to Heroku.
+
+#### **SPRINT 6 - EXTRA MODELS**
+* Add Reviews app and models, views and templates.
+* Add Blog app and models, views and templates.
+* Styling of the above.
+
+#### **SPRINT 7 - AWS AND HEROKU**
+* Add in the customer error pages.
+* Connect to AWS and third deployment to Heroku.
+* Test to ensure everything still working as expected.
+
+#### **SPRINT 7 - SNAGGING LIST AND EXTRA STYLING
+* Work through a list of things that I wasn't happy with or weren't working properly.
+* More styling.
+* Add in the extras, e.g Privacy Policy and Terms and Conditions.
+* Add the social links.
+* Connect up MailChimp for newsletter purposes.
+
+#### **SPRINT 8 - DOCUMENTATION AND TESTING**
+* Write the readme.md.
+* Testing and more testing.
+* Write testing.md
 
 ## Website Architecture
 
@@ -381,7 +536,7 @@ Courier has a typewriter feel, indeed according to [this](https://en.wikipedia.o
 + Kaggle:
     I chose [this database](https://www.kaggle.com/datasets/paramaggarwal/fashion-product-images-dataset) from Kaggle.  I started with a 25gb file which I then pared down to just watches.  At this point it was still 2000 items, so I took around 45 products and their images and created my database from there.
 
-    I created a spreadsheet of my products and their categories and used [jsonformatter.org] to create my fixtures files.
+    I created a spreadsheet of my products and their categories.  Then I wrote a python program (based on instructions found [here](https://medium.com/@hannah15198/convert-csv-to-json-with-python-b8899c722f6d)) to convert my csv files to json and used [jsonformatter.org](https://jsonformatter.org/) to create minify it for the fixtures files.
 
 ## **Existing Features**
 
@@ -840,6 +995,7 @@ class MediaStorage(S3Boto3Storage):
 * [Bootstrap 4](https://getbootstrap.com/docs/4.0/getting-started/introduction/)
 * [Markdown best practices](https://www.markdownguide.org/basic-syntax/)
 * [Markdown Table of content generator](http://ecotrust-canada.github.io/markdown-toc/)
+* [CSV to Markdown table conversion](https://www.convertcsv.com/csv-to-markdown.htm)
 * [Favicon](https://favicon.io/)
 * [TINYPNG](https://tinypng.com/)
 
