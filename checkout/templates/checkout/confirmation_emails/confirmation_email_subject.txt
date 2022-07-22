@@ -1,1 +1,1 @@
-Watch You Want Order Confirmation for order number {{ order.order_number }}
+Watch You Want Order Acknowledgement for order number {{ order.order_number }}
