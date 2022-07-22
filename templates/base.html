@@ -204,12 +204,24 @@
                     <div class="footer-widget">
                         <h6>Account</h6>
                         <ul>
+                            {% if request.user.is_authenticated %}
                             <li>
                                 <a href="{% url 'profile' %}">My Account</a>
                             </li>
                             <li>
                                 <a href="{% url 'view_bag' %}">My Bag</a>
                             </li>
+                            <li>
+                                <a href="{% url 'account_logout' %}">Logout</a>
+                            </li>
+                            {% else %}
+                            <li>
+                                <a href="{% url 'account_signup' %}">Register</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'account_login' %}">Login</a>
+                            </li>
+                            {% endif %}
                         </ul>
                     </div>
                 </div>
