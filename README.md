@@ -24,10 +24,10 @@
       - [**SPRINT 5 - MAJOR MODELS PART 3**](#--sprint-5---major-models-part-3--)
       - [**SPRINT 6 - EXTRA MODELS**](#--sprint-6---extra-models--)
       - [**SPRINT 7 - AWS AND HEROKU**](#--sprint-7---aws-and-heroku--)
-      - [**SPRINT 7 - SNAGGING LIST AND EXTRA STYLING](#--sprint-7---snagging-list-and-extra-styling--)
+      - [**SPRINT 7 - SNAGGING LIST AND EXTRA STYLING**](#--sprint-7---snagging-list-and-extra-styling--)
       - [**SPRINT 8 - DOCUMENTATION AND TESTING**](#--sprint-8---documentation-and-testing--)
-  * [Website Architecture](#--website-architecture--)
-    + [Database Schema](#--database-schema--)
+  * [**Website Architecture**](#--website-architecture--)
+    + [**Database Schema**](#--database-schema--)
     + [**Site Structure**](#--site-structure--)
   * [**Skeleton**](#--skeleton--)
     + [**Wireframes**](#--wireframes--)
@@ -39,15 +39,15 @@
       - [**User Profile Page**](#--user-profile-page--)
       - [**Blog App**](#--blog-app--)
       - [**Blog Detail Page**](#--blog-detail-page--)
-  * [Surface](#--surface--)
-    + [Main colours](#--main-colours--)
-    + [Inspirations](#--inspirations--)
-    + [Text](#--text--)
-  * [Technologies Used](#--technologies-used--)
-    + [Languages Used](#--languages-used--)
-    + [Technologies and Programs Used:](#--technologies-and-programs-used--)
-    + [Frameworks Libraries and Programs Used](#--frameworks-libraries-and-programs-used--)
-    + [Product database](#--product-database--)
+  * [**Surface**](#--surface--)
+    + [**Main colours**](#--main-colours--)
+    + [**Inspirations**](#--inspirations--)
+    + [**Text**](#--text--)
+  * [**Technologies Used**](#--technologies-used--)
+    + [**Languages Used**](#--languages-used--)
+    + [**Technologies and Programs Used:**](#--technologies-and-programs-used--)
+    + [**Frameworks Libraries and Programs Used**](#--frameworks-libraries-and-programs-used--)
+    + [**Product database**](#--product-database--)
   * [**Existing Features**](#--existing-features--)
     + [**Navbar and Footer**](#--navbar-and-footer--)
     + [**Footer**](#--footer--)
@@ -73,19 +73,19 @@
   * [**Project Bugs and Solutions**](#--project-bugs-and-solutions--)
   * [**Deployment and making a clone**](#--deployment-and-making-a-clone--)
     + [**Deployment to Heroku**](#--deployment-to-heroku--)
-    + [Forking the GitHub Repository](#--forking-the-github-repository--)
-    + [Making a Local Clone](#making-a-local-clone)
-    + [Setting up your local enviroment](#--setting-up-your-local-enviroment--)
-    + [Getting Stripe keys](#--getting-stripe-keys--)
-    + [Getting email variables from gmail](#--getting-email-variables-from-gmail--)
-    + [Setting AWS bucket](#--setting-aws-bucket--)
-  * [Credits](#--credits--)
-    + [Online resources](#--online-resources--)
-    + [Offline resources](#--offline-resources--)
-    + [Tutorials and inspiration](#--tutorials-and-inspiration--)
-    + [Code Snippets](#--code-snippets--)
-    + [People](#--people--)
-    + [Conclusion](#--conclusion--)
+    + [**Forking the GitHub Repository**](#--forking-the-github-repository--)
+    + [**Making a Local Clone**](#making-a-local-clone)
+    + [**Setting up your local enviroment**](#--setting-up-your-local-enviroment--)
+    + [**Getting Stripe keys**](#--getting-stripe-keys--)
+    + [**Getting email variables from gmail**](#--getting-email-variables-from-gmail--)
+    + [**Setting AWS bucket**](#--setting-aws-bucket--)
+  * [**Credits**](#--credits--)
+    + [**Online resources**](#--online-resources--)
+    + [**Offline resources**](#--offline-resources--)
+    + [**Tutorials and inspiration**](#--tutorials-and-inspiration--)
+    + [**Code Snippets**](#--code-snippets--)
+    + [**People**](#--people--)
+    + [**Conclusion**](#--conclusion--)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
@@ -987,8 +987,8 @@ class MediaStorage(S3Boto3Storage):
 - Go to your S3 bucket page on AWS. Create new folder "media"
 - go to the media folder and click Upload
 
-## Credits 
-### Online resources
+## **Credits** 
+### **Online resources**
 * [Adobe Stock Images](https://stock.adobe.com/uk/) - I signed up for a free trial, then cancelled it.
 * [Unsplash](https://unsplash.com/)
 * [Fontawsome](https://fontawesome.com/)
@@ -999,7 +999,7 @@ class MediaStorage(S3Boto3Storage):
 * [Favicon](https://favicon.io/)
 * [TINYPNG](https://tinypng.com/)
 
-### Offline resources
+### **Offline resources**
 * All of the images for the blog and for the restored section of the website were provided by my husband, Chris Morley.
 * All of the copy for the blog and for the restored section of the website was also provided by my husband and checked by myself for SEO purposes.
 
@@ -1007,29 +1007,30 @@ class MediaStorage(S3Boto3Storage):
 * [Visio](https://www.microsoft.com/en-gb/microsoft-365/visio/flowchart-software): Visio was used to create the models schema and the site map schema included in this README document.
 * [Balsamiq](https://balsamiq.cloud/): Balsamiq was used to create the wireframes in this README document.
 
-### Tutorials and inspiration
+### **Tutorials and inspiration**
 * The project walkthrough Boutique Ado from Code Institute [original repo](https://github.com/Code-Institute-Solutions/boutique_ado_v1/tree/f5880efee43b3b9ea1276a09ca972f4588001c59), deployed [here](https://ado-clothes-shop.herokuapp.com/). 
 * This [Bootstrap template from Colorlib](https://preview.colorlib.com/theme/ashion/index.html) that I used as inspiration for the home page of my website.  I liked the clean, white aesthetic which is very similar to the watch websites I encountered during my initial research.  Please note that I did not buy this template, but I did use its aesthetic and homepage layout as inspiration.
 * This website that I found and fell in love with during my research into websites with a retro aesthetic: [Cockta](https://cockta.eu/en/).
 * This [Pinterest board](https://www.pinterest.co.uk/bjoel0663/esprit-and-benetton-ads-of-the-80s/) featuring adverts from 1980s United Colour of Benetton.
 * Google image search ["Swatch Watch Aesthetic"](https://www.google.com/search?q=swatch+watch+aesthetic&sxsrf=ALiCzsZXApDm8-x3jfmKtcJ6VDZzzcu7yw:1657650512400&source=lnms&tbm=isch&sa=X&ved=2ahUKEwj39M-v_fP4AhUREcAKHTYXBSUQ_AUoAXoECAEQAw&biw=1294&bih=627&dpr=1)
 * This [blog about design and colours of the last 100 years](https://juiceboxinteractive.com/blog/color/).  The colour scheme I chose for this website is entirely based off of their 1980s colour scheme.
+* The structure of this readme has been influenced by [Jo Gorka's Project 5 readme](https://github.com/JoGorska/bonsai-shop/blob/main/README.md) and I also found her recent webinar about successful documentation exceedingly helpful.
 
-### Code Snippets
+### **Code Snippets**
 
 * The delete modal was adapted from code I found [here](https://mdbootstrap.com/docs/b4/jquery/modals/additional/).
 * The box shadows in the blog and in reviews come from [here](https://getcssscan.com/css-box-shadow-examples). 
 
-### People
+### **People**
 
-- Linda Biggs - for figuring out how to remove the background from images.
-- Chris Morley - my tester, my remover of backgrounds from images, my bringer of logic, food and tea, and most importantly, my husband.
-- Matthew Pendlebury -
-- Andrew Dempsey -  
+- [Chris Morley](https://www.linkedin.com/in/chris-morley-11620815/) - my tester, my remover of backgrounds from images, my bringer of logic, food and tea, and most importantly, my husband.  I couldn't have done this without him.
+- [Matthew Pendlebury](https://www.linkedin.com/in/matthewpendlebury/) - my childhood best friend and neighbour, a good egg who just happens to be an e-commerce web expert.
+- [Andrew Dempsey](https://www.linkedin.com/in/andrew-dempsey-20ab40180/) - my unofficial mentor.
+- The CI tutors who have helped me out of a hole on more than one occasion.
 
-### Conclusion
+### **Conclusion**
 
-My journey for this last 12 months has been unbelievable.  My degree in Modern Languages over 20 years ago was a walk in the park in comparison.  It has taken dedicated focus and the unfailing support of my husband to get to the end of this course.  I am so proud of US for getting through this.  
+My journey over the last 12 months has been unbelievable.  My degree in Modern Languages over 20 years ago was a walk in the park in comparison.  It has taken dedicated focus and the unfailing support of my husband to get to the end of this course.  I am so proud of US for getting through this.  
 
 I started this course because I have always been interested in coding.  From coding in BASIC on my Acorn Electron when I was about 8 years old, to getting hold of a copy of Dreamweaver 3.1 in about 1999/2000 and building myself an awful-looking repository of useful website links.  From there I had a series of Wordpress blogs for random things like poetry and I never really maintained them properly.  In 2020, I rebuilt my yoga studio website in Wordpress because it needed a refresh and I needed something to occupy my time during lockdown.  I rediscovered my love of building websites and I wanted to feel more in control of the code, so I started looking into courses and that's when I came across Code Institute.
 
