@@ -38,7 +38,7 @@ def add_to_bag(request, item_id):
                          (f'Updated {product.name} '
                           f'quantity to {bag[item_id]}'))
         # Overwrites the bag variable in the session with updated version.
-        request.session['bag'] = bag
+    request.session['bag'] = bag
 
     return redirect(redirect_url)
 

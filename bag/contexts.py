@@ -5,7 +5,11 @@ from products.models import Product
 
 
 def bag_contents(request):
-
+    """
+    Returns the context dictionary to display the cart contents and makes it
+    available to all templates across the application.  Works out and applies
+    discount free delivery based on free delivery threshold.
+    """
     bag_items = []
     total = 0
     product_count = 0
