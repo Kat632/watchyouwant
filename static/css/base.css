@@ -1110,7 +1110,7 @@ table.col {
     }
 }
 
-@media (max-width: 352px) {
+@media (max-width: 577px) {
     .big-box img {
         margin-left: -52px;
     }
@@ -1123,6 +1123,26 @@ table.col {
         font-size: 18px;
         margin-left: -5px;
         z-index: 1;
+    }
+    /* Fix delivery banner */
+    #delivery-banner h4 {
+        font-size: .8rem;
+        float: left;
+    }
+    /* Fix nav bar */
+    .navbar {
+        justify-content: flex-start;
+    }
+    .view-all-text {
+        margin-left: 1px;
+    }
+    .view-all-text h1 {
+        font-size: 20px;
+    }
+    .big-box {
+        padding-left: 30px;
+        height: auto;
+        margin-left: 0;
     }
 }
 
