@@ -114,6 +114,8 @@ When testing interactively, use a card number, such as 4242 4242 4242 4242. Ente
 
 This information has been taken directly from the [Stripe testing documentation](https://stripe.com/docs/testing).
 
+Please note that in order to enter a UK-based postcode, use a UK card number such as 4000 0582 6000 0005.
+
 ## **UX**
 
 ### **Ideal User Demographic**
