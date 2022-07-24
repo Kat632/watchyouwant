@@ -125,7 +125,7 @@ def checkout(request):
                                     args=[order.order_number]))
         else:
             messages.error(request, 'There was an error with your form. '
-                                     'Please double check your information.')
+                           'Please double check your information.')
     else:
         bag = request.session.get('bag', {})
         if not bag:
