@@ -19,7 +19,8 @@ class BlogPost(models.Model):
     last_updated = models.DateTimeField(auto_now=True)
     author = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
     status = models.IntegerField(choices=STATUS, default=0)
-    likes = models.ManyToManyField(UserProfile, related_name='blog_likes', blank=True)
+    likes = models.ManyToManyField(
+        UserProfile, related_name='blog_likes', blank=True)
 
     class Meta:
         """

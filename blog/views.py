@@ -42,7 +42,7 @@ class BlogDetail(View):
                 "comment_form": CommentForm(),
             },
         )
-    
+
     def post(self, request, slug, *args, **kwargs):
         """
         Creates view for a comments
