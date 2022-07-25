@@ -29,7 +29,6 @@ def add_to_bag(request, item_id):
                          (f'Updated {product.name} '
                           f'quantity to {bag[item_id]}'))
     elif product.stock_level == 0:
-        bag[item_id] = 0
         messages.error(request,
                        (f'{product.name} '
                         f'is out of stock'))
