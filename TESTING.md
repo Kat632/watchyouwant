@@ -376,11 +376,13 @@ The [W3C Markup Validator](https://validator.w3.org/ "Link to M£C Markup Valida
 <details>
 <summary>CSS Stylesheets - CSS Validation</summary>
 
-![Style sheet validation results - base.css](static/media/TESTING/validation/w3c-valid-base-css.png)
+![Style sheet validation results - base.css](README_docs/readme_images/testing/css/w3c_base_css.png)
 
-![Style sheet validation results - checkout.css](static/media/TESTING/validation/w3c-valid-checkout-css.png)
+![Style sheet validation results - blog.css](README_docs/readme_images/testing/css/w3c_blog_css.png)
 
-![Style sheet validation results - my_profile.css](static/media/TESTING/validation/w3c-valid-profile-css.png)
+![Style sheet validation results - checkout.css](README_docs/readme_images/testing/css/w3c_checkout_css.png)
+
+![Style sheet validation results - profile.css](README_docs/readme_images/testing/css/w3c_profile_css.png)
 
 </details>
 
@@ -388,15 +390,19 @@ The [W3C Markup Validator](https://validator.w3.org/ "Link to M£C Markup Valida
 <details>
 <summary>JavaScript Files - JS Validation</summary>
 
-![JS validation results - base.html - postloadjs](static/media/TESTING/validation/jshint-valid-base-postloadjs.png)
+![JS validation results - bag.html - postloadjs](README_docs/readme_images/testing/js/jshint_bag_postloadjs_warnings.png)
 
-![JS validation results - checkout_stripe_elements.js](static/media/TESTING/validation/jshint-valid-checkout-stripe-elements.png)
+![JS validation results - bag.html - postloadjs](README_docs/readme_images/testing/js/jshint_bag_postloadjs_fixed.png)
 
-![JS validation results - product_quantity_input_script](static/media/TESTING/validation/jshint-valid-product-quantity-input-script.png)
+![JS validation results - base.html - postloadjs](README_docs/readme_images/testing/js/jshint_base_postloadjs.png)
 
-![JS validation results - products - postloadjs](static/media/TESTING/validation/jshint-valid-products-postloadjs.png)
+![JS validation results - countryfield.js](README_docs/readme_images/testing/js/jshint_countryfield.png)
 
-![JS validation results - bag - postloadjs](static/media/TESTING/validation/jshint-valid-shopping-bag-postloadjs.png)
+![JS validation results - countryfield.js](README_docs/readme_images/testing/js/jshint_countryfield_fixed.png)
+
+![JS validation results - quantity_input_script.js](README_docs/readme_images/testing/js/jshint_quantity_input_script.png)
+
+![JS validation results - stripe_elements.js](README_docs/readme_images/testing/js/jshint_stripe_elements.png)
 
 </details>
 
@@ -413,6 +419,24 @@ The [W3C Markup Validator](https://validator.w3.org/ "Link to M£C Markup Valida
     ![Python Validation - urls.py](README_docs/readme_images/testing/bag/pep8_valid_bag_urls.png)
 
     ![Python Validation - views.py](README_docs/readme_images/testing/bag/pep8_valid_bag_views.png)
+
+    </details>
+
+- Blog
+    <details>
+    <summary>Blog Files - Python Validation</summary>
+
+    ![Python Validation - admin.py](README_docs/readme_images/testing/blog/pep8_valid_blog_admin.png)
+
+    ![Python Validation - apps.py](README_docs/readme_images/testing/blog/pep8_valid_blog_apps.png)
+
+    ![Python Validation - forms.py](README_docs/readme_images/testing/bag/pep8_valid_blog_forms.png)
+
+    ![Python Validation - models.py](README_docs/readme_images/testing/bag/pep8_valid_blog_models.png)
+
+    ![Python Validation - urls.py](README_docs/readme_images/testing/bag/pep8_valid_blog_urls.png)
+
+    ![Python Validation - views.py](README_docs/readme_images/testing/bag/pep8_valid_blog_views.png)
 
     </details>
 
@@ -440,14 +464,17 @@ The [W3C Markup Validator](https://validator.w3.org/ "Link to M£C Markup Valida
 
     </details>
 
-
 - Home
     <details>
     <summary>Home Files - Python Validation</summary>
 
-    ![Python Validation - student_rations - urls.py](static/media/TESTING/validation/pep8-valid-home-urls.png)
+    ![Python Validation - forms.py](README_docs/readme_images/testing/home/pep8_valid_home_forms.png)
 
-    ![Python Validation - settings.py](static/media/TESTING/validation/pep8-valid-home-views.png)
+    ![Python Validation - models.py](README_docs/readme_images/testing/home/pep8_valid_home_models.png)
+
+    ![Python Validation - urls.py](README_docs/readme_images/testing/home/pep8_valid_home_urls.png)
+
+    ![Python Validation - views.py](README_docs/readme_images/testing/home/pep8_valid_home_views.png)
 
     </details>
 
@@ -456,83 +483,53 @@ The [W3C Markup Validator](https://validator.w3.org/ "Link to M£C Markup Valida
     <details>
     <summary>Product Files - Python Validation</summary>
 
-    ![Python Validation - student_rations - urls.py](static/media/TESTING/validation/pep8-valid-product-admin.png)
+    ![Python Validation - admin.py](README_docs/readme_images/testing/products/pep8_valid_products_admin.png)
 
-    ![Python Validation - settings.py](static/media/TESTING/validation/pep8-valid-product-forms.png)
+    ![Python Validation - apps.py](README_docs/readme_images/testing/home/pep8_valid_products_apps.png)
 
-    ![Python Validation - admin.py](static/media/TESTING/validation/pep8-valid-product-models.png)
+    ![Python Validation - forms.py](README_docs/readme_images/testing/home/pep8_valid_products_forms.png)
 
-    ![Python Validation - forms.py](static/media/TESTING/validation/pep8-valid-product-urls.png)
+    ![Python Validation - models.py](README_docs/readme_images/testing/home/pep8_valid_products_models.png)
 
-    ![Python Validation - models.py](static/media/TESTING/validation/pep8-valid-product-views.png)
+    ![Python Validation - urls.py](README_docs/readme_images/testing/home/pep8_valid_products_urls.png)
 
-    </details>
+    ![Python Validation - views.py](README_docs/readme_images/testing/home/pep8_valid_products_views.png)
 
-
-- Profile
-    <details>
-    <summary>Profile Files - Python Validation</summary>
-
-    ![Python Validation - student_rations - urls.py](static/media/TESTING/validation/pep8-valid-profile-admin.png)
-
-    ![Python Validation - settings.py](static/media/TESTING/validation/pep8-valid-profile-forms.png)
-
-    ![Python Validation - admin.py](static/media/TESTING/validation/pep8-valid-profile-models.png)
-
-    ![Python Validation - forms.py](static/media/TESTING/validation/pep8-valid-profile-urls.png)
-
-    ![Python Validation - models.py](static/media/TESTING/validation/pep8-valid-profile-views.png)
+    ![Python Validation - widgets.py](README_docs/readme_images/testing/home/pep8_valid_products_widgets.png)
 
     </details>
 
 
-- Queries
+- Profiles
     <details>
-    <summary>Queries Files - Python Validation</summary>
+    <summary>Profiles Files - Python Validation</summary>
 
-    ![Python Validation - student_rations - urls.py](static/media/TESTING/validation/pep8-valid-queries-admin.png)
+    ![Python Validation - forms.py](README_docs/readme_images/testing/profiles/pep8_valid_profiles_forms.png)
 
-    ![Python Validation - settings.py](static/media/TESTING/validation/pep8-valid-queries-forms.png)
+    ![Python Validation - models.py](README_docs/readme_images/testing/profiles/pep8_valid_profiles_models.png)
 
-    ![Python Validation - admin.py](static/media/TESTING/validation/pep8-valid-queries-models.png)
+    ![Python Validation - urls.py](README_docs/readme_images/testing/profiles/pep8_valid_profiles_urls.png)
 
-    ![Python Validation - forms.py](static/media/TESTING/validation/pep8-valid-queries-urls.png)
-
-    ![Python Validation - models.py](static/media/TESTING/validation/pep8-valid-queries-views.png)
+    ![Python Validation - views.py](README_docs/readme_images/testing/profiles/pep8_valid_profiles_views.png)
 
     </details>
 
 
-- Shopping Bag
-    <details>
-    <summary>Shopping Bag Files - Python Validation</summary>
-
-    ![Python Validation - student_rations - urls.py](static/media/TESTING/validation/pep8-valid-shopping-bag-contexts.png)
-
-    ![Python Validation - settings.py](static/media/TESTING/validation/pep8-valid-shopping-bag-urls.png)
-
-    ![Python Validation - admin.py](static/media/TESTING/validation/pep8-valid-shopping-bag-views.png)
-
-    </details>
-
-
-- The Wagging Tailor
+- Watch You Want
 
     <details>
-    <summary>The Wagging Tailor Files - Python Validation</summary>
+    <summary>Watch You Want Files - Python Validation</summary>
 
-    ![Python Validation - student_rations - urls.py](static/media/TESTING/validation/pep8-valid-wagging-tailor-settings.png)
+    ![Python Validation - urls.py](README_docs/readme_images/testing/profiles/pep8_valid_wyw_urls.png)
 
-    ![Python Validation - settings.py](static/media/TESTING/validation/pep8-valid-wagging-tailor-urls.png)
+    ![Python Validation - views.py](README_docs/readme_images/testing/profiles/pep8_valid_wyw_views.png)
 
-    ![Python Validation - admin.py](static/media/TESTING/validation/pep8-valid-wagging-tailor-views.png)
-
-    ![Python Validation - forms.py](static/media/TESTING/validation/pep8-valid-wagging-tailor-wsgi.png)
+    ![Python Validation - wsgi.py](README_docs/readme_images/testing/profiles/pep8_valid_wyw_wsgi.png)
 
     </details>
 
 ## User testing 
-My husband and the lovely people of Slack were asked to review the site and documentation to point out any bugs and/or user experience issues. Their helpful advice throughout the process led to a few small UX changes in order to create a better experience. 
+My husband and the lovely people of Slack were asked to review the site and documentation to point out any bugs and/or user experience issues. Their helpful advice throughout the process led to a few small UX changes in order to create a better experience.
 
 [Back to top ⇧](#)
 
