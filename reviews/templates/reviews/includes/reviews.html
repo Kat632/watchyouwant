@@ -10,14 +10,15 @@
                     <h5 class="title-heading-small">Add your review here</h5>
                     <a href="{% url 'add_review' product.id %}" class="btn btn-custom rounded-0" aria-label="add review">Add Review <i
                         class="fas fa-plus ml-2"></i></a>
+                    </div>
             {% else %}
             <div class="columns">
                 <div class="column">
                     <h6 class="title-heading-small">
                         Please <a href="{% url 'account_login' %}">log in</a> to add a review of a product.</h6>
                 </div>
-            </div>
             {% endif %}
+            </div>
         </div>
     </div>
 
