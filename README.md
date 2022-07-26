@@ -94,6 +94,8 @@
 Click [here](https://watchyouwant-pp5.herokuapp.com/) to visit the live site.
 ------
 
+[Back to top](#)
+
 ## **Introduction**
 
 **Watch You Want?** is a full stack e-commerce website for the 5th and final project of the Code Institute diploma in Software Development (e-commerce applications).
@@ -115,6 +117,8 @@ When testing interactively, use a card number, such as 4242 4242 4242 4242. Ente
 This information has been taken directly from the [Stripe testing documentation](https://stripe.com/docs/testing).
 
 Please note that in order to enter a UK-based postcode, use a UK card number such as 4000 0582 6000 0005.
+
+[Back to top](#)
 
 ## **UX**
 
@@ -227,6 +231,8 @@ With the user stories in mind, I created the below strategy table using MOSCOW p
 
 Each story was assigned a classification of Must-Have, Should-Have, Could-Have or Won't Have. Each story was also assigned user story points, based on my best estimation for the time/difficulty of completing each story.  All of the user stories in the table are what I believed I needed to do in order to deliver above the expected MVP (Minimum Viable Product).  This is why there are no Won't Have items in the table below because I expected to be able to deliver all of the user stories.  I completed every user story within the timeframe.
 
+[Back to top](#)
+
 #### **Strategy Table**
 
 |User Story ID                                                     |AS A/AN   |I WANT TO BE ABLE TO…                                                 |SO THAT I CAN…                                                                                                      |Story Points|MOSCOW     |
@@ -278,6 +284,8 @@ Each story was assigned a classification of Must-Have, Should-Have, Could-Have o
 |35                                                                |Site Admin|Approve product reviews                                               |Filter out any spam or irrelevant reviews                                                                           |2           |Should Have|
 |36                                                                |Site Admin|Delete product reviews                                                |Remove product reviews that are irrelevant or unhelpful                                                             |2           |Should Have|
 |                                                                  |          |                                                                      |Total Story Points                                                                                                  |122         |           |
+
+[Back to top](#)
 
 ### **User Stories that have been satisfied by the creation of particular apps in ths project:**
 
@@ -336,6 +344,8 @@ Each story was assigned a classification of Must-Have, Should-Have, Could-Have o
 |  [#33](https://github.com/Kat632/watchyouwant/issues/40) | As a Site Admin, I want to be able to delete comments on my blog so that I can filter out any spam or irrelevant comments. | admin panel, blog app |
 |  [#34](https://github.com/Kat632/watchyouwant/issues/41) | As a Site Admin, I want to be able to approve product reviews so that I can remove comments that are spam or offensive. | admin panel, reviews app |
 |  [#35](https://github.com/Kat632/watchyouwant/issues/42) | As a Site Admin, I want to be able to delete product reviews so that I can remove product reviews that are irrelevant or unhelpful. | admin panel, reviews app |
+
+[Back to top](#)
 
 ## **Agile**
 ### **Kanban Board and Issues**
@@ -408,6 +418,8 @@ I also used Issues to detail some of the over-arching project tasks.  I found th
 * Testing and more testing.
 * Write testing.md
 
+[Back to top](#)
+
 ## Website Architecture
 
 ### Database Schema
@@ -419,6 +431,8 @@ A relational database has been used to deliver the expected functionality.  SQLi
 I prepared a site map diagram in order to keep track of the templates I needed to create and to see how the site would flow.  Users need to be able to navigate through the site with ease and efficiency.
 
 ![Site map for Watch You Want](README_docs/readme_images/site_map.png)
+
+[Back to top](#)
 
 ## **Skeleton**
 
@@ -438,7 +452,7 @@ The home page is divided into sections, with links to the main product categorie
 
 The page which shows all of the products has a small breadcrumb at the top.  If a user clicks the house they will be taken back to the homepage.  Next to that there is a sort box, which allows the user to manipulate the order in which they view the products.  For example, they can sort in alphabetical order or reverse alphabetical order.
 
-The way the products are displayed, is a simple bootstrap grid with cards for the individual products.  This was to ensure that the products remained responsive at all screen sizes.
+The way the products are displayed is a simple bootstrap grid with cards for the individual products.  This was to ensure that the products remained responsive at all screen sizes.
 
 #### **Product Detail Page**
 ![Wireframe for Watch You Want - Product Detail Page](README_docs/readme_images//wireframes/wyw_product_detail.png)
@@ -484,12 +498,14 @@ Each blog detail page has the title of the blog at the top in a header bar, plus
 
 Underneath the blog, there is a comments section where a logged in user can leave a comment and anyone can read the comments that have been previously left for that blog post.
 
+[Back to top](#)
+
 ## Surface
 
 ### Main colours
-The overall design of the **Watch You Want?** website takes inspiration from [United Colours of Benetton](https://gb.benetton.com/) and [Swatch](https://www.swatch.com/).  I wanted a simple, clean site with a 1980s vibe and neon colours.  I felt that this would help to differentiate the site from the ones mentioned below. in [Inspirations]  - NEED LINK!
+The overall design of the **Watch You Want?** website takes inspiration from [United Colours of Benetton](https://gb.benetton.com/) and [Swatch](https://www.swatch.com/).  I wanted a simple, clean site with a 1980s vibe and neon colours.  I felt that this would help to differentiate the site from the ones mentioned below. in [Inspirations](#--inspirations--).
 
-This conrast grid shows how all the colours fit together.  Further information about my design inspiration can be found in [this section](#tutorials-and-inspiration). - LINK DOESN'T GO ANYWHERE
+This conrast grid shows how all the colours fit together.  Further information about my design inspiration can be found in [this section](#--tutorials-and-inspiration--).
 
 ![Eightshapes Contrast Grid](README_docs/readme_images/watchyouwant_eightshapes.png)
 
@@ -497,9 +513,11 @@ This conrast grid shows how all the colours fit together.  Further information a
 Having extensively researched e-commerce websites, and then latterly specific watch websites, I knew that I wanted the website to have a white background and to not be overly busy.  My research led me to [Watch Shop](https://www.watchshop.com/) and to [House of Watches](https://www.houseofwatches.co.uk/), both of which served as inspiration for **Watch You Want?**.
 
 ### Text
-I deliberately decided to only use one font throughout the site.  My chosen font is Courier New, which is a TrueType font.  It is scaleable, in that it doesn't become jagged around the edges when enlarged.  The font is versatile enough using different font weights and uppercase to be sufficient for both headlines and other text.
+I deliberately decided to use only one font throughout the site.  My chosen font is Courier New, which is a TrueType font.  It is scaleable, in that it doesn't become jagged around the edges when enlarged.  The font is versatile enough using different font weights and uppercase to be sufficient for both headlines and other text.
 
 Courier has a typewriter feel, indeed according to [this](https://en.wikipedia.org/wiki/Courier_(typeface)) Wikipedia article, it was developed for IBM's first typewriters.  I felt that this added to the retro style of the website.
+
+[Back to top](#)
 
 ## Technologies Used
 ### Languages Used
@@ -539,6 +557,8 @@ Courier has a typewriter feel, indeed according to [this](https://en.wikipedia.o
     I chose [this database](https://www.kaggle.com/datasets/paramaggarwal/fashion-product-images-dataset) from Kaggle.  I started with a 25gb file which I then pared down to just watches.  At this point it was still 2000 items, so I took around 45 products and their images and created my database from there.
 
     I created a spreadsheet of my products and their categories.  Then I wrote a python program (based on instructions found [here](https://medium.com/@hannah15198/convert-csv-to-json-with-python-b8899c722f6d)) to convert my csv files to json and used [jsonformatter.org](https://jsonformatter.org/) to create minify it for the fixtures files.
+
+[Back to top](#)
 
 ## **Existing Features**
 
@@ -620,6 +640,8 @@ On the profile page, a user can update their personal delivery information which
 
 A superuser is able to add or edit a product from the front end of the website.
 
+[Back to top](#)
+
 ## **Future Features**
 
 ### **Stock Management**
@@ -638,6 +660,8 @@ The site currently gets the star ratings from two different places.  The first o
 
 A logged in user is currently able to leave a review for every product, regardless of whether or not they have previously purchased it.  In the future I would like to be able to limit a user's ability to leave a review to only products they have purchased.  I just ran out of time to implement this.
 
+[Back to top](#)
+
 ## **Web Marketing**
 
 ### **SEO**
@@ -647,6 +671,8 @@ The site has been equipped with a sitemap generated [here](https://www.xml-sitem
 The site also has a Privacy Policy and Terms and Conditions - both documents generated [here](https://policymaker.io/).
 
 I have one issue with images that have been uploaded to the body of the blog.  I have not found a way to give them alt texts.  I did some very scant investigations into the capabilities of Django Summernote.  However, this does not appear to be too much of a problem with my Lighthouse score - SEE TESTING.MD INSERT LINK and so I have decided to not look into it further.  
+
+[Back to top](#)
 
 ## **Keywords**
 
@@ -675,18 +701,21 @@ Here is a [link to the Facebook page I created](https://www.facebook.com/Watch-Y
 ![Facebook example post](README_docs/readme_images/watchyouwant_sample_post.png)
 | Watch You Want Facebook sample post |
 
+[Back to top](#)
 
 ## **Code Validation**
 
-Please see testing.md - NEED LINK!
+Please see [testing.md](/TESTING.md).
 
 ## **Testing**
 
-Please see testing.md - NEED LINK!
+Please see [testing.md](/TESTING.md).
 
 ## **Project Bugs and Solutions**
 
-Please see testing.md
+Please see [testing.md](/TESTING.md).
+
+[Back to top](#)
 
 ## **Deployment and making a clone**
 
@@ -719,7 +748,6 @@ Please see testing.md
 
     * Database URL will be added automaticaly
     * Secret_key - is the djnago secret key can be generated [here](https://miniwebtool.com/django-secret-key-generator/). 
-
 
 **Go back to your code**
 
@@ -831,9 +859,7 @@ In Heroku
 EMAIL_HOST_PASS is the password copied from above.
 EMAIL_HOST_USER is the gmail email address
 
-
 ### Setting AWS bucket
-
 
 1. Go to [Amzon Web Services](https://aws.amazon.com/) page and login or register
 
@@ -989,6 +1015,8 @@ class MediaStorage(S3Boto3Storage):
 - Go to your S3 bucket page on AWS. Create new folder "media"
 - go to the media folder and click Upload
 
+[Back to top](#)
+
 ## **Credits** 
 ### **Online resources**
 * [Adobe Stock Images](https://stock.adobe.com/uk/) - I signed up for a free trial, then cancelled it.
@@ -1021,7 +1049,8 @@ class MediaStorage(S3Boto3Storage):
 ### **Code Snippets**
 
 * The delete modal was adapted from code I found [here](https://mdbootstrap.com/docs/b4/jquery/modals/additional/).
-* The box shadows in the blog and in reviews come from [here](https://getcssscan.com/css-box-shadow-examples). 
+* The box shadows in the blog and in reviews come from [here](https://getcssscan.com/css-box-shadow-examples).
+* The review cards are adapted from code I found [here](https://mdbootstrap.com/docs/standard/extended/quotes/). 
 
 ### **People**
 
@@ -1040,4 +1069,4 @@ I am incredibly grateful to the CI tutors and everyone on our CI Slack channel f
 
 I can't believe that I'm here, at the end, 12 months later.  If you're reading this because you're a CI student and you're still ploughing through the projects - KEEP GOING, I promise you it will be worth it!
 
-Now I just need to get a job!
+[Back to top](#)

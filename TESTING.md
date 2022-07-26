@@ -1,4 +1,4 @@
-# Student Rations - Testing 
+# **Watch You Want - Testing** 
 
 [Main README.md file](/README.md)
 
@@ -7,335 +7,177 @@
 [View GitHub repository](https://github.com/Kat632/watchyouwant)
 
 ***
-## Table of contents
-1. [Testing User Stories](#Testing-User-Stories)
-2. [Manual Testing](#Manual-Testing)
-3. [Automated Testing](#Automated-Testing) 
+## **Table of contents**
+1. [Manual Testing](#Manual-Testing)
+2. [Automated Testing](#Automated-Testing) 
      - [Code Validation](#Code-Validation)
-4. [User Testing](#User-Testing)
-
-
+3. [Project Bugs and Solutions](#project-bugs-and-solutions)
+3. [User Testing](#User-Testing)
 ***
 
-## Testing User Stories
+## **Manual Testing**
 
-### User Stories:
-#### Site User
-- As a Site User, I want to be able to save my pet's measurements to my user profile so that I can remind myself of the correct sizing when ordering a product.
-    - There is a form available for the user to add a profile entry for each pet, detailing their name, breed, gender, mesaurements and an image.
-
-- As a Site User, I want to be able to leave a comment on a product so that others can see my thoughts regarding the product.    
-    - There is a form on the product info page which allows the user to add a title and the body of a comment to the product page. The comment will detail the user's username, date of entry, and the title and body of the comment.
-
-- As a Site User, I want to be able to search for a product by name or description so that I can find a specific product I'd like to purchase.
-    - There is a search bar in the header which allows users to search for products based on keywords in the description or name fields.
-
-- As a Site User, I want to be able to sort the list of available products so that I can easily identify the best rated, best priced and categorically sorted products.
-    - There is a 'sort-by' selector box on the products page which allows the user to sort the products by rating, name, price and category in ascending or decending order.
-
-- As a Site User, I want to be able to sort a specific category of product so that I can find the best-priced or best-rated product in a specific category, or sort the products in that category by name.
-    - There are navigation links and filter buttons that allow the user to view all products of a certin category or group of categories.
-
-- As a Site User, I want to be able to easily select the size and quantity of a product when purchasing it so that I can ensure I don't accidentally select the wrong product, quantity or size.
-    - On the product info page, there is a selection box for sizes, with a helpful sizing guide and diagram underneath, and a quantity selector with increment and decrement buttons beside it.
-
-- As a Site User, I want to be able to adjust the number of individual items in my bag so that I can easily make changes to my purchase before checkout.
-    - There is a quantity increment and decrement button with an update button that allows the user to increase or decrease the number of the specific item they wish to purchase.
-
-- As a Site User, I want to be able to easily log in or log out so that I can access my personal account information.
-    - There is a link in the header which allows the user to log in, log out and register for an account.
-
-- As a Site User, I want to be able to easily recover my password in case I forget it so that I can recover access to my account.
-    - There is an option on the log in page to request a resst password link be sent to the user's email address. Clicking the link and entering an email address sends an email to the person's email address to reset their password.
-
-- As a Site User, I want to be able to receive an email confirmation after registering so that I can verify my account registration was successful.
-    - On registering for an account, a verification email is sent to the user's registered email so they can verify their account and log in.
-
-- As a Site User, I want to be able to easily enter my payment info so that I can check out quickly and with no hassles.
-    - The checkout screen uses the Stripe payment system for safe and secure payment of purchases.
-
-- As a Site User, I want to be able to have a personalised user profile so that I can view my order history and order confirmations and save my payment information.
-    - On registration of a new account, a personal profile is automatically rendered. Here the user can view their order history and pet profiles.
-
-- As a Site User, I want to be able to view a list of products so that I can select some to purchase.
-    - On the porducts page, a list of product cards are visible, showing the product name, rating, price, category and an image.
-
-- As a Site User, I want to be able to easily see what I've searched for and the number of results so that I can quickly decide whether the product I want is available.
-    - When a search query has been entered, the user is brought to a filtered products page. Here they can see the products which align with their search, as well as an indicator of how many items where found relating to the search query.
-
-- As a Site User, I want to be able to view a specific category of products so that I can quickly find products I'm interested in without having to search through all products.
-    - In the nav menu are links to each category class for ease of access. In addition, on the products page, there are category buttons that filter with the products currently visible.
-
-- As a Site User, I want to be able to view individual product details so that I can identify the price, description, product rating, product image and sizes.
-    - Each product in the products list has it's own info page which details the price, description, product rating, product image and sizes, including a sizing guide where sizes are available.
-
-- As a Site User, I want to be able to easily view the total of my purchase at any time so that I can avoid spending too much.
-    - The shopping bag icon in the header gives an up-to-date counter of the current shopping bag total. In addition, each item added to the shopping bag activates a pop-up which details your current bag summary, prices, total cost and shipping. It also advises the user how much more they need to spend to qualify for free shipping.
-
-- As a Site User, I want to be able to view items in my bag to be purchased so that I can identify the total cost of my purchase and all items I will receive.
-    - There is a shopping bag page which allows the user to view all products currently sleected, their sizes and quantities, and the total cost with and without shipping if applicable. Here the user can also update and delete items from the shopping bag if required.
-
-- As a Site User, I want to be able to feel my personal and payment information is safe and secure so that I can confidently provide the needed information to make a purchase.
-    - The link to the shopping bag page advises the checkout is secure, and the payment information input is set to ensure the user's information is correct and valid before purchasing.
-
-- As a Site User, I want to be able to view an order confirmation after checkout so that I can verify that I haven't made any mistakes.
-    - On submitting a purchase, the user is shown the order confirmation page which briefly details the order information, the shipping details, product information and the total cost. This information can also be viewed on the user profile in the order history section
-
-#### Store Owner
-- As a Store Owner, I want to be able to add a product so that I can add new items to my store.
-    - There is a page accessible only by superusers where store owners add products to the store. The link for this page is in the user acconut dropdown in the header. This link takes the user to the add product page where they can fill the product details in the form. Each product added generates a new product id and individual product info page.
-
-- As a Store Owner, I want to be able to edit/update a product so that I can change product prices, descriptions, images, and other product criteria.
-    - On the individual products' pages, superusers can can see a link to update the product information. Clicking the link brings the store owner to a prepopulated form where adjustments can be made to the specific product.
-
-- As a Store Owner, I want to be able to delete a product so that I can remove items that are no longer for sale.
-    - On the individual products' pages, superusers can can see a link to delete the product information. Clicking the link immediately deletes the product page and information.
-
+| Manual Testing                        |                                                           |                                                                                                                                                                                           |      |   |
+|---------------------------------------|-----------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------|---|
+|                                       |                                                           |                                                                                                                                                                                           |      |   |
+| **Navigation**                            |                                                           |                                                                                                                                                                                           |      |   |
+| **Reference**                             | **Test object**                                               | **Expected Result**                                                                                                                                                                           | **Pass** |   |
+| **Navbar**                                |                                                           |                                                                                                                                                                                           |      |   |
+|                                     1 | Store Logo/Home link                                      | Directs the user to the home page                                                                                                                                                         | PASS |   |
+|                                     2 | Categories link                                           | Opens the categories dropdown menu. All categories links work                                                                                                                             | PASS |   |
+|                                     3 | All Products link                                         | Opens the all products dropdown menu.  All links work                                                                                                                                     | PASS |   |
+|                                     4 | Special Offers link                                       | Opens the special offers dropdown menu.  All the links work.                                                                                                                              | PASS |   |
+|                                     5 | Blog Link                                                 | Directs the user to the 'Blog' page                                                                                                                                                       | PASS |   |
+|                                     6 | Search bar                                                | Directs the user to the 'Products' page showing products that match the query                                                                                                             | PASS |   |
+|                                     7 | My Account Icon                                           | Opens the account links dropdown menu                                                                                                                                                     | PASS |   |
+|                                     8 | Sign in link (unsigned users)                             | Directs the 'Sign in' page                                                                                                                                                                | PASS |   |
+|                                     9 | Sign up link (unsigned users)                             | Directs the 'Sign up' page                                                                                                                                                                | PASS |   |
+|                                    10 | Sign out link (signed in users)                           | Directs the 'Sign out' page                                                                                                                                                               | PASS |   |
+|                                    11 | My Profile (signed in users)                              | Directs the user to the profile page                                                                                                                                                      | PASS |   |
+|                                    12 | Product management (superuser)                            | Directs the user to the 'Product management' page                                                                                                                                         | PASS |   |
+|                                    13 | Bag Icon                                                  | Directs the user to their shopping cart page                                                                                                                                              | PASS |   |
+|                                    14 | Burger menu                                               | Burger menu opens the burger menu with the appropriate links work based on what type of user is signed in                                                                                 | PASS |   |
+| **Footer**                                |                                                           |                                                                                                                                                                                           |      |   |
+|                                     1 | Contact us link                                           | Directs the user to the 'Contact us' page                                                                                                                                                 | PASS |   |
+|                                     2 | Terms & Conditions link                                   | Directs user to the Terms & Conditions page                                                                                                                                               | PASS |   |
+|                                     3 | Privacy Policy link                                       | Directs user to the Privacy Policy page                                                                                                                                                   | PASS |   |
+|                                     4 | Account Links (unsigned users)                            | Direct the users to the appropriate pages                                                                                                                                                 | PASS |   |
+|                                     5 | Account Links (signed in users)                           | Direct the users to the appropriate pages                                                                                                                                                 | PASS |   |
+|                                     6 | Newsletter subscribe button                               | Displays the appropriate message INVALID/VALID                                                                                                                                            | PASS |   |
+|                                     7 | Social media links                                        | Open the respective social network page in a new tab                                                                                                                                      | PASS |   |
+| **Home Page**                             |                                                           |                                                                                                                                                                                           |      |   |
+| **Reference**                             | **Test object**                                               | **Expected Result**                                                                                                                                                                           | Pass |   |
+| 1                                     | Products by category links                                | Direct the user to the 'Products' page with the correct category filters in place                                                                                                         | PASS |   |
+| **Products Page**                         |                                                           |                                                                                                                                                                                           |      |   |
+| **Reference**                             | **Test object**                                               | **Expected Result**                                                                                                                                                                           | Pass |   |
+|                                     1 | Product Count                                             | Product Count updates in accordance with the number of products displayed and search term displays if a user has entered a search query                                                   | PASS |   |
+|                                     2 | View all products link                                    | Redirects to the 'Products' page showing the entire catalogue of products                                                                                                                 | PASS |   |
+|                                     3 | Breadcrumb Home link                                      | Clicking on Home in the breadcrumbs takes the user back to the home page                                                                                                                  | PASS |   |
+|                                     4 | Sort By Dropdown                                          | Sort by dropdown displays all the options available and sorts the products in accordance with the selection                                                                               | PASS |   |
+|                                     5 | Product Cards                                             | Clicking on a product card directs the user to the correct 'Product details' page                                                                                                         | PASS |   |
+|                                     6 | Edit Product link (superuser)                             | Directs the superuser to the edit product form                                                                                                                                            | PASS |   |
+|                                     7 | Delete Product link (superuser)                           | Triggers the delete confirmation modal                                                                                                                                                    | PASS |   |
+|                                     8 | Delete Product Modal                                      | Clicking the 'Cancel' button closes the modal and clicking the 'Yes' button deletes the product successfully                                                                              | PASS |   |
+| **Product Detail Page**                   |                                                           |                                                                                                                                                                                           |      |   |
+| **Reference**                             | **Test object**                                               | **Expected Result**                                                                                                                                                                           | Pass |   |
+| **Product Details**                       |                                                           |                                                                                                                                                                                           |      |   |
+|                                     1 | Product Details                                           | Displays the detail of the appropriate product                                                                                                                                            | PASS |   |
+|                                     2 | Technical Details                                         | Displays the appropriate technical details for the product                                                                                                                                | PASS |   |
+|                                     3 | Quantity selectors                                        | Allows the user to adjust the quantity by clicking the plus and minus icons.                                                                                                              | PASS |   |
+|                                     4 | Add to bag link                                           | When a product is added to the bag, a toast to confirm the action is displayed, and the amount below the cart icon in the navbar is updated to reflect the price of the items in the cart | PASS |   |
+|                                     5 | Out of Stock items                                        | A user cannot add an item that is out of stock to their basket                                                                                                                            | PASS |   |
+| **Reviews**                               |                                                           |                                                                                                                                                                                           |      |   |
+|                                     1 | Product Reviews                                           | Displays the reviews for the product                                                                                                                                                      | PASS |   |
+|                                     2 | No Reviews message                                        | Displays when no reviews are present                                                                                                                                                      | PASS |   |
+|                                     3 | Add review button                                         | Open the page to add a product review                                                                                                                                                     | PASS |   |
+|                                     4 | Delete Comment link (reviewer)                            | Deletes the review                                                                                                                                                                        | PASS |   |
+|                                     5 | Edit Comment link (reviewer)                              | Takes the user to the edit comment page                                                                                                                                                   | PASS |   |
+| **Add a Review Page**                     |                                                           |                                                                                                                                                                                           |      |   |
+| **Reference**                             | **Test object**                                               | **Expected Result**                                                                                                                                                                           | Pass |   |
+|                                     1 | Add a review                                              | Allows user to post a review if all fields are valid, by clicking on the 'Submit' button.                                                                                                 | PASS |   |
+| **Edit a Review Page**                    |                                                           |                                                                                                                                                                                           |      |   |
+| **Reference**                             | **Test object**                                               | **Expected Result**                                                                                                                                                                           | Pass |   |
+|                                     1 | Edit a review                                             | Allows a user to edit a review if all the fields are valid, by clicking the submit button.                                                                                                | PASS |   |
+| **Shopping Bag page**                     |                                                           |                                                                                                                                                                                           |      |   |
+| **Reference**                             | **Test object**                                               | **Expected Result**                                                                                                                                                                           | Pass |   |
+|                                     1 | Quantity Selectors                                        | Allows the user to adjust the quantity by clicking the plus and minus icons. Limits the quantity to what items are in stock. Disallows minus numbers                                      | PASS |   |
+|                                     2 | Update Link                                               | Updates the quantity for the selected product                                                                                                                                             | PASS |   |
+|                                     3 | Remove Link                                               | Removes the selected product from the cart                                                                                                                                                | PASS |   |
+|                                     4 | Price totals                                              | The subtotal of each product, cart total and grand total are updated whenever the cart's content is changed                                                                               | PASS |   |
+|                                     5 | Delivery Cost                                             | Delivery cost is added or removed when cart total is above or below £50                                                                                                                   | PASS |   |
+|                                     6 | Keep Shopping Button                                      | Redirects the user to the Products page                                                                                                                                                   | PASS |   |
+|                                     7 | Secure Checkout Button                                    | Directs the user to the checkout page                                                                                                                                                     | PASS |   |
+|                                     8 | Cart is empty message                                     | Displays when there are no products in the cart. Below 'Keep shopping' button is displayed and redirects the user to the Products page                                                    | PASS |   |
+| Checkout page                         |                                                           |                                                                                                                                                                                           |      |   |
+| **Reference**                             | **Test object**                                               | **Expected Result**                                                                                                                                                                           | Pass |   |
+|                                     1 | Order Summary                                             | Order summary information renders correctly. Price totals match the contents of the bag                                                                                                   | PASS |   |
+|                                     2 | Checkout Form                                             | Form only submits when all the required fields are filled                                                                                                                                 | PASS |   |
+|                                     3 | Pre-populated fields                                      | When a user is signed in and their shipping details have been saved on their profile, the corresponding fields are pre-populated                                                          | PASS |   |
+|                                     4 | Save details checkbox                                     | When the delivery information checkbox is checked the user's profile is updated with the correct information after the form submission                                                    | PASS |   |
+|                                     5 | Log In and Sign Up Links (unsigned users)                 | The sign in and sign up links are displayed and redirected the user to the relevant page                                                                                                  | PASS |   |
+|                                     6 | Card errors                                               | Card errors message displays in case of: invalid card number, insufficient funds, etc.                                                                                                    | PASS |   |
+|                                     7 | Card Charge notification                                  | Is displayed to let the user know how much their card will be charged to verify that the figure matches the total in the order summary section                                            | PASS |   |
+|                                     8 | Adjust Cart button                                        | Redirects the user to the shopping cart                                                                                                                                                   | PASS |   |
+|                                     9 | Complete Order button                                     | Triggers the loading overlay before redirecting the user to the Checkout Success page                                                                                                     | PASS |   |
+| **Checkout success page and Stripe**      |                                                           |                                                                                                                                                                                           |      |   |
+| **Reference**                             | **Test object**                                               | **Expected Result**                                                                                                                                                                           | Pass |   |
+|                                     1 | Toast success message                                     | When the user is redirected to the Checkout Success page, a confirmation toast with the order number and a message to let the user know a confirmation email has been sent is displayed   | PASS |   |
+|                                     2 | Confirmation Email                                        | The user receives a confirmation email to the address entered on the checkout page                                                                                                        | PASS |   |
+|                                     3 | Order Summary                                             | Renders correctly with a list of the purchased products                                                                                                                                   | PASS |   |
+|                                     4 | Order and Billing Info                                    | Matches the information entered on the checkout form and displays correct totals                                                                                                          | PASS |   |
+|                                     5 | Continue Shopping link                                    | Redirects the user to the Products page                                                                                                                                                   | PASS |   |
+|                                     6 | Back to profile link (if user accessed page from Profile) | Displays when users are looking at past orders from their profile, and when clicked it redirects the user back to the Profile page                                                        | PASS |   |
+|                                     7 | Stripe payment succeed webhook                            | If payment succeeds, Stripe shows webhook: payment_intent.succeeded with status 200                                                                                                       | PASS |   |
+|                                     8 | Order confirmation email                                  | If payment succeeds, the user receives a confirmation email with the order details                                                                                                        | PASS |   |
+| **Contact Page**                          |                                                           |                                                                                                                                                                                           |      |   |
+| **Reference**                             | **Test object**                                               | **Expected Result**                                                                                                                                                                           | Pass |   |
+| 1                                     | Form Validation                                           | The form cannot be submitted without all the required fields being filled                                                                                                                 | PASS |   |
+|                                     2 | Submit Button                                             | Once clicked the form is cleared and a success message displays to inform the user that their message has been sent                                                                       | PASS |   |
+| **Blog Page**                             |                                                           |                                                                                                                                                                                           |      |   |
+| **Reference**                             | **Test object**                                               | **Expected Result**                                                                                                                                                                           | Pass |   |
+|                                     1 | Blog Post links                                           | Direct the user to the correct 'Blog Post' page                                                                                                                                           | PASS |   |
+| **Blog Post Page**                        |                                                           |                                                                                                                                                                                           |      |   |
+| **Reference**                             | **Test object**                                               | **Expected Result**                                                                                                                                                                           | Pass |   |
+|                                     1 | Log In and Sign Up Links (unsigned users)                 | Log In and Sign Up Links (unsigned users)                                                                                                                                                 | PASS |   |
+|                                     2 | Log In and Sign Up Links (unsigned users)                 | Displays when no comments are present                                                                                                                                                     | PASS |   |
+|                                     3 | Add comment button                                        | Open the post comment modal                                                                                                                                                               | PASS |   |
+|                                     4 | Post Comment form                                         | Allows user to post a comment, given that all the required field on the form are filed, by clicking on the 'Submit' button                                                                | PASS |   |
+| **Profile Page**                          |                                                           |                                                                                                                                                                                           |      |   |
+| **Reference**                             | **Test object**                                               | **Expected Result**                                                                                                                                                                           | Pass |   |
+|                                     1 | Delivery Information Form                                 | User's shipping information is displaying in the relevant fields if they have previously made an order and clicked the save to profile checkbox                                           | PASS |   |
+|                                     2 | Update Information button                                 | Saves changes to the user's profile if form is valid and a success message displays to confirm this to the user                                                                           | PASS |   |
+|                                     3 | Previous orders                                           | Displays in the order history section with the latest order at the top                                                                                                                    | PASS |   |
+|                                     4 | Previous order confirmation                               | Clicking the order number takes the user to the checkout success page for the selected order                                                                                              | PASS |   |
+| **Add Product (Product Management) Page** |                                                           |                                                                                                                                                                                           |      |   |
+| **Reference**                             | **Test object**                                               | **Expected Result**                                                                                                                                                                           | Pass |   |
+|                                     1 | Required Fields                                           | Form does not submit unless required fields are correctly filled                                                                                                                          | PASS |   |
+|                                     2 | Dropdown Fields                                           | All the categories options appear in the dropdown fields                                                                                                                                  | PASS |   |
+|                                     3 | Select Image Link                                         | Allows the user to upload an image from their device, and a message displays to the user the images' name                                                                                 | PASS |   |
+|                                     4 | Cancel Button                                             | Redirects the user back to the products page                                                                                                                                              | PASS |   |
+|                                     5 | Add Product Button                                        | Redirects the user to the 'Product details' page for the new product with the correct information displayed                                                                               | PASS |   |
+| **Edit Product Page**                     |                                                           |                                                                                                                                                                                           |      |   |
+| **Reference**                             | **Test object**                                               | **Expected Result**                                                                                                                                                                           | Pass |   |
+|                                     1 | Form Fields                                               | Form fields are pre-populated with the product information stored in the database                                                                                                         | PASS |   |
+|                                     2 | Cancel Button                                             | Redirects the user back to the 'Products' page                                                                                                                                            | PASS |   |
+|                                     3 | Update Product Button                                     | Updates any of the product information and redirects the user to the 'Product details' page for the edited product with the correct information displayed                                 | PASS |   |
+| Backend Blog post pages               |                                                           |                                                                                                                                                                                           |      |   |
+| **Reference**                             | **Test object**                                               | **Expected Result**                                                                                                                                                                           | Pass |   |
+|                                     1 | Add blog post                                             | Superuser can add a blog post                                                                                                                                                             | PASS |   |
+|                                     2 | Edit blog post                                            | Superuser can edit a blog post                                                                                                                                                            | PASS |   |
+|                                     3 | Delete blog post                                          | Superuser can delete a blog post                                                                                                                                                          | PASS |   |
+|                                     4 | Approve comments                                          | Superuser can approve blog post comments                                                                                                                                                  | PASS |   |
+|                                     5 | Delete comments                                           | Superuser can delete comments                                                                                                                                                             | PASS |   |
+| **Backend Reviews**                       |                                                           |                                                                                                                                                                                           |      |   |
+| **Reference**                             | **Test object**                                               | **Expected Result**                                                                                                                                                                           | Pass |   |
+|                                     1 | Delete a review                                           | Superuser can delete a review                                                                                                                                                             | PASS |   |
+| **Sign In**                               |                                                           |                                                                                                                                                                                           |      |   |
+| **Reference                             | Test object                                               | Expected Result**                                                                                                                                                                           | Pass |   |
+|                                     1 | Sign Up Link                                              | Directs the user to the sign up page                                                                                                                                                      | PASS |   |
+|                                     2 | Home Link                                                 | Directs the user to the home page                                                                                                                                                         | PASS |   |
+|                                     3 | Forgot Password Link                                      | Directs the user to the Password Reset page                                                                                                                                               | PASS |   |
+|                                     4 | Sign In Link                                              | If the details are correct the user is redirected to the home page                                                                                                                        | PASS |   |
+| **Sign Out**                              |                                                           |                                                                                                                                                                                           |      |   |
+| **Reference                             | Test object                                               | Expected Result**                                                                                                                                                                           | Pass |   |
+| 1                                     | Sign Out button                                           | Signs the user out of their account and redirects to the home page                                                                                                                        | PASS |   |
+| **Sign Up**                               |                                                           |                                                                                                                                                                                           |      |   |
+| **Reference                             | Test object                                               | Expected Result**                                                                                                                                                                           | Pass |   |
+|                                     1 | Sign In Link                                              | Directs the user to the sign in page                                                                                                                                                      | PASS |   |
+|                                     2 | Back to Login Link                                        | Redirects the user to the sign in page                                                                                                                                                    | PASS |   |
+|                                     3 | Sign Up Link                                              | If the form is valid directs the user to the verify email address page and a confirmation email is sent to the user                                                                       | PASS |   |
 
 [Back to top](#)
 
-## Manual Testing
+## **Automated Testing**
 
-### Common Elements Testing
-Manual testing was conducted on the following elements that appear on every page:
-
+### **Lighthouse**
 <details>
-<summary>Across Site - Manual Testing</summary>
+<summary>Lighthouse</summary>
 
-- Test that Logo redirects to home screen.
-
-    ![Test that Logo redirects to home screen](static/media/TESTING/manual_testing/logo-works.gif)
-
-- Test that Nav Links work.
-
-    ![Test that Nav Links work.](static/media/TESTING/manual_testing/nav-links-work.gif)
-
-- Test that Query Links work.
-
-    ![Test that Query Links work.](static/media/TESTING/manual_testing/query-links-work.gif)
-
-- Test that Search Bar works.
-
-    ![Test that Search Bar works.](static/media/TESTING/manual_testing/search-bar-works.gif)
-
-- Test that Social Links work.
-
-    ![Test that Social Links work.](static/media/TESTING/manual_testing/social-links-work.gif)
-
-- Test that My Profile links show differently for users, super users and those not logged in.
-
-    ![Test that My Profile links show differently for users, super users and those not logged in.](static/media/TESTING/manual_testing/profile-links-change-for-user-type.gif)
+![Home Page HTML Validation Results](README_docs/readme_images/testing/lighthouse/lighthouse.png)
 
 </details>
 
-
-### Home Page
-Manual testing was conducted on the following elements of the [Home Page](https://the-wagging-tailor.herokuapp.com/):
-     
-<details>
-<summary>Home Page - Manual Testing</summary>
-
-- Test that the three product buttons go to the correct pages.
-
-    ![Test that the three product buttons go to the correct pages](static/media/TESTING/manual_testing/home-product-buttons-work.gif)
-
-- Test that the carousel images slide when clicked.
-
-    ![Test that the carousel images slide when clicked](static/media/TESTING/manual_testing/home-carousel.gif)
-
-- Test that the Mail Chimp subscription form works.
-
-    ![Test that the Mail Chimp subscription form works](static/media/TESTING/manual_testing/home-mail-chimp.gif)
-
-</details>
-
-### Products List
-Manual testing was conducted on the following elements of the [Products List Page](https://the-wagging-tailor.herokuapp.com/products/):
-
-<details>
-<summary>Products List Page - Manual Testing</summary>
-
-- Test that products can be sorted by price, category name and rating.
-
-    ![Test that products can be sorted by price, category name and rating](static/media/TESTING/manual_testing/products-sort-by-selector.gif)
-
-- Test that product category buttons work.
-
-    ![Test that product category buttons work](static/media/TESTING/manual_testing/products-category-buttons.gif)
-     
-- Test that clicking on a product opens that products info page.
-
-    ![Test that clicking on a product opens that products info page](static/media/TESTING/manual_testing/products-open-product-info.gif)
-
-</details>
-
-### Product Info Page
-Manual testing was conducted on the following elements of the [Product Info Page](https://the-wagging-tailor.herokuapp.com/products/4/):
-
-<details>
-<summary>Product Info Page - Manual Testing</summary>
-
-- Test that users can increase and decrease quantity of product.
-
-    ![Test that users can increase and decrease quantity of product](static/media/TESTING/manual_testing/product-info-quantity.gif)
-     
-- Test that size selector and quide appear only for products with sizes.
-
-    ![Test that size selector and guide appear only for products with sizes](static/media/TESTING/manual_testing/product-info-sizes-available.gif)
-     
-- Test that users can add a product to their shopping bag.
-
-    ![Test that users can add a product to their shopping bag](static/media/TESTING/manual_testing/product-info-add-to-bag.gif)
-
-- Test that the comments form is only available if logged in and the comments section displays comments submitted in the form.
-
-    ![Test that the comments form is only available if logged in and the comments section displays comments submitted in the form](static/media/TESTING/manual_testing/product-info-comments.gif)
-
-- Test that the Update and Delete Product buttons are only visible to super users.
-
-    ![Test that the Update and Delete Product buttons are only visible to super users](static/media/TESTING/manual_testing/product-info-update-delete-product.gif)
-
-- Test that a super user can add, edit and delete a product.
-
-    ![Test that a super user can add, edit and delete a product](static/media/TESTING/manual_testing/product-info-add-product.gif)
-
-</details>
-
-### Shopping Bag Page
-Manual testing was conducted on the following elements of the [Product Info Page](https://the-wagging-tailor.herokuapp.com/shopping_bag/):
-
-<details>
-<summary>Shopping Bag Page - Manual Testing</summary>
-
-- Test that users can update quantity of product.
-
-    ![Test that users can update quantity of product](static/media/TESTING/manual_testing/shopping-bag-update-quantity.gif)
-
-- Test that users can remove product from shopping bag.
-
-    ![Test that users can remove product from shopping bag](static/media/TESTING/manual_testing/shopping-bag-remove-item.gif)
-
-- Test that users can view the same products of different sizes.
-
-    ![Test that users can view the same products of different sizes](static/media/TESTING/manual_testing/shopping-bag-same-item-size.gif)
-
-- Test that total cost, shipping cost and grand total update when updating products in bag.
-
-    ![Test that total cost, shipping cost and grand total update when updating products in bag](static/media/TESTING/manual_testing/shopping-bag-total-updates.gif)
-
-- Test that users can access the checkout page.
-
-    ![Test that users can access the checkout page](static/media/TESTING/manual_testing/shopping-bag-access-checkout.gif)
-
-</details>
-
-### Checkout Page
-Manual testing was conducted on the following elements of the [Product Info Page](https://the-wagging-tailor.herokuapp.com/checkout/):
-
-<details>
-<summary>Checkout Page - Manual Testing</summary>
-
-- Test that add shipping details.
-
-    ![Test that add shipping details](static/media/TESTING/manual_testing/checkout-enter-details.gif)
-
-- Test that users can only use valid card details.
-
-    ![Test that users can only use valid card details](static/media/TESTING/manual_testing/checkout-valid-card-details.gif)
-
-- Test that users can submit payment details and see order confirmation.
-
-    ![Test that users can submit payment details and see order confirmation](static/media/TESTING/manual_testing/checkout-submit-order.gif)
-
-</details>
-
-### Profile Page
-Manual testing was conducted on the following elements of the [Profile Page](https://the-wagging-tailor.herokuapp.com/profile/):
-
-<details>
-<summary>Profile Page - Manual Testing</summary>
-
-- Test that user name displayed as heading, and pet profile and order history visible.
-
-    ![Test that user name displayed as heading, and pet profile and order history visible](static/media/TESTING/manual_testing/profile-username-pets-and-order-history.gif)
-
-- Test that users can add, edit and delete pet details.
-
-    ![Test that users can add, edit and delete pet details](static/media/TESTING/manual_testing/profile-add-edit-delete-pets.gif)
-
-- Test that users can view their order history for specific orders.
-
-    ![Test that users can submit payment details and see order confirmation](static/media/TESTING/manual_testing/profile-order-history.gif)
-
-</details>
-
-### Query Page
-Manual testing was conducted on the following elements of the [Query Page](https://the-wagging-tailor.herokuapp.com/queries/):
-
-<details>
-<summary>Query Page - Manual Testing</summary>
-
-- Test that the user can submit a query.
-
-    ![Test that the user can submit a query](static/media/TESTING/manual_testing/queries-submit-query.gif)
-
-- Test that the user can submit a quote request.
-
-    ![Test that the user can submit a quote request](static/media/TESTING/manual_testing/queries-submit-quote.gif)
-
-- Test that queries/quotes are saved to the admin for store owner use.
-
-    ![Test that queries/quotes are saved to the admin for store owner use](static/media/TESTING/manual_testing/queries-visible-on-admin.gif)
-
-</details>
-     
-### Sign in/Sign Out/Sign Up Pages
-Manual testing was conducted on the following elements of the [Sign In Page](https://the-wagging-tailor.herokuapp.com/accounts/login/), [Verify Email Page](https://the-wagging-tailor.herokuapp.com/accounts/confirm-email/), [Sign Out Page](https://the-wagging-tailor.herokuapp.com/accounts/logout/) and [Sign Up Page](https://the-wagging-tailor.herokuapp.com/accounts/signup/):
-
-<details>
-<summary>User Account Pages - Manual Testing</summary>
-
-- Test that users can register, verify their email, log in and logout.
-
-    ![Test that users can register, verify their email, log in and logout](static/media/TESTING/manual_testing/account-signup-verify-signin-signout.gif)
-
-</details>
-
-### Pages are Responsive
-- Manual testing was conducted on the following pages for responsiveness on large, medium and small screens.
-
-<details>
-<summary>Responsive Pages - Manual Testing</summary>
-
-![Responsive Home](static/media/TESTING/manual_testing/responsive-home.gif)
-
-![Responsive Products List](static/media/TESTING/manual_testing/responsive-products-list.gif)
-
-![Responsive Products Info](static/media/TESTING/manual_testing/responsive-product-info.gif)
-
-![Responsive Add/Edit Product Form](static/media/TESTING/manual_testing/responsive-add-edit-product.gif)
-
-![Responsive Shopping Bag Page](static/media/TESTING/manual_testing/responsive-shopping-bag.gif)
-
-![Responsive Checkout Page](static/media/TESTING/manual_testing/responsive-checkout.gif)
-
-![Responsive Order Confirmation/History Page](static/media/TESTING/manual_testing/responsive-order-confirmation.gif)
-
-![Responsive Profile Page](static/media/TESTING/manual_testing/responsive-profile.gif)
-
-![Responsive Add/Edit Pet Form](static/media/TESTING/manual_testing/responsive-add-edit-pet.gif)
-
-![Responsive Query Form](static/media/TESTING/manual_testing/responsive-query.gif)
-
-![Responsive Sign In, Sign Out and Sign Up](static/media/TESTING/manual_testing/responsive-signout-signup-signin.gif)
-
-</details>
-
-[Back to top](#)
-
-## Automated Testing
-
-### Code Validation
+### **Code Validation**
 The [W3C Markup Validator](https://validator.w3.org/ "Link to M£C Markup Validator Site") service was used to validate the `HTML` and `CSS` code used. The [PEP8 Python Validator](http://pep8online.com/ "Link to the PEP8 Python Validator Site") was used to validate the `Python`code used. The [JSHint JavaScript Validator](https://jshint.com/ "Link to the JSHint JavaScript Validator Site") was used to validate the `JavaScript` code used.
 
 #### **Results:**
@@ -344,31 +186,39 @@ The [W3C Markup Validator](https://validator.w3.org/ "Link to M£C Markup Valida
 <details>
 <summary>HTML Pages - HTML Validation</summary>
 
-![Home Page HTML Validation Results](static/media/TESTING/validation/valid-html-home.png)
-
-![Products Page HTML Validation Results](static/media/TESTING/validation/valid-html-products.png)
-
-![Product Info Page HTML Validation Results](static/media/TESTING/validation/valid-html-product-info.png)
-
-![Add Product Page HTML Validation Results](static/media/TESTING/validation/valid-html-add-a-product.png)
-
-![Edit Product Page HTML Validation Results](static/media/TESTING/validation/valid-html-edit-a-product.png)
-
-![Shopping Bag Page HTML Validation Results](static/media/TESTING/validation/valid-html-shopping-bag.png)
-
-![Checkout Page HTML Validation Results](static/media/TESTING/validation/valid-html-checkout.png)
-
-![Order Confirmation Page HTML Validation Results](static/media/TESTING/validation/valid-html-checkout-successful.png)
-
-![Order History Page HTML Validation Results](static/media/TESTING/validation/valid-html-my-order-history.png)
-
-![Profile Page HTML Validation Results](static/media/TESTING/validation/valid-html-profile.png)
-
-![Add Pet Page HTML Validation Results](static/media/TESTING/validation/valid-html-add-a-pet.png)
-
-![Edit Pet Page HTML Validation Results](static/media/TESTING/validation/valid-html-edit-a-pet.png)
-
-![Queries Page HTML Validation Results](static/media/TESTING/validation/valid-html-queries.png)
+| Watch You Want – HTML Validation – Page Test List |                                                  |          |              |              |
+|---------------------------------------------------|--------------------------------------------------|----------|--------------|--------------|
+|                                                   |                                                  |          |              |              |
+| Page and scenario tested                          | Checked on https://validator.w3.org/ - Live site |          | Screenshot 1 | Screenshot 2 |
+| bag.html                                          | OK                                               | 24/07/22 | ![HTML validation results - bag.html](README_docs/readme_images/testing/html/bag_html.png)             |              |
+| bag.html with one item                            | See image                                        | 25/07/22 |              |              |
+| bag.html with three items                         | See image                                        | 25/07/22 |              |              |
+| checkout_success.html – 1 item                    | OK                                               | 25/07/22 |              |              |
+| checkout_success.html – 3 items                   | OK                                               | 25/07/22 |              |              |
+| checkout.html – 1 item                            | OK                                               | 25/07/22 |              |              |
+| checkout.html – 3 items                           | OK                                               | 25/07/22 |              |              |
+| contact.html                                      | Ok                                               | 24/07/22 |              |              |
+| index.html                                        | ok                                               | 24/07/22 |              |              |
+| privacy.html                                      | Ok                                               | 24/07/22 |              |              |
+| terms.html                                        | Ok                                               | 24/07/22 |              |              |
+| products.html – all products                      | OK                                               | 24/07/22 |              |              |
+| products.html – new arrivals                      | OK                                               | 24/07/22 |              |              |
+| products.html – category “women”                  | OK                                               | 24/07/22 |              |              |
+| products.html – category “restored”               | OK                                               | 24/07/22 |              |              |
+| products.html – search with results               | OK                                               | 24/07/22 |              |              |
+| products.html – search with no results            | OK                                               | 24/07/22 |              |              |
+| add_product.html                                  | OK                                               | 25/07/22 |              |              |
+| edit_product.html                                 | OK                                               | 25/07/22 |              |              |
+| delete_product                                    | ok                                               |          |              |              |
+| product_detail with no reviews                    |                                                  |          |              |              |
+| product_detail with reviews                       | OK                                               | 25/07/22 |              |              |
+| product_detail with out of stock item             | Ok                                               |          |              |              |
+| add_review.html                                   | OK                                               | 26/07/22 |              |              |
+| login.html                                        | OK                                               | 25/07/22 |              |              |
+| logout.html                                       | OK                                               | 25/07/22 |              |              |
+| register.html                                     | OK                                               | 25/07/22 |              |              |
+| blog.html                                         | OK                                               | 25/07/22 |              |              |
+| blog_detail.html                                  | OK                                               | 25/07/22 |              |              |
 
 </details>
 
@@ -527,6 +377,11 @@ The [W3C Markup Validator](https://validator.w3.org/ "Link to M£C Markup Valida
     ![Python Validation - wsgi.py](README_docs/readme_images/testing/profiles/pep8_valid_wyw_wsgi.png)
 
     </details>
+
+## **Project Bugs and Solutions**
+
+**Bag Quantity**
+During testing I discovered a bug whereby the quantity of an item was being added to the basket, but it wasn't showing up as a number in the quantity increment/decrement box and the Qty on the toast was showing up as True.  I spent a lot of time looking at my contexts.py file after a conversation with Alan from Tutor Support.  However, in the end in turned out to be a problem in my add_to_bag function in views.py.  I had re-written this function several times already to incorporate my primitive stock system.  When I compared it with the Boutique Ado code, I could see that I was missing an if-else statement in my final else statement.
 
 ## User testing 
 My husband and the lovely people of Slack were asked to review the site and documentation to point out any bugs and/or user experience issues. Their helpful advice throughout the process led to a few small UX changes in order to create a better experience.
