@@ -659,6 +659,34 @@ The site currently gets the star ratings from two different places.  The first o
 
 A logged in user is currently able to leave a review for every product, regardless of whether or not they have previously purchased it.  In the future I would like to be able to limit a user's ability to leave a review to only products they have purchased.  I just ran out of time to implement this.
 
+Futhermore, reviews do not require admin validation and the admin cannot delete a review from the Frontend.  I do not necessarily see this as a limitation of the site.  I feel like an honest business would not be able to easily limit their reviews to only the good ones.  However, Backend functionality is in place in case of spam or offensive reviews.
+
+One more enhancement for reviews would be to allow a "Customer Service" account to respond to the reviews that have been left by a user.
+
+### **Blog**
+
+A superuser can only create/edit a blog post from the Backend.  If this proved to be a limitation in a real-life commercial context and a Frontend editing facility was required, then this could easily be put in.
+
+### **Order Number length**
+
+One of my testers, Matthew Pendlebury, noted that my order number length is too long.  In a real-life scenario, if a purchaser was to need to call customer services, a 50 character order number is rather excessive to have to read out over the phone to someone.
+
+### **Products URLs**
+
+It is worth noting that one of my testers, Matthew Pendlebury. noted that Google may not like the way that the individual products URLs are rendered and that it would possibly be better for SEO purposes to include the product name in the URL.
+
+### **Search Results**
+
+I would be intersted to explore the code involved in auto-fill search results.  For example, if a user began typing "pi", the search results could auto-suggest "pink".
+
+### **Buy button on products pages**
+
+A quick-buy functionality could be enabled so that a customer can add a product to their basket directly from the product view without having to click through to the product detail page.
+
+### **Bootstrap toast colours**
+
+I wish I'd changed the bootstrap standard colours in the toasts to be in line with my site colours.
+
 [Back to top](#)
 
 ## **Web Marketing**
