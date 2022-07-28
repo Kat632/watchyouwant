@@ -189,8 +189,8 @@ The [W3C Markup Validator](https://validator.w3.org/ "Link to M£C Markup Valida
 | Watch You Want – HTML Validation – Page Test List |                                                  |          |              |              |
 |---------------------------------------------------|--------------------------------------------------|----------|--------------|--------------|
 |                                                   |                                                  |          |              |              |
-| Page and scenario tested                          | Checked on https://validator.w3.org/ - Live site |          | Screenshot 1 | Screenshot 2 |
-| bag.html                                          | OK                                               | 24/07/22 | ![HTML validation results - bag.html](README_docs/readme_images/testing/html/bag_html.png)             |              |
+| Page and scenario tested                          | Checked on https://validator.w3.org/ - Live site |          | Screenshot 1 | Comments     |
+| bag.html                                          | OK                                               | 24/07/22 |              |              |
 | bag.html with one item                            | See image                                        | 25/07/22 |              |              |
 | bag.html with three items                         | See image                                        | 25/07/22 |              |              |
 | checkout_success.html – 1 item                    | OK                                               | 25/07/22 |              |              |
@@ -209,7 +209,7 @@ The [W3C Markup Validator](https://validator.w3.org/ "Link to M£C Markup Valida
 | products.html – search with no results            | OK                                               | 24/07/22 |              |              |
 | add_product.html                                  | OK                                               | 25/07/22 |              |              |
 | edit_product.html                                 | OK                                               | 25/07/22 |              |              |
-| delete_product                                    | ok                                               |          |              |              |
+| delete_product                                    |                                                  |          |              |              |
 | product_detail with no reviews                    |                                                  |          |              |              |
 | product_detail with reviews                       | OK                                               | 25/07/22 |              |              |
 | product_detail with out of stock item             | Ok                                               |          |              |              |
@@ -218,7 +218,7 @@ The [W3C Markup Validator](https://validator.w3.org/ "Link to M£C Markup Valida
 | logout.html                                       | OK                                               | 25/07/22 |              |              |
 | register.html                                     | OK                                               | 25/07/22 |              |              |
 | blog.html                                         | OK                                               | 25/07/22 |              |              |
-| blog_detail.html                                  | OK                                               | 25/07/22 |              |              |
+| blog_detail.html                                  | OK                                               | 25/07/22 | ![Blog Detail HTML Validation Results](README_docs/readme_images/testing/html/blog_detail_html.png)             | The lack of alt attributes on images uploaded to the blog seems to be a limitation of Summernote.  There are third-party extentions out there to do this with Summernote, but I lack the time to do this before my project deadline.  Of course, I could take the images out, but that would not be satisfactory in the context of the blog functionality.             |
 
 </details>
 
@@ -380,8 +380,18 @@ The [W3C Markup Validator](https://validator.w3.org/ "Link to M£C Markup Valida
 
 ## **Project Bugs and Solutions**
 
-**Bag Quantity**
+### **Bag Quantity**
 During testing I discovered a bug whereby the quantity of an item was being added to the basket, but it wasn't showing up as a number in the quantity increment/decrement box and the Qty on the toast was showing up as True.  I spent a lot of time looking at my contexts.py file after a conversation with Alan from Tutor Support.  However, in the end in turned out to be a problem in my add_to_bag function in views.py.  I had re-written this function several times already to incorporate my primitive stock system.  When I compared it with the Boutique Ado code, I could see that I was missing an if-else statement in my final else statement.
+
+### **Input Field**
+During HTML code validation I realised that I had set an input tag as type="disabled". See image below.
+![HTML Validation Input Type](README_docs/readme_images/testing/html/readme_bug_input_disabled.png)
+
+I had forgotten that I could not do this, but a quick Google search and [this](https://stackoverflow.com/questions/16109358/what-is-the-correct-readonly-attribute-syntax-for-input-text-elements) Stack Overflow post helped me solve the issue.
+
+This is what the code looks like now using "disabled" correctly.
+
+![HTML Validation Input Type Fixed](README_docs/readme_images/testing/html/bug_input_fixed.png)
 
 ## User testing 
 My husband and the lovely people of Slack were asked to review the site and documentation to point out any bugs and/or user experience issues. Their helpful advice throughout the process led to a few small UX changes in order to create a better experience.

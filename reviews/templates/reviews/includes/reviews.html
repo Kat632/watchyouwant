@@ -7,18 +7,18 @@
         <div class="review-body m-3">
             <h3 class="review-heading">Reviews</h3>
             {% if user.is_authenticated %}
-                    <h5 class="title-heading-small">Add your review here</h5>
-                    <a href="{% url 'add_review' product.id %}" class="btn btn-custom rounded-0" aria-label="add review">Add Review <i
-                        class="fas fa-plus ml-2"></i></a>
-                    </div>
+            <h5 class="title-heading-small">Add your review here</h5>
+            <a href="{% url 'add_review' product.id %}" class="btn btn-custom rounded-0" aria-label="add review">Add
+                Review <i class="fas fa-plus ml-2"></i></a>
+
             {% else %}
             <div class="columns">
                 <div class="column">
                     <h6 class="title-heading-small">
                         Please <a href="{% url 'account_login' %}">log in</a> to add a review of a product.</h6>
                 </div>
-            {% endif %}
             </div>
+            {% endif %}
         </div>
     </div>
 
@@ -37,13 +37,13 @@
                     </div>
                     <div class="card-footer card-footer-review">
                         <div class="text-black"><small>Review by {{ review.user }}, on
-                            {{ review.review_time|date:"M d, Y" }}.</small>
+                                {{ review.review_time|date:"M d, Y" }}.</small>
                         </div>
                         <div class="text-black"><small>{{ review.user }} gave this product a
-                            <span class="review-star-rating">{{ review.star_rating }} - <i
-                                    class="fas fa-star mr-1"></i></span>rating.</small>
+                                <span class="review-star-rating">{{ review.star_rating }} - <i
+                                        class="fas fa-star mr-1"></i></span>rating.</small>
                         </div>
-                        
+
                         {% if request.user.is_authenticated %}
                         {% if request.user|lower == review.user|lower %}
                         <!-- Edit / Delete review if user's review -->
@@ -91,7 +91,7 @@
     </div>
     {% else %}
     <div class="column">
-        <h5 class="title-heading-small">There are no reviews for {{ product.name }} yet.  Why don't you add one?</h5>
+        <h5 class="title-heading-small">There are no reviews for {{ product.name }} yet. Why don't you add one?</h5>
     </div>
     {% endif %}
     {% endblock %}
