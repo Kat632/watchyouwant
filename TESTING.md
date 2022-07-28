@@ -8,11 +8,11 @@
 
 ***
 ## **Table of contents**
-1. [Manual Testing](#Manual-Testing)
-2. [Automated Testing](#Automated-Testing) 
-     - [Code Validation](#Code-Validation)
+1. [Manual Testing](#manual-testing)
+2. [Automated Testing](#automated-testing) 
+     - [Code Validation](#code-validation)
 3. [Project Bugs and Solutions](#project-bugs-and-solutions)
-3. [User Testing](#User-Testing)
+3. [User Testing](#user-testing)
 ***
 
 ## **Manual Testing**
@@ -178,7 +178,7 @@
 </details>
 
 ### **Code Validation**
-The [W3C Markup Validator](https://validator.w3.org/ "Link to M£C Markup Validator Site") service was used to validate the `HTML` and `CSS` code used. The [PEP8 Python Validator](http://pep8online.com/ "Link to the PEP8 Python Validator Site") was used to validate the `Python`code used. The [JSHint JavaScript Validator](https://jshint.com/ "Link to the JSHint JavaScript Validator Site") was used to validate the `JavaScript` code used.
+The [W3C Markup Validator](https://validator.w3.org/ "Link to W3C Markup Validator Site") service was used to validate the `HTML` and `CSS` code used. The [PEP8 Python Validator](http://pep8online.com/ "Link to the PEP8 Python Validator Site") was used to validate the `Python` code used. The [JSHint JavaScript Validator](https://jshint.com/ "Link to the JSHint JavaScript Validator Site") was used to validate the `JavaScript` code used.
 
 #### **Results:**
 
@@ -191,8 +191,8 @@ The [W3C Markup Validator](https://validator.w3.org/ "Link to M£C Markup Valida
 |                                                   |                                                  |          |              |              |
 | Page and scenario tested                          | Checked on https://validator.w3.org/ - Live site |          | Screenshot 1 | Comments     |
 | bag.html                                          | OK                                               | 24/07/22 |              |              |
-| bag.html with one item                            | See image                                        | 25/07/22 |              |              |
-| bag.html with three items                         | See image                                        | 25/07/22 |              |              |
+| bag.html with one item                            | OK                                               | 25/07/22 |              |              |
+| bag.html with three items                         | OK                                               | 25/07/22 |              |              |
 | checkout_success.html – 1 item                    | OK                                               | 25/07/22 |              |              |
 | checkout_success.html – 3 items                   | OK                                               | 25/07/22 |              |              |
 | checkout.html – 1 item                            | OK                                               | 25/07/22 |              |              |
@@ -209,10 +209,10 @@ The [W3C Markup Validator](https://validator.w3.org/ "Link to M£C Markup Valida
 | products.html – search with no results            | OK                                               | 24/07/22 |              |              |
 | add_product.html                                  | OK                                               | 25/07/22 |              |              |
 | edit_product.html                                 | OK                                               | 25/07/22 |              |              |
-| delete_product                                    |                                                  |          |              |              |
-| product_detail with no reviews                    |                                                  |          |              |              |
+| delete_product                                    | OK                                               | 28/07/22 |              |              |
+| product_detail with no reviews                    | OK                                               | 28/07/22 |              |              |
 | product_detail with reviews                       | OK                                               | 25/07/22 |              |              |
-| product_detail with out of stock item             | Ok                                               |          |              |              |
+| product_detail with out of stock item             | Ok                                               | 28/07/22 |              |              |
 | add_review.html                                   | OK                                               | 26/07/22 |              |              |
 | login.html                                        | OK                                               | 25/07/22 |              |              |
 | logout.html                                       | OK                                               | 25/07/22 |              |              |
@@ -280,13 +280,13 @@ The [W3C Markup Validator](https://validator.w3.org/ "Link to M£C Markup Valida
 
     ![Python Validation - apps.py](README_docs/readme_images/testing/blog/pep8_valid_blog_apps.png)
 
-    ![Python Validation - forms.py](README_docs/readme_images/testing/bag/pep8_valid_blog_forms.png)
+    ![Python Validation - forms.py](README_docs/readme_images/testing/blog/pep8_valid_blog_forms.png)
 
-    ![Python Validation - models.py](README_docs/readme_images/testing/bag/pep8_valid_blog_models.png)
+    ![Python Validation - models.py](README_docs/readme_images/testing/blog/pep8_valid_blog_models.png)
 
-    ![Python Validation - urls.py](README_docs/readme_images/testing/bag/pep8_valid_blog_urls.png)
+    ![Python Validation - urls.py](README_docs/readme_images/testing/blog/pep8_valid_blog_urls.png)
 
-    ![Python Validation - views.py](README_docs/readme_images/testing/bag/pep8_valid_blog_views.png)
+    ![Python Validation - views.py](README_docs/readme_images/testing/blog/pep8_valid_blog_views.png)
 
     </details>
 
@@ -370,11 +370,11 @@ The [W3C Markup Validator](https://validator.w3.org/ "Link to M£C Markup Valida
     <details>
     <summary>Watch You Want Files - Python Validation</summary>
 
-    ![Python Validation - urls.py](README_docs/readme_images/testing/profiles/pep8_valid_wyw_urls.png)
+    ![Python Validation - urls.py](README_docs/readme_images/testing/wyw/pep8_valid_wyw_urls.png)
 
-    ![Python Validation - views.py](README_docs/readme_images/testing/profiles/pep8_valid_wyw_views.png)
+    ![Python Validation - views.py](README_docs/readme_images/testing/wyw/pep8_valid_wyw_views.png)
 
-    ![Python Validation - wsgi.py](README_docs/readme_images/testing/profiles/pep8_valid_wyw_wsgi.png)
+    ![Python Validation - wsgi.py](README_docs/readme_images/testing/wyw/pep8_valid_wyw_wsgi.png)
 
     </details>
 
@@ -387,7 +387,7 @@ During testing I discovered a bug whereby the quantity of an item was being adde
 During HTML code validation I realised that I had set an input tag as type="disabled". See image below.
 ![HTML Validation Input Type](README_docs/readme_images/testing/html/readme_bug_input_disabled.png)
 
-I had forgotten that I could not do this, but a quick Google search and [this](https://stackoverflow.com/questions/16109358/what-is-the-correct-readonly-attribute-syntax-for-input-text-elements) Stack Overflow post helped me solve the issue.
+I had forgotten that this is no the correct way to disable an input, but a quick Google search and [this](https://stackoverflow.com/questions/16109358/what-is-the-correct-readonly-attribute-syntax-for-input-text-elements) Stack Overflow post helped me solve the issue.
 
 This is what the code looks like now using "disabled" correctly.
 
