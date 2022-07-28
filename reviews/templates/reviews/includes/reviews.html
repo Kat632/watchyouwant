@@ -6,11 +6,12 @@
     <div class="card bg-light ml-3 mr-3">
         <div class="review-body m-3">
             <h3 class="review-heading">Reviews</h3>
+            <!-- Allow authenticated user to add a review -->
             {% if user.is_authenticated %}
             <h5 class="title-heading-small">Add your review here</h5>
             <a href="{% url 'add_review' product.id %}" class="btn btn-custom rounded-0" aria-label="add review">Add
                 Review <i class="fas fa-plus ml-2"></i></a>
-
+            <!-- Or prompt a user to login to leave a review -->
             {% else %}
             <div class="columns">
                 <div class="column">
@@ -24,7 +25,7 @@
 
     <div class="container text-center text-md-left mb-3">
         <div class="row text-center text-md-left g-3 card-row-review">
-
+            <!-- Display product reviews -->
             {% if reviews %}
             {% for review in product.reviews.all %}
             <div class="col-md-6 col-lg-3 col-xl-3 mx-auto mt-3">
@@ -70,6 +71,7 @@
                 {% endfor %}
             </div>
             {% else %}
+            <!-- Text to display if there are no reviews -->
             <div class="column">
                 <h5 class="title-heading-small">There are no reviews for {{ product.name }} yet. Why don't you add one?</h5>
             </div>

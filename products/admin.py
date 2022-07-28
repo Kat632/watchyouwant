@@ -3,6 +3,9 @@ from .models import Product, Category, Review
 
 
 class ProductAdmin(admin.ModelAdmin):
+    """
+    class to enable admin to manage product model
+    """
     list_display = (
         'sku',
         'name',
@@ -23,6 +26,9 @@ class ProductAdmin(admin.ModelAdmin):
 
 
 class CategoryAdmin(admin.ModelAdmin):
+    """
+    class to enable admin to manage category model
+    """
     list_display = (
         'friendly_name',
         'name',
@@ -32,9 +38,7 @@ class CategoryAdmin(admin.ModelAdmin):
 @admin.register(Review)
 class ReviewAdmin(admin.ModelAdmin):
     """
-    Admin class for Review model
-    With list_display to show fields
-    to user
+    class to enable admin to  manage user model
     """
     list_display = (
         'product',

@@ -6,7 +6,9 @@ from profiles.models import UserProfile
 
 
 class Category(models.Model):
-
+    """
+    Form to add categories to the products
+    """
     class Meta:
         verbose_name_plural = 'Categories'
 
@@ -21,6 +23,9 @@ class Category(models.Model):
 
 
 class Product(models.Model):
+    """
+    Creates the products database
+    """
     category = models.ForeignKey(
         'Category', null=True, blank=True, on_delete=models.SET_NULL)
     featured = models.BooleanField(default=False)

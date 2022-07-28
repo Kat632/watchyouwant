@@ -28,6 +28,7 @@
                 {% if bag_items %}
                     <div class="table-responsive rounded d-none d-md-block">
                         <table class="table table-sm table-borderless">
+                            <!-- Bag table header -->
                             <thead class="text-purple">
                                 <tr>
                                     <th scope="col">Product Info</th>
@@ -38,6 +39,7 @@
                                 </tr>
                             </thead>
 
+                            <!-- Bag products -->
                             {% for item in bag_items %}
                                 <tr>
                                     <td class="p-3 w-25">
@@ -61,11 +63,13 @@
                                     </td>
                                 </tr>
                             {% endfor %}
+                            <!-- Grand Total -->
                             <tr>
                                 <td colspan="5" class="pt-5 text-right">
                                     {% include "bag/bag-total.html" %}
                                 </td>
                             </tr>
+                            <!-- Keep shopping & checkout buttons -->
                             <tr>
                                 <td colspan="5" class="text-right">
                                     {% include "bag/checkout-buttons.html" %}
@@ -90,6 +94,7 @@
 {% block postloadjs %}
 {{ block.super }}
 <script>
+    // Scroll to top
     $('.btt-link').click(function(e) {
         window.scrollTo(0,0);
     });

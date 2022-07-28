@@ -55,12 +55,14 @@
         <div class="col card mb-4 mt-3 left top">
             <div class="card-body">
                 <div class="blog-image-container">
+                     <!-- Blog image -->
                     {% if blog.featured_image %}
                         <img class="img-fluid" src="{{ blog.featured_image.url }}" alt="{{ blog.title }}">
                     {% else %}
                         <img class="img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ blog.title }}">
                     {% endif %}
                 </div>
+                <!-- Blog info -->
                 <p class="card-text">
                     {{ blog.content | safe }}
                 </p>
@@ -93,10 +95,12 @@
         </div>
     </div>
 
+    <!-- Blog Comment section -->
     <div class="row border-top">
         <div class="col-md-8 card mb-4 mt-3 ">
             <h3>Comments: <i class="fas fa-comments ps-1 blueicon"></i></h3>
             <div class="card-body">
+                <!-- List of comments -->
                 <hr class="thin">
                 {% for comment in comments %}
                 <div class="comments p-2">

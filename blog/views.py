@@ -8,7 +8,7 @@ from profiles.models import UserProfile
 
 class BlogList(generic.ListView):
     """
-    Creates the recipe list
+    Creates the blog post list
     """
     model = BlogPost
     queryset = BlogPost.objects.filter(status=1).order_by('-publish_date')
@@ -18,11 +18,11 @@ class BlogList(generic.ListView):
 
 class BlogDetail(View):
     """
-    Class for single recipe view
+    Class for single log post view
     """
     def get(self, request, slug, *args, **kwargs):
         """
-        Creates view for a single recipe
+        Creates view for a single blog post
         """
         queryset = BlogPost.objects.filter(status=1)
         blog = get_object_or_404(queryset, slug=slug)
@@ -81,7 +81,7 @@ class BlogDetail(View):
 
 class PostLike(View):
     """
-    Like a recipe
+    Like a blog post
     """
     def post(self, request, slug):
         """
