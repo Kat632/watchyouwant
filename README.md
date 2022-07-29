@@ -85,10 +85,10 @@
     + [Setting AWS bucket](#setting-aws-bucket)
   * [**Credits**](#credits)
     + [Online resources](#online-resources)
-    + [Offline resources**](#offline-resources)
-    + [Tutorials and inspiration**](#tutorials-and-inspiration)
-    + [Code Snippets**](#code-snippets)
-    + [People**](#people)
+    + [Offline resources](#offline-resources)
+    + [Tutorials and inspiration](#tutorials-and-inspiration)
+    + [Code Snippets](#code-snippets)
+    + [People](#people)
     + [Conclusion](#conclusion)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
