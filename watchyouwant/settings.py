@@ -37,7 +37,7 @@ DEBUG = 'DEVELOPMENT' in os.environ
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
-ALLOWED_HOSTS = ['watchyouwant-pp5.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['watchyouwant-pp5.herokuapp.com', 'localhost', 'watchyouwant.up.railway.app']
 
 
 # Application definition
