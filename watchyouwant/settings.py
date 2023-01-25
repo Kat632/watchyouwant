@@ -37,8 +37,13 @@ DEBUG = 'DEVELOPMENT' in os.environ
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
-ALLOWED_HOSTS = ['watchyouwant-pp5.herokuapp.com', 'localhost', 'watchyouwant.up.railway.app']
+#ALLOWED_HOSTS = ['watchyouwant-pp5.herokuapp.com', 'localhost', 'watchyouwant.up.railway.app']
+ALLOWED_HOSTS = ['*']
 
+#Add Render.com URL to allowed hosts
+RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
+if RENDER_EXTERNAL_HOSTNAME:
+    ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
 
 # Application definition
 
